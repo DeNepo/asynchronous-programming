@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Asynchronous Programming: Week X</title>
+
+  <script src='../dependencies/code-along.js'></script>
+
+  <link rel="stylesheet" href="../dependencies/reveal.js/css/reset.css">
+  <link rel="stylesheet" href="../dependencies/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../dependencies/reveal.js/css/theme/night.css">
+
+  <script src='../dependencies/beautify.js'></script>
+
+  <!-- why won't local parser-babylon work -->
+  <script src="../dependencies/prettier/standalone.js"></script>
+  <!-- <script src="https://unpkg.com/prettier@1.13.0/standalone.js"></script> -->
+  <!-- <script src="./prettier/parser-babylon.js"></script> -->
+  <script src="https://unpkg.com/prettier@1.13.0/parser-babylon.js"></script>
+  <!-- <script src="../dependencies/beautify.js"></script> -->
+
+  <style>
+    /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
+    .reveal .footer {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 0.5em;
+      /* z-index: 1000; */
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="reveal">
+    <div class='footer'>
+      <ul id='footer-links' style='visibility: hidden;'>
+        <li>
+          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/asynchronous-programming" target="_blank">
+            <code>module repository</code>
+          </a>
+        </li>
+        <li>
+          </a><a id='to-sketchpad' href="https://hackyourfuture.be/sketchpad" target="_blank">
+            <code>live sketchpad</code>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <code id="footer-text">ESC to overview</code>
+    </div>
+
+
+    <div class="slides">
+
+      <section id='cover-slide'>
+        <h2>Asynchronous Programming</h2>
+        <br>
+        <h3>Week X</h3>
+        <br>
+        <code>"s"</code> for speaker notes
+        <br>
+        <br>
+        <a href="https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-X" target='_blank'>
+          -- back to repo --
+        </a>
+      </section>
+
+
+      <section id="learning-objectives">
+        <section>
+          <h1>Learning Objectives</h1>
+          <br>
+          <br>
+          <p>
+            What can you expect to cover in class today?
+          </p>
+        </section>
+        <section>
+          <h3>Isolate</h3>
+          <br>
+          <ul>
+            <li></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Integrate</h3>
+          <br>
+          <ul>
+            <li></li>
+          </ul>
+        </section>
+      </section>
+
+
+      <section id='review'>
+        <section>
+          <h1>Review</h1>
+          <br>
+          <br>
+          <p>Any <code>sunday-review</code> issues?</p>
+          <p>Any other Questions?</p>
+          <br>
+          <code>(~30 min)</code>
+        </section>
+        <section id="js-code-along">
+          <script>
+            codeAlong({
+              title: '',
+              container: 'js-code-along',
+              type: 'js',
+              source: []
+            })
+          </script>
+        </section>
+        <section id="document-code-along">
+          <script>
+            codeAlong({
+              title: '',
+              container: 'document-code-along',
+              type: 'document',
+              source: []
+            })
+          </script>
+        </section>
+      </section>
+
+      <section id='what-you-will-build'>
+        <section>
+          <h1>What You'll Build</h1>
+          <br>
+          <p>_</p>
+        </section>
+        <section>
+          <h3>_</h3>
+          <iframe style='background-color:white; height: 75vh; width: 100%;'
+            src='../example-projects/_-separated/index.html'></iframe>
+        </section>
+      </section>
+
+
+      <section id='review'>
+        <h1>New Material</h1>
+      </section>
+
+      <section id='_'>
+        <section>
+          <h2>_</h2>
+          <br>
+          <code>(pair programming)</code>
+        </section>
+        <section id='_-examples'>
+          <script>
+            codeAlong({
+              title: '_: Examples',
+              container: '_-examples',
+              type: 'js',
+              source: [
+                {
+                  name: '_',
+                  path: '../javascripting/_',
+                },
+              ]
+            })
+          </script>
+        </section>
+        <section id='_-exercises'>
+          <script>
+            codeAlong({
+              title: '_: Exercises',
+              container: '_-exercises',
+              type: 'js',
+              source: [
+                {
+                  name: '_',
+                  path: '../javascripting/_',
+                },
+              ]
+            })
+          </script>
+        </section>
+      </section>
+
+
+      <section id='break'>
+        <h1>Break!</h1>
+        <br>
+        <code>(~20 min)</code>
+      </section>
+
+      <section id='example-projects'>
+        <section>
+          <h2>Example Projects</h2>
+          <br>
+          <p>finished code for inspiration</p>
+        </section>
+        <section id='_-stepped'>
+          <script>
+            codeAlong({
+              title: '_: stepped',
+              container: '_-stepped',
+              type: 'document',
+              source: [
+                {
+                  name: '0. Setup',
+                  path: '../example-projects/_-stepped/0-setup.html'
+                },
+              ]
+            })
+          </script>
+        </section>
+        <section>
+          <h2>_: Separated</h2>
+          <br>
+          <ul>
+            <li><a href='../example-projects/_/index.html' target='_blank'>live project</a>
+            </li>
+            <li><a
+                href='https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/example-projects/_'
+                target='_blank'>source code</a></li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='in-class-project'>
+        <section id='in-class-cover'>
+          <h2>In-Class Project</h2>
+          <br>
+          <p>_</p>
+          <br>
+          <code>(pair programming)</code>
+        </section>
+        <section>
+          <h2>_</h2>
+          <br>
+          <p>
+            <a href='https://github.com/HackYourFutureBelgium/coming-soon' target='_blank'>
+              Starter Repository Link
+            </a>
+          </p>
+        </section>
+      </section>
+
+      <section id='homework-launch'>
+        <section>
+          <h2>Homework Launch</h2>
+          <br>
+          <p>It's only just beginning :)</p>
+        </section>
+        <section>
+          <h2><a href='https://github.com/hackyourfuturebelgium/encapsulation/tree/master/week-2' target='_blank'>
+              The Assignments</a></h2>
+        </section>
+        <section>
+          <h2><a href='https://github.com/HackYourFutureBelgium/homework-submission#homework-issues' target='_blank'>
+              Weekly Issues</a></h2>
+          <p>if you haven't already, please create an issue and:</p>
+          <br>
+          <ol>
+            <li>Name it something helpful</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users'
+                target='_blank'>
+                Assign</a>, it to yourself</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/applying-labels-to-issues-and-pull-requests'
+                target='_blank'>
+                Label</a>, it <code>week-N</code> and <code>homework</code></li>
+            <li><a href='https://help.github.com/en/github/managing-your-work-on-github/about-milestones'
+                target='_blank'>
+                Milestone</a> it <code>module-name</code></li>
+            <li>Fill in the assignments</li>
+            <li>Move it to the project board</li>
+          </ol>
+        </section>
+      </section>
+
+      <section id='cover-slide'>
+        <h2>Asynchronous Programming</h2>
+        <br>
+        <h3>Week X</h3>
+        <br>
+        <code>"s"</code> for speaker notes
+        <br>
+        <br>
+        <a href="https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-X" target='_blank'>
+          -- back to repo --
+        </a>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="../dependencies/reveal.js/js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      controlsTutorial: true,
+      slideNumber: 'h/t',
+      hash: true,
+      help: true,
+      width: "100%",
+      height: "100%",
+      keyboard: {
+        // 67: function () { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+        // 66: function () { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+        // 46: function () { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+        // 8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+        // 68: function () { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+        // 88: function () { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+        // 89: function () { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+      },
+      dependencies: [
+        // { src: 'plugin/markdown/marked.js' },
+        // { src: 'plugin/markdown/markdown.js' },
+        { src: '../dependencies/reveal.js/plugin/notes/notes.js', async: true },
+        // { src: '../dependencies/reveal.js/plugin/chalkboard/chalkboard.js' },
+        // { src: 'plugin/highlight/highlight.js', async: true }
+      ],
+    });
+
+    Reveal.addEventListener('overviewshown', function (event) {
+      document.getElementById('footer-text').innerHTML = "ESC into slide";
+      document.getElementById('footer-links').style.visibility = 'visible';
+    });
+    Reveal.addEventListener('overviewhidden', function (event) {
+      document.getElementById('footer-text').innerHTML = "ESC to overview";
+      document.getElementById('footer-links').style.visibility = 'hidden';
+    });
+
+
+
+  </script>
+</body>
+
+</html>

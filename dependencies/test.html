@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="./dependencies/code-along.js"></script>
+</head>
+
+<body>
+  <div id='root'></div>
+
+  <script>// empty code-alongs
+
+    // codeAlong().then(result => (document.getElementById('root').appendChild(result.container), console.log(result)));
+
+    // codeAlong('root').then(result => console.log(result));
+
+    // codeAlong(
+    //   document.getElementById('root')
+    // ).then(result => console.log(result));
+
+    // codeAlong({
+    //   container: 'root',
+    // }).then(result => console.log(result));
+
+    // codeAlong({
+    //   container: document.body,
+    // }).then(result => console.log(result));
+  </script>
+
+  <script>// titled code-alongs
+
+    // codeAlong({
+    //   title: 'title'
+    // }).then(result => {
+    //   document.getElementById('root')
+    //     .appendChild(result.container);
+    //   console.log(result);
+    // });
+
+    // codeAlong({
+    //   container: 'root',
+    //   title: 'a title'
+    // }).then(result => console.log(result));
+
+    // codeAlong({
+    //   container: document.body,
+    //   title: 'a title'
+    // }).then(result => console.log(result));
+  </script>
+
+  <script>// source is just a relative path string
+
+    // codeAlong({
+    //   source: './dependencies/test-examples/assertions.js'
+    // }).then(result => {
+    //   document.getElementById('root')
+    //     .appendChild(result.container);
+    //   console.log(result);
+    // });
+
+    // codeAlong({
+    //   container: 'root',
+    //   source: './dependencies/test-examples/assertions.js'
+    // }).then(result => console.log(result));
+
+    // codeAlong({
+    //   container: document.body,
+    //   source: './dependencies/test-examples/assertions.js'
+    // }).then(result => console.log(result));
+  </script>
+
+  <script>// title & source
+
+    // codeAlong({
+    //   source: './dependencies/test-examples/assertions.js',
+    //   title: 'tititltltltlelele'
+    // }).then(result => {
+    //   document.getElementById('root')
+    //     .appendChild(result.container);
+    //   console.log(result);
+    // });
+
+    // codeAlong({
+    //   container: 'root',
+    //   source: './dependencies/test-examples/assertions.js',
+    //   title: 'tititltltltlelele'
+    // }).then(result => console.log(result));
+
+    // codeAlong({
+    //   container: document.body,
+    //   source: './dependencies/test-examples/assertions.js',
+    //   title: 'tititltltltlelele'
+    // }).then(result => console.log(result));
+  </script>
+
+  <script>// worked examples with just path strings (un-named steps)
+
+    // codeAlong({
+    //   title: 'variable swap',
+    //   container: 'root',
+    //   source: [
+    //     "./dependencies/test-examples/value-swap/0-setup.js",
+    //     "./dependencies/test-examples/value-swap/1-store-2.js",
+    //     "./dependencies/test-examples/value-swap/2-reassign-a.js",
+    //     "./dependencies/test-examples/value-swap/3-use-stashed-value.js",
+    //   ],
+    // }).then(result => console.log(result));
+
+  </script>
+
+  <script>// worked examples with named steps
+
+    codeAlong({
+      title: 'variable swap',
+      container: 'root',
+      source: [
+        {
+          name: "0. setup",
+          path: "./dependencies/test-examples/value-swap/0-setup.js",
+        },
+        {
+          name: "1. store a's value for later",
+          path: "./dependencies/test-examples/value-swap/1-store-2.js",
+        },
+        {
+          name: "2. assign b's value to a",
+          path: "./dependencies/test-examples/value-swap/2-reassign-a.js",
+        },
+        {
+          name: '3. assign stored value to b',
+          path: "./dependencies/test-examples/value-swap/3-use-stored-value.js",
+        },
+      ],
+    }).then(result => console.log(result));
+
+  </script>
+
+  <script>// worked examples with mixed named/un-named steps
+
+    // codeAlong({
+    //   title: 'variable swap',
+    //   container: 'root',
+    //   source: [
+    //     {
+    //       name: "0. setup",
+    //       path: "./dependencies/test-examples/value-swap/0-setup.js",
+    //     },
+    //     "./dependencies/test-examples/value-swap/1-store-2.js",
+    //     {
+    //       name: "2. assign b's value to a",
+    //       path: "./dependencies/test-examples/value-swap/2-reassign-a.js",
+    //     },
+    //     "./dependencies/test-examples/value-swap/3-use-stashed-value.js",
+    //   ],
+    // }).then(result => console.log(result));
+
+  </script>
+
+
+</body>
+
+</html>
