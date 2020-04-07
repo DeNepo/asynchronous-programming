@@ -350,6 +350,33 @@ codeAlong.md = (iframe, steps, config) => {
 
 }
 
+codeAlong.openIn = {
+  jstutor: (editor) => {
+    const button = document.createElement('button');
+    button.innerHTML = 'open in JS Tutor';
+    button.onclick = () => {
+      const encodedJST = encodeURIComponent(editor.getValue());
+      const sanitizedJST = encodedJST
+        .replace(/\(/g, '%28').replace(/\)/g, '%29')
+        .replace(/%09/g, '%20%20');
+      // const jsTutorURL = "http://www.pythontutor.com/live.html#code=" + sanitizedJST + "&cumulative=false&curInstr=2&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false";
+      const URL = "http://www.pythontutor.com/javascript.html#code=" + sanitizedJST + "&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D";
+      window.open(URL, '_blank');
+    };
+    return button;
+  },
+  loupe: (editor) => {
+    const button = document.createElement('button');
+    button.innerHTML = 'open in Loupe';
+    button.onclick = () => {
+      const encoded = encodeURIComponent(btoa(editor.getValue()));
+      const URL = "http://latentflip.com/loupe/?code=" + encoded + "!!!"
+      window.open(URL, '_blank');
+    };
+    return button;
+  }
+};
+
 codeAlong.js = (iframe, steps, config) => {
 
   const title = config.title;
@@ -487,17 +514,7 @@ codeAlong.js = (iframe, steps, config) => {
   maxIterationsForm.appendChild(withLoopGuard);
   maxIterationsForm.appendChild(maxIterationsInput);
 
-  const jsTutorButton = document.createElement('button');
-  jsTutorButton.innerHTML = 'open in JS Tutor';
-  jsTutorButton.onclick = () => {
-    const encodedJST = encodeURIComponent(editor.getValue());
-    const sanitizedJST = encodedJST
-      .replace(/\(/g, '%28').replace(/\)/g, '%29')
-      .replace(/%09/g, '%20%20');
-    // const jsTutorURL = "http://www.pythontutor.com/live.html#code=" + sanitizedJST + "&cumulative=false&curInstr=2&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false";
-    const jsTutorURL = "http://www.pythontutor.com/javascript.html#code=" + sanitizedJST + "&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D";
-    window.open(jsTutorURL, '_blank');
-  };
+
 
   const linterButton = document.createElement('button');
   linterButton.innerHTML = 'open in JSHint';
@@ -521,8 +538,16 @@ codeAlong.js = (iframe, steps, config) => {
   buttonDiv.appendChild(evaluateInDebugger);
   buttonDiv.appendChild(maxIterationsForm);
   buttonDiv.appendChild(document.createElement('br'));
-  if (!config.async === true) {
-    buttonDiv.appendChild(jsTutorButton);
+  if (!config.openIn) {
+    buttonDiv.appendChild(codeAlong.openIn.jstutor(editor));
+  } else {
+    config.openIn.forEach(viztool => {
+      try {
+        buttonDiv.appendChild(codeAlong.openIn[viztool.toLowerCase()](editor));
+      } catch (err) {
+        console.log('cannot open in ' + viztool);
+      };
+    });
   }
   try {
     // does it exist?
