@@ -52,16 +52,18 @@
 
 Solve each exercise on a separate branch and merge to master when they are complete.  Be sure to run `$ node review.js` before pushing to make it easier for your coaches to review your work.
 
-* [Event Loop](https://github.com/hackyourfuturebelgium/event-loop)
+* [Closure](https://github.com/hackyourfuturebelgium/closure)
+* [Arrow Functions](https://github.com/hackyourfuturebelgium/arrow-functions)
 * [Promises](https://github.com/hackyourfuturebelgium/promises)
-* [Async/Await](https://github.com/hackyourfuturebelgium/async-await)
 
 #### Integrating JavaScript
 
 * Form a group of 2-3 and Complete 1 [JavaScript 30](https://github.com/hackyourfuturebelgium/javascript-30) group challenge, your choice!
   * Link to your team's main repository in your homework issue
 
-<!-- #### Challenge Exercises -->
+#### Extra Practice
+
+* [The Callstack](https://github.com/hackyourfuturebelgium/callstack)
 
 ### Project: `repo-name`
 

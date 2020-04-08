@@ -148,23 +148,67 @@
         <h1>New Material</h1>
       </section>
 
-      <section id='_'>
+      <section id='the-event-loop'>
         <section>
-          <h2>_</h2>
+          <h2>The Event Loop</h2>
           <br>
           <code>(pair programming)</code>
         </section>
-        <section id='_-examples'>
+        <section>
+          <h3>Helpful Links</h3>
+          <br>
+          <ul>
+            <li>
+              <a href='https://javascript.info/settimeout-setinterval' target='_blank'>
+                javascript.info: scheduling</a>
+            </li>
+            <li>
+              <a href='http://latentflip.com/loupe/?code=!!!' target='_blank'>
+                Loupe</a>
+            </li>
+            <li>
+              <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop' target='_blank'>
+                MDN: the event loop</a>
+            </li>
+          </ul>
+        </section>
+        <section id='event-loop-examples'>
           <script>
             codeAlong({
-              title: '_: Examples',
-              container: '_-examples',
+              title: 'Event Loop: Examples',
+              container: 'event-loop-examples',
               type: 'js',
-              openIn: ['loupe'],
+              openIn: [],
+              clearScheduled: true,
+              preserveLogs: true,
               source: [
                 {
-                  name: '_',
-                  path: '../javascripting/_',
+                  name: 'Callbacks',
+                  path: '../javascripting/event-loop-examples/callbacks.js',
+                },
+                {
+                  name: 'setTimeout',
+                  path: '../javascripting/event-loop-examples/set-timeout.js',
+                },
+                {
+                  name: 'clearTimeout',
+                  path: '../javascripting/event-loop-examples/clear-timeout.js',
+                },
+                {
+                  name: 'setInterval',
+                  path: '../javascripting/event-loop-examples/set-interval.js',
+                },
+                {
+                  name: 'clearInterval',
+                  path: '../javascripting/event-loop-examples/clear-interval.js',
+                },
+                {
+                  name: 'Zero Delays',
+                  path: '../javascripting/event-loop-examples/zero-delays.js',
+                },
+                {
+                  name: 'Passing Arguments',
+                  path: '../javascripting/event-loop-examples/passing-arguments.js',
                 },
               ]
             })

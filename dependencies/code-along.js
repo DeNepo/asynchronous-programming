@@ -433,8 +433,9 @@ codeAlong.js = (iframe, steps, config) => {
 
         editor.setSession(step.session);
 
-        resultsContainer.innerHTML = '';
-
+        if (!config.preserveLogs) {
+          resultsContainer.innerHTML = '';
+        };
       }
       step.button = button;
       return button;
@@ -460,17 +461,26 @@ codeAlong.js = (iframe, steps, config) => {
   const evaluateInCodeAlong = document.createElement('button');
   evaluateInCodeAlong.innerHTML = 'evaluate code';
   evaluateInCodeAlong.addEventListener('click', function evaluateCode() {
-    resultsContainer.innerHTML = '';
+    if (!config.preserveLogs) {
+      resultsContainer.innerHTML = '';
+    };
     codeAlong.preparing_your_code(editor.getValue(), resultsContainer);
     // const results = codeAlong.preparing_your_code(editor.getValue());
     // resultsContainer.appendChild(results);
   });
 
   function step_through_in_debugger() {
-    resultsContainer.innerHTML = '';
-    const allDone = codeAlong.step_through_in_debugger(editor.getValue());
+    if (!config.preserveLogs) {
+      resultsContainer.innerHTML = '';
+    };
+    const executing_your_code = eval;
+    executing_your_code(
+      'debugger; // injected by codeAlong\n'
+      + '\n'
+      + editor.getValue()
+    );
     const debuggeredEl = document.createElement('pre');
-    debuggeredEl.innerHTML = allDone;
+    debuggeredEl.innerHTML = "    All done! \n\n    (psst. try again with devtools open if they aren't already)";
     resultsContainer.appendChild(debuggeredEl);
   }
   const evaluateInDebugger = document.createElement('button');
@@ -478,7 +488,9 @@ codeAlong.js = (iframe, steps, config) => {
   evaluateInDebugger.addEventListener('click', step_through_in_debugger);
 
   function with_infinite_loop_guard(event) {
-    resultsContainer.innerHTML = '';
+    if (!config.preserveLogs) {
+      resultsContainer.innerHTML = '';
+    };
     const max = Number(event.target.form.max.value);
     let allDone;
     try {
@@ -537,6 +549,19 @@ codeAlong.js = (iframe, steps, config) => {
   buttonDiv.appendChild(evaluateInCodeAlong);
   buttonDiv.appendChild(evaluateInDebugger);
   buttonDiv.appendChild(maxIterationsForm);
+  if (config.clearScheduled) {
+    const clearIntervals = document.createElement('button');
+    clearIntervals.innerHTML = 'setInterval: clear all';
+    clearIntervals.addEventListener('click', () => codeAlong.clearScheduled('intervals'));
+
+    const clearTimeouts = document.createElement('button');
+    clearTimeouts.innerHTML = 'setTimeout: clear all';
+    clearTimeouts.addEventListener('click', () => codeAlong.clearScheduled('timeouts'));
+
+    buttonDiv.appendChild(document.createElement('br'));
+    buttonDiv.appendChild(clearIntervals);
+    buttonDiv.appendChild(clearTimeouts);
+  };
   buttonDiv.appendChild(document.createElement('br'));
   if (!config.openIn) {
     buttonDiv.appendChild(codeAlong.openIn.jstutor(editor));
@@ -548,7 +573,15 @@ codeAlong.js = (iframe, steps, config) => {
         console.log('cannot open in ' + viztool);
       };
     });
-  }
+  };
+
+  if (config.preserveLogs) {
+    const clearLogs = document.createElement('button');
+    clearLogs.innerHTML = 'clear test logs';
+    clearLogs.addEventListener('click', () => { resultsContainer.innerHTML = '' });
+
+    buttonDiv.appendChild(clearLogs);
+  };
   try {
     // does it exist?
     prettier.format(
@@ -573,13 +606,17 @@ codeAlong.js = (iframe, steps, config) => {
         const allGoodPre = document.createElement('pre');
         allGoodPre.innerHTML = '  no syntax errors found';
         allGoodPre.style = 'padding-left:5px;'
-        resultsContainer.innerHTML = '';
+        if (!config.preserveLogs) {
+          resultsContainer.innerHTML = '';
+        };
         resultsContainer.appendChild(allGoodPre);
       } catch (err) {
         const errPre = document.createElement('pre');
         errPre.innerHTML = err.message;
         errPre.style = 'padding-left:5px;'
-        resultsContainer.innerHTML = '';
+        if (!config.preserveLogs) {
+          resultsContainer.innerHTML = '';
+        };
         resultsContainer.appendChild(errPre);
       }
     });
@@ -683,7 +720,9 @@ codeAlong.js = (iframe, steps, config) => {
     maxIterationsFormCopy.childNodes[0].onclick = with_infinite_loop_guard;
 
     function with_infinite_loop_guard(event) {
-      resultsContainer.innerHTML = '';
+      if (!config.preserveLogs) {
+        resultsContainer.innerHTML = '';
+      };
       const max = Number(event.target.form.max.value);
       try {
         // does it exist?
@@ -724,45 +763,25 @@ codeAlong.js = (iframe, steps, config) => {
   iframe.contentDocument.body.appendChild(stepsContainer);
   iframe.contentDocument.body.appendChild(outputContainer);
 
-}
+};
 
-// binding evaluation function to window for arrow function correctness
-//   ! annoyingly (but correctly) globals hoisted variables
-//   much simpler callstack in the debugger
-//   and still does arrows correctly
+
 codeAlong.step_through_in_debugger = (function in_debugger(your_source_code) {
   const executing_your_code = eval;
-  // try {
   executing_your_code(
     'debugger; // injected by codeAlong\n'
     + '\n'
     + your_source_code
   );
-  // } catch (err) {
-  //   console.log(err);
-  // };
   return "    All done! \n\n    (psst. try again with devtools open if they aren't already)";
 }).bind(window);
-// codeAlong.step_through_in_debugger = (function in_debugger(your_source_code) {
-//   try {
-//     const executing_your_code = () => {
-//       eval(
-//         'debugger; // injected by codeAlong\n'
-//         + '\n'
-//         + your_source_code
-//       );
-//     };
-//     executing_your_code();
-//   } catch (err) {
-//     console.log(err);
-//   };
-//   return "    All done! \n\n    (psst. try again with devtools open if they aren't already)";
-// }).bind(window);
+
 
 codeAlong.format_and_loop_guard = (function with_infinite_loop_guard(your_source_code, max_iterations) {
   let number_of_loops = 0;
+  const executing_prepared_code = eval;
   try {
-    eval(
+    executing_prepared_code(
       'debugger; // injected by codeAlong\n'
       + '\n'
       + js_beautify(
@@ -784,8 +803,9 @@ codeAlong.format_and_loop_guard = (function with_infinite_loop_guard(your_source
 
 codeAlong.with_infinite_loop_guard = (function with_infinite_loop_guard(your_source_code, max_iterations) {
   let number_of_loops = 0;
+  const executing_prepared_code = eval;
   try {
-    eval(
+    executing_prepared_code(
       'debugger; // injected by codeAlong\n'
       + '\n'
       +
@@ -807,7 +827,8 @@ codeAlong.preparing_your_code = function (your_source_code, resultsContainer) {
   const nativeConsole = console;
   console = Object.create(nativeConsole);
   console.assert = function () {
-    nativeConsole.assert(...Array.from(arguments));
+    const args = Array.from(arguments);
+    nativeConsole.assert(...args);
 
     const statusString = arguments[0] ? 'PASS: ' : 'FAIL: ';
     const statusEl = document.createElement('p');
@@ -817,10 +838,7 @@ codeAlong.preparing_your_code = function (your_source_code, resultsContainer) {
     statusEl.style.color = arguments[0] ? 'green' : 'orange';
 
     const messages = document.createElement('code');
-    messages.innerHTML = '  ' + Array.from(arguments)
-      .slice(1, arguments.length)
-      .toString()
-      .replace(',', ', ');
+    messages.innerHTML = '  ' + args.slice(1).join(', ');
 
     const newLi = document.createElement('li');
     newLi.style = 'padding-top:1%;'
@@ -830,63 +848,17 @@ codeAlong.preparing_your_code = function (your_source_code, resultsContainer) {
     resultsContainer.appendChild(newLi);
     // resultsEl.appendChild(newLi);
 
-  }
-
-  // for capturing and displaying async errors
-  {
-    // console.error = function () {
-    //   nativeConsole.error('- logged with console.error -\n', ...Array.from(arguments));
-
-    //   const before = document.createElement('pre');
-    //   before.innerHTML = '- begin console.error -';
-    //   resultsEl.appendChild(before);
-
-    //   if (arguments[0] instanceof Error) {
-    //     resultsEl.appendChild(renderError(arguments[0], true));
-    //     arguments = Array.from(arguments).splice(1, arguments.length);
-    //   }
-
-    //   if (arguments.length !== 0) {
-    //     const messages = document.createElement('code');
-    //     messages.innerHTML = Array.from(arguments)
-    //       .toString()
-    //       .replace(',', ', ');
-    //     messages.style.color = 'red';
-
-    //     resultsEl.appendChild(messages);
-    //   }
-
-    //   const after = document.createElement('pre');
-    //   after.innerHTML = '- end console.error -';
-    //   resultsEl.appendChild(after);
-
-    // }
-
-    // // debugger;
-    // // declare this at the top of each example
-    // const startTime = (new Date()).getTime();
-    // const elapsed = () => {
-    //   const now = (new Date()).getTime();
-    //   return Math.round(now - startTime) + ' ms';
-    // };
+  };
 
 
-    // const requestURL = "https://hacyourfuure.be/practice-api/food/wet/soups.json";
-
-    // fetch(requestURL)
-    //   .then(function parseResponse(resp) { return resp.json() })
-    //   .then(function workWithData(data) {
-    //     // write me!
-    //   })
-    //   .then(function assertResult(result) {
-    //     console.assert(result === 3, elapsed() + ' - result should be 3');
-    //   })
-    //   .catch(function handleErrors(err) {
-    //     console.error(err, elapsed() + ' - Test 2', 223)
-    //   });
-  }
-
-  const renderError = (err, noCallstackMessage) => {
+  const renderError = (err) => {
+    if (!(err instanceof Error)) {
+      const errorEl = document.createElement('pre');
+      errorEl.style.color = "red";
+      errorEl.innerHTML = JSON.stringify(err, null, '  ');
+      errorEl.appendChild(document.createTextNode('\n\n   callstack is logged to the console'));
+      return errorEl;
+    };
     const errorEl = document.createElement('pre');
     errorEl.style.color = "red";
     const duckDuckLink = document.createElement('a');
@@ -897,9 +869,7 @@ codeAlong.preparing_your_code = function (your_source_code, resultsContainer) {
     const searchButton = document.createElement('button');
     searchButton.appendChild(duckDuckLink)
     errorEl.appendChild(searchButton);
-    if (!noCallstackMessage) {
-      errorEl.appendChild(document.createTextNode('\n\n   callstack is logged to the console'));
-    }
+    errorEl.appendChild(document.createTextNode('\n\n   callstack is logged to the console'));
     return errorEl;
   }
   const renderHaltingWarning = (err) => {
@@ -914,6 +884,23 @@ codeAlong.preparing_your_code = function (your_source_code, resultsContainer) {
     phaseEl.innerHTML = '   caught during ' + phase;
     return phaseEl;
   }
+
+  window.onerror = function (msg, url, lineNo, columnNo, error) {
+    // console.log(msg); // error name + message
+    // console.log(url); // empty for exercises
+    // console.log(lineNo); // number out of context
+    // console.log(columnNo); // number out of context
+    // console.error(error); // duplication of what happens anyway
+    const errOrWarning = error.message === 'Loop exceeded 1000 iterations'
+      ? renderHaltingWarning(error)
+      : renderError(error);
+    resultsContainer.appendChild(errOrWarning);
+    resultsContainer.appendChild(renderPhase(true));
+    const isAsync = document.createElement('pre');
+    isAsync.innerHTML = '   asynchronous error';
+    resultsContainer.appendChild(isAsync);
+    return false;
+  };
 
   const didExecute = { status: false };
   try {
@@ -960,3 +947,28 @@ codeAlong.deDebugger = code => code
   .replace(' debugger\n', ' \n')
   .replace('\tdebugger\n', '\t\n')
   .replace('\ndebugger\n', '\n\n');
+
+
+// hopefully this doesn't break reveal.js
+codeAlong.clearScheduled = (() => {
+  const lastClearing = {
+    timeouts: 0,
+    intervals: 0
+  };
+  return (type) => {
+    if (type !== 'intervals' && type !== 'timeouts') {
+      alert('nothing cleared, invalid arg');
+    };
+
+    const nowMax = setInterval(() => { }, 0);
+    for (let i = lastClearing[type]; i < nowMax; i++) {
+      if (type === 'intervals') {
+        clearInterval(i);
+      } else {
+        clearTimeout(i);
+      };
+    };
+    alert('cleared all ' + type);
+    lastClearing[type] = nowMax + 1;
+  };
+})();

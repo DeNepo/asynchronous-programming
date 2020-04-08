@@ -26,6 +26,7 @@
   * [Prep Work](./week-3#prep-work)
   * [Lesson Plan](./week-3#lesson-plan)
   * [Assignments](./week-3#assignments)
+* [Class Recordings](./class-recordings.md)
 * [Study Links](https://study.hackyourfuture.be) (external)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
 
