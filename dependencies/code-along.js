@@ -972,7 +972,7 @@ codeAlong.clearScheduled = (() => {
         clearTimeout(i);
       };
     };
-    alert('cleared all ' + type);
+    // alert('cleared all ' + type);
     lastClearing[type] = nowMax + 1;
   };
 })();
