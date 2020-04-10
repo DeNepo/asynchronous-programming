@@ -33,12 +33,12 @@ Scheduling tasks on the Event Loop: `setTimeout`, `clearTimeout`.  `setInterval`
 
 ### Isolate
 
-* The Event Loop: [examples](../javascripting/event-loop-examples), [exercises](../javascripting/event-loop-exercises)
+* The Event Loop: [examples](../isolate/event-loop-examples), [exercises](../isolate/event-loop-exercises)
 
 ### Integrate
 
-* [Cyclo](../example-projects/cyclo)
-* [Sketchpad](../example-projects/sketchpad)
+* [Cyclo](../integrate/cyclo)
+* [Sketchpad](../integrate/sketchpad)
 * [Whack-A-Mole](https://github.com/hackyourfuturebelgium/whack-a-mole) (starter repository)
 
 ---

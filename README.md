@@ -12,8 +12,6 @@
 
 * [Module Summary](#module-summary)
 * [Learning Objectives](#learning-objectives)
-* [Example Projects](./example-projects)
-* [In-Class Exercises](./javascripting)
 * [Week 1](./week-1)
   * [Prep Work](./week-1#prep-work)
   * [Lesson Plan](./week-1#lesson-plan)
@@ -26,6 +24,8 @@
   * [Prep Work](./week-3#prep-work)
   * [Lesson Plan](./week-3#lesson-plan)
   * [Assignments](./week-3#assignments)
+* [Isolate](./isolate)
+* [Integrate](./integrate)
 * [Class Recordings](./class-recordings.md)
 * [Study Links](https://study.hackyourfuture.be) (external)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
