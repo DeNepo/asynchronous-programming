@@ -295,8 +295,12 @@ codeAlong.document = (iframe, steps, config) => {
   const outputEl = document.createElement('iframe');
   // can do better than this
   config.title
-    ? outputEl.style = "width:100%;height:85%;"
-    : outputEl.style = "width:100%;height:90%;";
+    ? config.clearScheduled
+      ? outputEl.style = "width:100%;height:78%;"
+      : outputEl.style = "width:100%;height:85%;"
+    : config.clearScheduled
+      ? outputEl.style = "width:100%;height:85%;"
+      : outputEl.style = "width:100%;height:90%;";
   outputEl.id = '\n-- study: rendered DOM --\n';
   outputEl.src = "data:text/html;charset=utf-8," + encodeURIComponent(steps[0].code);
 

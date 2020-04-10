@@ -29,16 +29,17 @@
 
 > [Lesson Plan Slides](https://hackyourfuture.be/asynchronous-programming/week-1)
 
-... a few words ...
+Scheduling tasks on the Event Loop: `setTimeout`, `clearTimeout`.  `setInterval`, `clearInterval`
 
 ### Isolate
 
-* \_: [examples](../javascripting/_/), [exercises](../javascripting/_/)
+* The Event Loop: [examples](../javascripting/event-loop-examples), [exercises](../javascripting/event-loop-exercises)
 
 ### Integrate
 
-* \_: [stepped](../example-projects/_), [separated](../example-projects/_)
-* [\_](https://github.com/hackyourfuturebelgium/coming-soon) (starter repo)
+* [Cyclo](../example-projects/cyclo)
+* [Sketchpad](../example-projects/sketchpad)
+* [Whack-A-Mole](https://github.com/hackyourfuturebelgium/whack-a-mole) (starter repository)
 
 ---
 
@@ -53,7 +54,6 @@
 Solve each exercise on a separate branch and merge to master when they are complete.  Be sure to run `$ node review.js` before pushing to make it easier for your coaches to review your work.
 
 * [Closure](https://github.com/hackyourfuturebelgium/closure)
-* [Arrow Functions](https://github.com/hackyourfuturebelgium/arrow-functions)
 * [Promises](https://github.com/hackyourfuturebelgium/promises)
 
 #### Integrating JavaScript
@@ -61,9 +61,11 @@ Solve each exercise on a separate branch and merge to master when they are compl
 * Form a group of 2-3 and Complete 1 [JavaScript 30](https://github.com/hackyourfuturebelgium/javascript-30) group challenge, your choice!
   * Link to your team's main repository in your homework issue
 
-#### Extra Practice
+#### Suggested Study
 
-* [The Callstack](https://github.com/hackyourfuturebelgium/callstack)
+* `this` and `() => {}`: [tyler mcginnis](https://tylermcginnis.com/arrow-functions/), [youtube search](https://www.youtube.com/results?search_query=arrow+function+binding+this), [dario garcia moya](https://www.codementor.io/@dariogarciamoya/understanding-this-in-javascript-with-arrow-functions-gcpjwfyuc)
+* The Callstack: [youtube search](https://www.youtube.com/results?search_query=javascript+callstack)
+* [Traversy: Asynchronous Programming](https://www.youtube.com/watch?v=PoRJizFvM7s)
 
 ### Project: `repo-name`
 
