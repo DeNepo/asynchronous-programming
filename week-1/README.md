@@ -67,18 +67,20 @@ Solve each exercise on a separate branch and merge to master when they are compl
 * The Callstack: [youtube search](https://www.youtube.com/results?search_query=javascript+callstack)
 * [Traversy: Asynchronous Programming](https://www.youtube.com/watch?v=PoRJizFvM7s)
 
-### Project: `repo-name`
+### Project: `budget-app`
 
 > [project type](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
-This week's project is to study the [link to project (starter repo, tutorial, ...)](_).  _more about the project, what it covers, any extra info_
+This week's project is to study the [budget-app tutorial](https://www.youtube.com/watch?v=m_HJ3juuFvo) from FCC.  You will build a more complex project that uses classes
 
-You will be expected to turn in your code from his tutorial on a new repository called `repo-name`.  This should be a complete project repository including:
+You will be expected to turn in your code from his tutorial on a new repository called `budget-app`.  This should be a complete project repository including:
 
 * A `development-strategy.md` file to explain how you built the app in small pieces (this file doesn't need to match the tutorial!)
 * One branch per step in your `development-strategy.md`
-* _something about how to organize the code_
-* _any more requirements_
+* The final tutorial code refactored into a well-thought-out folder structure
+* A project board & issues to track your progress through your development strategy
+* A live demo
+* A complete README
 
 You will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.
 
