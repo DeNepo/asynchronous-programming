@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Asynchronous Programming: Week 1</title>
+  <title>Asynchronous Programming: Week 2</title>
 
   <script src='../dependencies/code-along.js'></script>
 
@@ -61,12 +61,12 @@
       <section id='cover-slide'>
         <h2>Asynchronous Programming</h2>
         <br>
-        <h3>Week 1</h3>
+        <h3>Week 2</h3>
         <br>
         <code>"s"</code> for speaker notes
         <br>
         <br>
-        <a href="https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-1" target='_blank'>
+        <a href="https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-2" target='_blank'>
           -- back to repo --
         </a>
       </section>
@@ -85,16 +85,21 @@
           <h3>Isolate</h3>
           <br>
           <ul>
-            <li>The Event Loop</li>
-            <li><code>setTimeout</code></li>
-            <li><code>setInterval</code></li>
+            <li>
+              <code>What are API's?</code>
+            </li>
+            <li>
+              <code>fetch</code>
+            </li>
           </ul>
         </section>
         <section>
           <h3>Integrate</h3>
           <br>
           <ul>
-            <li>Interactive Game Boards</li>
+            <li>
+              <code>Consuming and rendering API data</code>
+            </li>
           </ul>
         </section>
       </section>
@@ -136,11 +141,11 @@
         <section>
           <h1>What You'll Build</h1>
           <br>
-          <p>Whack-A-Mole</p>
+          <p></p>
         </section>
         <section>
           <iframe style='background-color:white; height: 75vh; width: 100%;'
-            src='../integrate/whack-a-mole-obfuscated/index.html'></iframe>
+            src='../integrate/_-obfuscated/index.html'></iframe>
         </section>
       </section>
 
@@ -151,7 +156,7 @@
 
       <section id='the-event-loop'>
         <section>
-          <h2>The Event Loop</h2>
+          <h2>Fetching Data</h2>
           <br>
           <code>(pair programming)</code>
         </section>
@@ -160,94 +165,104 @@
           <br>
           <ul>
             <li>
-              <a href='https://javascript.info/settimeout-setinterval' target='_blank'>
-                javascript.info: scheduling</a>
+              <a href='https://javascript.info/fetch' target='_blank'>
+                <code>fetch</code></a>
             </li>
             <li>
-              <a href='http://latentflip.com/loupe/?code=!!!' target='_blank'>
-                Loupe</a>
+              <a href='https://jsonplaceholder.typicode.com' target='_blank'>
+                jsonplaceholder.typicode.com</a>,
+              <a href='https://jsonplaceholder.typicode.com/guide.html' target='_blank'>
+                guide</a>
             </li>
             <li>
-              <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop' target='_blank'>
-                MDN: the event loop</a>
+              <a href='https://jsonplaceholder.typicode.com/todos' target='_blank'>
+                Explore: <code>/todos</code> </a>
+            </li>
+            <li>
+              <a href='https://jsonplaceholder.typicode.com/posts' target='_blank'>
+                Explore: <code>/posts</code> </a>
+            </li>
+            <li>
+              <a href='https://jsonplaceholder.typicode.com/comments' target='_blank'>
+                Explore: <code>/comments</code> </a>
+            </li>
+            <li>
+              DevTools Network Tab:
+              <a href='https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor' target='_blank'>
+                Firefox</a>, <a href='https://developers.google.com/web/tools/chrome-devtools/network/' target='_blank'>
+                Chrome</a>
             </li>
           </ul>
         </section>
-        <section id='event-loop-examples'>
+        <section id='fetch-examples'>
           <script>
             codeAlong({
-              title: 'Event Loop: Examples',
-              container: 'event-loop-examples',
+              title: 'Fetch: Examples',
+              container: 'fetch-examples',
               type: 'js',
               openIn: [],
-              clearScheduled: true,
               preserveLogs: true,
               source: [
                 {
-                  name: 'Callbacks',
-                  path: '../isolate/event-loop-examples/callbacks.js',
+                  name: '/todos/1',
+                  path: '../isolate/fetch-examples/todos-1.js',
                 },
                 {
-                  name: 'setTimeout',
-                  path: '../isolate/event-loop-examples/set-timeout.js',
+                  name: '/todos/40',
+                  path: '../isolate/fetch-examples/todos-40.js',
                 },
                 {
-                  name: 'clearTimeout',
-                  path: '../isolate/event-loop-examples/clear-timeout.js',
+                  name: '/posts/1',
+                  path: '../isolate/fetch-examples/posts-1.js',
                 },
                 {
-                  name: 'setInterval',
-                  path: '../isolate/event-loop-examples/set-interval.js',
+                  name: '/posts/1/comments',
+                  path: '../isolate/fetch-examples/posts-1-comments.js',
                 },
                 {
-                  name: 'clearInterval',
-                  path: '../isolate/event-loop-examples/clear-interval.js',
-                },
-                {
-                  name: 'Zero Delays',
-                  path: '../isolate/event-loop-examples/zero-delays.js',
-                },
-                {
-                  name: 'Passing Arguments',
-                  path: '../isolate/event-loop-examples/passing-arguments.js',
+                  name: '/comments?postId=1',
+                  path: '../isolate/fetch-examples/comments-postid-1.js',
                 },
               ]
             });
           </script>
         </section>
-        <section id='event-loop-exercises'>
+        <section id='fetch-exercises'>
           <script>
             codeAlong({
-              title: 'Event Loop: Exercises',
-              container: 'event-loop-exercises',
+              title: 'Fetch: Exercises',
+              container: 'fetch-exercises',
               type: 'js',
               openIn: [],
-              clearScheduled: true,
               preserveLogs: true,
               source: [
                 {
-                  name: 'Exercise 1',
-                  path: '../isolate/event-loop-exercises/exercise-1.js',
+                  name: 'exercise 1',
+                  path: '../isolate/fetch-exercises/exercise-1.js',
                 },
                 {
-                  name: 'Exercise 2',
-                  path: '../isolate/event-loop-exercises/exercise-2.js',
+                  name: 'exercise 2',
+                  path: '../isolate/fetch-exercises/exercise-2.js',
                 },
                 {
-                  name: 'Exercise 3',
-                  path: '../isolate/event-loop-exercises/exercise-3.js',
+                  name: 'exercise 3',
+                  path: '../isolate/fetch-exercises/exercise-3.js',
                 },
                 {
-                  name: 'Exercise 4',
-                  path: '../isolate/event-loop-exercises/exercise-4.js',
+                  name: 'exercise 4',
+                  path: '../isolate/fetch-exercises/exercise-4.js',
                 },
                 {
-                  name: 'Exercise 5',
-                  path: '../isolate/event-loop-exercises/exercise-5.js',
+                  name: 'exercise 5',
+                  path: '../isolate/fetch-exercises/exercise-5.js',
                 },
                 {
-                  name: 'Exercise 6',
-                  path: '../isolate/event-loop-exercises/exercise-6.js',
+                  name: 'exercise 6',
+                  path: '../isolate/fetch-exercises/exercise-6.js',
+                },
+                {
+                  name: 'exercise 7',
+                  path: '../isolate/fetch-exercises/exercise-7.js',
                 },
               ]
             });
@@ -312,7 +327,7 @@
           <p>It's only just beginning :)</p>
         </section>
         <section>
-          <h2><a href='https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-1'
+          <h2><a href='https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-2'
               target='_blank'>
               The Assignments</a></h2>
         </section>
@@ -343,12 +358,12 @@
       <section id='cover-slide'>
         <h2>Asynchronous Programming</h2>
         <br>
-        <h3>Week 1</h3>
+        <h3>Week 2</h3>
         <br>
         <code>"s"</code> for speaker notes
         <br>
         <br>
-        <a href="https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-1" target='_blank'>
+        <a href="https://github.com/hackyourfuturebelgium/asynchronous-programming/tree/master/week-2" target='_blank'>
           -- back to repo --
         </a>
       </section>

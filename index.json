@@ -1,0 +1,333 @@
+{
+  "path": "/00-repo",
+  "dirs": [
+    {
+      "path": "/dependencies",
+      "files": [
+        {
+          "path": "/beautify.js"
+        },
+        {
+          "path": "/code-along.js"
+        }
+      ],
+      "dirs": [
+        {
+          "path": "/ace",
+          "files": [
+            {
+              "path": "/ace.js"
+            },
+            {
+              "path": "/ext-beautify.js"
+            },
+            {
+              "path": "/ext-language_tools.js"
+            },
+            {
+              "path": "/keybinding-sublime.js"
+            },
+            {
+              "path": "/keybinding-vscode.js"
+            },
+            {
+              "path": "/mode-html.js"
+            },
+            {
+              "path": "/mode-javascript.js"
+            },
+            {
+              "path": "/mode-json.js"
+            },
+            {
+              "path": "/mode-json5.js"
+            },
+            {
+              "path": "/theme-chrome.js"
+            },
+            {
+              "path": "/theme-iplastic.js"
+            },
+            {
+              "path": "/worker-css.js"
+            },
+            {
+              "path": "/worker-html.js"
+            },
+            {
+              "path": "/worker-javascript.js"
+            },
+            {
+              "path": "/worker-json.js"
+            }
+          ],
+          "dirs": [
+            {
+              "path": "/snippets",
+              "files": [
+                {
+                  "path": "/css.js"
+                },
+                {
+                  "path": "/html.js"
+                },
+                {
+                  "path": "/javascript.js"
+                },
+                {
+                  "path": "/json.js"
+                },
+                {
+                  "path": "/json5.js"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/prettier",
+          "files": [
+            {
+              "path": "/parser-babylon.js"
+            },
+            {
+              "path": "/standalone.js"
+            }
+          ]
+        },
+        {
+          "path": "/reveal.js",
+          "files": [
+            {
+              "path": "/gruntfile.js"
+            }
+          ],
+          "dirs": [
+            {
+              "path": "/js",
+              "files": [
+                {
+                  "path": "/reveal.js"
+                }
+              ]
+            },
+            {
+              "path": "/lib",
+              "dirs": [
+                {
+                  "path": "/js",
+                  "files": [
+                    {
+                      "path": "/html5shiv.js"
+                    },
+                    {
+                      "path": "/promise.js"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "path": "/plugin",
+              "dirs": [
+                {
+                  "path": "/highlight",
+                  "files": [
+                    {
+                      "path": "/highlight.js"
+                    }
+                  ]
+                },
+                {
+                  "path": "/notes",
+                  "files": [
+                    {
+                      "path": "/notes.js"
+                    }
+                  ]
+                },
+                {
+                  "path": "/search",
+                  "files": [
+                    {
+                      "path": "/search.js"
+                    }
+                  ]
+                },
+                {
+                  "path": "/zoom-js",
+                  "files": [
+                    {
+                      "path": "/zoom.js"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/test-examples",
+          "files": [
+            {
+              "path": "/assertions.js"
+            }
+          ],
+          "dirs": [
+            {
+              "path": "/value-swap",
+              "files": [
+                {
+                  "path": "/0-setup.js"
+                },
+                {
+                  "path": "/1-store-2.js"
+                },
+                {
+                  "path": "/2-reassign-a.js"
+                },
+                {
+                  "path": "/3-use-stored-value.js"
+                }
+              ]
+            }
+          ],
+          "isExample": true
+        }
+      ]
+    },
+    {
+      "path": "/integrate",
+      "dirs": [
+        {
+          "path": "/cyclo",
+          "files": [
+            {
+              "path": "/init.js"
+            }
+          ]
+        },
+        {
+          "path": "/sketchpad",
+          "files": [
+            {
+              "path": "/init.js"
+            }
+          ]
+        },
+        {
+          "path": "/whack-a-mole-obfuscated",
+          "files": [
+            {
+              "path": "/bundle.min.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/isolate",
+      "dirs": [
+        {
+          "path": "/event-loop-examples",
+          "files": [
+            {
+              "path": "/callbacks.js"
+            },
+            {
+              "path": "/clear-interval.js"
+            },
+            {
+              "path": "/clear-timeout.js"
+            },
+            {
+              "path": "/passing-arguments.js"
+            },
+            {
+              "path": "/set-interval.js"
+            },
+            {
+              "path": "/set-timeout.js"
+            },
+            {
+              "path": "/zero-delays.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/event-loop-exercises",
+          "files": [
+            {
+              "path": "/exercise-1.js"
+            },
+            {
+              "path": "/exercise-2.js"
+            },
+            {
+              "path": "/exercise-3.js"
+            },
+            {
+              "path": "/exercise-4.js"
+            },
+            {
+              "path": "/exercise-5.js"
+            },
+            {
+              "path": "/exercise-6.js"
+            }
+          ]
+        },
+        {
+          "path": "/fetch-examples",
+          "files": [
+            {
+              "path": "/comments-postid-1.js"
+            },
+            {
+              "path": "/posts-1-comments.js"
+            },
+            {
+              "path": "/posts-1.js"
+            },
+            {
+              "path": "/todos-1.js"
+            },
+            {
+              "path": "/todos-40.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/fetch-exercises",
+          "files": [
+            {
+              "path": "/exercise-1.js"
+            },
+            {
+              "path": "/exercise-2.js"
+            },
+            {
+              "path": "/exercise-3.js"
+            },
+            {
+              "path": "/exercise-4.js"
+            },
+            {
+              "path": "/exercise-5.js"
+            },
+            {
+              "path": "/exercise-6.js"
+            },
+            {
+              "path": "/exercise-7.js"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lastBuild": "2020-04-15T16:12:12.146Z",
+  "title": "promises"
+}

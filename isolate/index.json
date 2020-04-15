@@ -1,0 +1,104 @@
+{
+  "path": "",
+  "dirs": [
+    {
+      "path": "/event-loop-examples",
+      "files": [
+        {
+          "path": "/callbacks.js"
+        },
+        {
+          "path": "/clear-interval.js"
+        },
+        {
+          "path": "/clear-timeout.js"
+        },
+        {
+          "path": "/passing-arguments.js"
+        },
+        {
+          "path": "/set-interval.js"
+        },
+        {
+          "path": "/set-timeout.js"
+        },
+        {
+          "path": "/zero-delays.js"
+        }
+      ],
+      "isExample": true
+    },
+    {
+      "path": "/event-loop-exercises",
+      "files": [
+        {
+          "path": "/exercise-1.js"
+        },
+        {
+          "path": "/exercise-2.js"
+        },
+        {
+          "path": "/exercise-3.js"
+        },
+        {
+          "path": "/exercise-4.js"
+        },
+        {
+          "path": "/exercise-5.js"
+        },
+        {
+          "path": "/exercise-6.js"
+        }
+      ]
+    },
+    {
+      "path": "/fetch-examples",
+      "files": [
+        {
+          "path": "/comments-postid-1.js"
+        },
+        {
+          "path": "/posts-1-comments.js"
+        },
+        {
+          "path": "/posts-1.js"
+        },
+        {
+          "path": "/todos-1.js"
+        },
+        {
+          "path": "/todos-40.js"
+        }
+      ],
+      "isExample": true
+    },
+    {
+      "path": "/fetch-exercises",
+      "files": [
+        {
+          "path": "/exercise-1.js"
+        },
+        {
+          "path": "/exercise-2.js"
+        },
+        {
+          "path": "/exercise-3.js"
+        },
+        {
+          "path": "/exercise-4.js"
+        },
+        {
+          "path": "/exercise-5.js"
+        },
+        {
+          "path": "/exercise-6.js"
+        },
+        {
+          "path": "/exercise-7.js"
+        }
+      ]
+    }
+  ],
+  "lastBuild": "2020-04-15T16:44:00.821Z",
+  "title": " Isolate: Aynchronous Programming"
+}

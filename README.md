@@ -6,7 +6,8 @@
   </a>
 </div>
 
->  quote
+> "Synchronous basically means that you can only execute one thing at a time. Asynchronous means that you can execute multiple things at a time and you don't have to finish executing the current thing in order to move on to next one."
+> * [StackOverflow](https://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
 
 ### Overview
 
@@ -24,8 +25,8 @@
   * [Prep Work](./week-3#prep-work)
   * [Lesson Plan](./week-3#lesson-plan)
   * [Assignments](./week-3#assignments)
-* [Isolate](./isolate)
-* [Integrate](./integrate)
+* [Isolate - examples & exercises](./isolate)
+* [Integrate - example projects](./integrate)
 * [Class Recordings](./class-recordings.md)
 * [Study Links](https://study.hackyourfuture.be) (external)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
@@ -40,13 +41,12 @@
 
 ## Learning Objectives
 
-### Programming Skills
-
-### Isolating JavaScript
-
-### Integrating JavaScript
-
-### Tooling
+* Use `setTimeout` and `setInterval` to schedule tasks
+* Write and consume promises
+* Refactor promises to async/await syntax
+* Use `fetch` to get data from an API
+* Use `import` and `export` to organize your projects
+* Read and write files using the `fs` node module
 
 [TOP](#overview)
 

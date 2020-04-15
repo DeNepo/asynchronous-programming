@@ -1,0 +1,13 @@
+Server running at http://localhost:3000/
+1. request: GET /
+1. response: ./index.html
+2. request: GET /app/index.js
+2. response: ./app/index.js
+3. request: GET /app/exercise.js
+4. request: GET /app/live-study.js
+3. response: ./app/exercise.js
+4. response: ./app/live-study.js
+5. request: GET /index.json
+5. response: ./index.json
+Ctrl-C...
+process.exit with code 2

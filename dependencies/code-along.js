@@ -416,6 +416,7 @@ codeAlong.js = (iframe, steps, config) => {
   });
 
   const resultsContainer = document.createElement('div');
+  resultsContainer.id = 'results';
 
 
   if (steps.length > 1) {
@@ -854,6 +855,23 @@ codeAlong.preparing_your_code = function (your_source_code, resultsContainer) {
 
   };
 
+  console.error = function () {
+    const args = Array.from(arguments);
+    nativeConsole.error(...args);
+
+    const error = args[0];
+    const errOrWarning = error.message === 'Loop exceeded 1000 iterations'
+      ? renderHaltingWarning(error)
+      : renderError(error);
+    resultsContainer.appendChild(errOrWarning);
+    resultsContainer.appendChild(renderPhase({ status: 1 }));
+    if (error && error.message && error.message.toLowerCase().includes('fetch')) {
+      const isAsync = document.createElement('pre');
+      isAsync.innerHTML = '   asynchronous error';
+      resultsContainer.appendChild(isAsync);
+    };
+  };
+
 
   const renderError = (err) => {
     if (!(err instanceof Error)) {
@@ -890,6 +908,7 @@ codeAlong.preparing_your_code = function (your_source_code, resultsContainer) {
   }
 
   window.onerror = function (msg, url, lineNo, columnNo, error) {
+    console.log('hi')
     // console.log(msg); // error name + message
     // console.log(url); // empty for exercises
     // console.log(lineNo); // number out of context
