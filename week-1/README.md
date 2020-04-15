@@ -67,7 +67,9 @@ Solve each exercise on a separate branch and merge to master when they are compl
 * The Callstack: [youtube search](https://www.youtube.com/results?search_query=javascript+callstack)
 * [Traversy: Asynchronous Programming](https://www.youtube.com/watch?v=PoRJizFvM7s)
 
-### Project: `budget-app`
+### Project
+
+#### `budget-app`
 
 > [project type](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
