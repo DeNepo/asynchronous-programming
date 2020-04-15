@@ -70,13 +70,11 @@ Solve each exercise on a separate branch and merge to master when they are compl
 
 * [async/await](https://duckduckgo.com/?q=what+is+async+await+javascript&atb=v214-2__&iar=videos&iax=videos&ia=videos)
 
-<!-- ### Project: `budget-app`
+### Project: `github-api-crash-course`
 
-> [project type](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
+> [Code-Along](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
-This week's project is to study the [budget-app tutorial](https://www.youtube.com/watch?v=m_HJ3juuFvo) from FCC.  You will build a more complex project that uses classes
-
-You will be expected to turn in your code from his tutorial on a new repository called `budget-app`.  This should be a complete project repository including:
+This week's project is to study the [github-api-crash-course tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE).  (hint: avoid pushing your GitHub auth token!).  This should be a complete project repository including:
 
 * A `development-strategy.md` file to explain how you built the app in small pieces (this file doesn't need to match the tutorial!)
 * One branch per step in your `development-strategy.md`
@@ -85,7 +83,7 @@ You will be expected to turn in your code from his tutorial on a new repository 
 * A live demo
 * A complete README
 
-You will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README. -->
+You will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.
 
 ---
 ---

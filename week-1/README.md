@@ -54,6 +54,7 @@ Scheduling tasks on the Event Loop: `setTimeout`, `clearTimeout`.  `setInterval`
 Solve each exercise on a separate branch and merge to master when they are complete.  Be sure to run `$ node review.js` before pushing to make it easier for your coaches to review your work.
 
 * [Closure](https://github.com/hackyourfuturebelgium/closure)
+* [Promise Practice](https://github.com/oliverjam/promise-practice)
 * [Promises](https://github.com/hackyourfuturebelgium/promises)
 
 #### Integrating JavaScript
