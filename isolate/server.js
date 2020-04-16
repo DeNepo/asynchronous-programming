@@ -18,7 +18,7 @@ try {
     };
   };
 } catch (err) {
-  console.log('--- creating ./logs directory ---');
+  console.log('--- creating ./server-logs directory ---');
   fs.mkdirSync(LOG_DIR);
 };
 

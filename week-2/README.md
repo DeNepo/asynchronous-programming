@@ -1,4 +1,4 @@
-# Week 1
+# Week 2
 
 ## Asynchronous Programming
 
@@ -42,10 +42,11 @@
 * `fetch`: [examples](../isolate/fetch-examples), [exercises](../isolate/fetch-exercises)
 
 ### Integrate
-<!--
-* [Cyclo](../integrate/cyclo)
-* [Sketchpad](../integrate/sketchpad)
-* [Whack-A-Mole](https://github.com/hackyourfuturebelgium/whack-a-mole) (starter repository) -->
+
+* [Explore Albums](../integrate/explore-albums)
+* [Explore Posts](../integrate/explore-posts)
+* [Explore Users](../integrate/explore-users-obfuscated) (obfuscated)
+* [in-class project](https://github.com/hackyourfuturebelgium/explore-users) (starter repository)
 
 ---
 
