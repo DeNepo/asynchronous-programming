@@ -22,6 +22,7 @@
 
 * [How do they work?](https://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
 * [Like a Restaurant](https://www.youtube.com/watch?v=s7wmiS2mSXY)
+* [MuleSoft Explains](https://www.youtube.com/watch?v=s7wmiS2mSXY)
 
 ### `fetch`
 
