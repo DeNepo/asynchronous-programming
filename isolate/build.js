@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const TITLE = ' Isolate: Aynchronous Programming';
+const TITLE = ' Isolate: Asynchronous Programming';
 const DIR = '.'
   + (process.argv[2]
     ? process.argv[2]
