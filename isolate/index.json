@@ -95,10 +95,16 @@
         },
         {
           "path": "/exercise-7.js"
+        },
+        {
+          "path": "/exercise-8.js"
+        },
+        {
+          "path": "/exercise-9.js"
         }
       ]
     }
   ],
-  "lastBuild": "2020-04-15T16:44:00.821Z",
+  "lastBuild": "2020-04-16T10:08:01.475Z",
   "title": " Isolate: Aynchronous Programming"
 }
