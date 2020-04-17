@@ -80,16 +80,25 @@ Solve each exercise on a separate branch and merge to master when they are compl
 
 > [Starter Code](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
+This week's project is to refactor your final code from Practical JavaScript to include ES6 `class`es, `fetch` and a RESTful backend to access your app's data.  This time, your app's data won't be hard-coded into your JavaScript source.  Your first fullstack project!
 
+After forking [the starter repository](https://github.com/hackyourfuturebelgium/restful-pjs), you will have a fully-working backend.  You will need to write the frontend, and are free to organize your frontend code however you like as long as it:
+
+* Is not in one file.  Please separate your concerns.
+* Is all in the `/public` folder
+* And builds from `/public/index.html`
+
+Your finished repository must include:
 
 * A `development-strategy.md` file to explain how you built the app in small pieces (this file doesn't need to match the tutorial!)
 * One branch per step in your `development-strategy.md`
-* The final tutorial code refactored into a well-thought-out folder structure
+* Your code in `/public`, refactored from Practical JavaScript to include classes & fetch
 * A project board & issues to track your progress through your development strategy
-* A live demo
 * A complete README
 
-You will be assessed not only on your live demo, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.
+You will be assessed not on completion, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.
+
+A live demo isn't required for this project, but is a nice touch. Because this project has a backend it's not possible to deploy it with GitHub Pages.  The simplest option will be to [deploy it with Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true).
 
 ---
 ---
