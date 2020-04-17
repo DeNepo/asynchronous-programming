@@ -59,13 +59,10 @@
 
 #### Isolating JavaScript
 
-Solve each exercise on a separate branch and merge to master when they are complete.  Be sure to run `$ node review.js` before pushing to make it easier for your coaches to review your work.
-
 * [learn-fetch](https://github.com/oliverjam/learn-fetch) & [real-world-fetch](https://github.com/oliverjam/real-world-fetch)
     * These repository contain a very helpful README, starter code in `workshop.html` and a solution to study.
     * Your task is to write a _different_ solution with separated concerns that runs from _index.html_
     * Turn on github-pages so your coaches can review the live project
-* [Fetching Data](https://github.com/hackyourfuturebelgium/fetching-data)
 
 #### Integrating JavaScript
 
