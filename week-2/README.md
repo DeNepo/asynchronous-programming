@@ -76,11 +76,11 @@ Solve each exercise on a separate branch and merge to master when they are compl
 
 * [async/await](https://duckduckgo.com/?q=what+is+async+await+javascript&atb=v214-2__&iar=videos&iax=videos&ia=videos)
 
-### Project: `github-api-crash-course`
+### Project: `restful-pjs`
 
-> [Code-Along](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
+> [Starter Code](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
-This week's project is to study the [github-api-crash-course tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE).  (hint: avoid pushing your GitHub auth token!).  This should be a complete project repository including:
+
 
 * A `development-strategy.md` file to explain how you built the app in small pieces (this file doesn't need to match the tutorial!)
 * One branch per step in your `development-strategy.md`
