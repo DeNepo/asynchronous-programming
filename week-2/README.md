@@ -24,6 +24,11 @@
 * [Like a Restaurant](https://www.youtube.com/watch?v=s7wmiS2mSXY)
 * [MuleSoft Explains](https://www.youtube.com/watch?v=s7wmiS2mSXY)
 
+### RESTful
+
+* [jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
+* [restfulapi.net](https://restfulapi.net/)
+
 ### `fetch`
 
 * [javascript.info/fetch](https://javascript.info/fetch)

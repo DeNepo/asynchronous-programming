@@ -15,3 +15,8 @@ Screen recordings of class.  Coaches, when sending your PR's with links please m
 1. week 1:
     * Part 1: [The Event Loop](https://vimeo.com/406780143) - [Anthony](https://github.com/Toinne/)
     * Part 2: [In-Class Project](https://vimeo.com/408313126) - [Kevin](https://github.com/kevintss/)
+1. week 2:
+    * Part 1: [`fetch` & REST](ttps://vimeo.com/409437916) - [Kevin](https://github.com/kevintss/)
+    * Part 2: [In-Class Project](https://vimeo.com/409459062) - [Anthony](https://github.com/Toinne/)
+
+
