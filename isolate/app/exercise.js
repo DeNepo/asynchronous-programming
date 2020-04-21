@@ -1,18 +1,5 @@
 export default class Exercise {
 
-  static populate(data, path) {
-    path = path || data.path;
-    if (data.files) {
-      data.exercises = data.files
-        .map(relPath => new this(relPath, path));
-    };
-    if (data.dirs) {
-      data.dirs.forEach(subDir => this.populate(subDir, path + subDir.path));
-    };
-    return data;
-    // by side effect
-  }
-
   path = {
     rel: null,
     abs: null

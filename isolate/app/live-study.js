@@ -1,4 +1,5 @@
 export default class LiveStudy {
+
   constructor(exercises, title) {
     this.exercises = exercises;
   }
@@ -21,20 +22,33 @@ export default class LiveStudy {
   renderExercises(exercises) {
     const virDir = exercises || this.exercises;
 
+    if (virDir.isProject) {
+      const projectView = virDir.project.render();
+      const container = document.createElement('li');
+      container.appendChild(projectView);
+      return container;
+    };
+
     const detailsEl = document.createElement('details');
     const summaryEl = document.createElement('summary');
-    // summaryEl.innerHTML = virDir.path;
-    const loadAllButton = document.createElement('button');
-    loadAllButton.innerHTML = virDir.path + ' (run all)';
-    loadAllButton.onclick = () => {
-      console.log('loading: ' + virDir.path);
-      virDir.exercises.forEach(exercise =>
-        exercise.fetchCode()
-          .then(() => exercise.run(false))
-          .catch(err => console.error(err))
-      );
+
+    if (virDir.exercises) {
+      const loadAllButton = document.createElement('button');
+      loadAllButton.innerHTML = virDir.path + ' (run all)';
+      loadAllButton.onclick = () => {
+        console.log('loading: ' + virDir.path);
+        virDir.exercises.forEach(exercise =>
+          exercise.fetchCode()
+            .then(() => exercise.run(false))
+            .catch(err => console.error(err))
+        );
+      }
+      summaryEl.appendChild(loadAllButton);
+    } else {
+      const subDirText = document.createElement('text');
+      subDirText.innerHTML = virDir.path;
+      summaryEl.appendChild(subDirText);
     };
-    summaryEl.appendChild(loadAllButton);
     detailsEl.appendChild(summaryEl);
 
     const subListEl = document.createElement('ul');

@@ -103,8 +103,153 @@
           "path": "/exercise-9.js"
         }
       ]
+    },
+    {
+      "path": "/import-export-examples",
+      "dirs": [
+        {
+          "path": "/0-hello-user",
+          "files": [
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/user.js"
+            }
+          ],
+          "isProject": true
+        },
+        {
+          "path": "/1-hello-user",
+          "files": [
+            {
+              "path": "/hello.js"
+            },
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/user.js"
+            }
+          ],
+          "isProject": true
+        },
+        {
+          "path": "/2-export-before-declarations",
+          "files": [
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/script.js"
+            }
+          ],
+          "isProject": true
+        },
+        {
+          "path": "/3-export-apart-from-declarations",
+          "files": [
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/script.js"
+            }
+          ],
+          "isProject": true
+        },
+        {
+          "path": "/4-import-star",
+          "files": [
+            {
+              "path": "/greetings.js"
+            },
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/main.js"
+            }
+          ],
+          "isProject": true
+        },
+        {
+          "path": "/5-import-as",
+          "files": [
+            {
+              "path": "/greetings.js"
+            },
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/main.js"
+            }
+          ],
+          "isProject": true
+        },
+        {
+          "path": "/6-export-as",
+          "files": [
+            {
+              "path": "/greetings.js"
+            },
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/main.js"
+            }
+          ],
+          "isProject": true
+        },
+        {
+          "path": "/7-export-default",
+          "files": [
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/main.js"
+            },
+            {
+              "path": "/user.js"
+            }
+          ],
+          "isProject": true
+        },
+        {
+          "path": "/8-re-export",
+          "files": [
+            {
+              "path": "/index.html"
+            },
+            {
+              "path": "/main.js"
+            }
+          ],
+          "dirs": [
+            {
+              "path": "/auth",
+              "files": [
+                {
+                  "path": "/helpers.js"
+                },
+                {
+                  "path": "/index.js"
+                },
+                {
+                  "path": "/user.js"
+                }
+              ]
+            }
+          ],
+          "isProject": true
+        }
+      ],
+      "isExample": true
     }
   ],
-  "lastBuild": "2020-04-16T10:41:02.935Z",
+  "lastBuild": "2020-04-21T13:53:05.325Z",
   "title": " Isolate: Asynchronous Programming"
 }

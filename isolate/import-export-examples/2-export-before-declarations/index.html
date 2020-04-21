@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  <title id='export before declarations'></title>
+  <script>debugger;</script>
+  <script type="module">
+    import {
+      months, User,
+      MODULES_BECAME_STANDARD_YEAR
+    } from './script.js';
+
+    const pig = new User('pig');
+    months = 'hi!';
+    MODULES_BECAME_STANDARD_YEAR = 2063;
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

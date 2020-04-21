@@ -24,7 +24,11 @@ const register = function (dirPath) {
       }, false);
 
     const isDirectory = fs.statSync(dirPath + '/' + nextPath).isDirectory();
-    if (!isDirectory && path.extname(nextPath) !== '.js') continue;
+    if (!isDirectory
+      && path.extname(nextPath) !== '.js'
+      && path.extname(nextPath) !== '.html') {
+      continue;
+    };
 
     if (isDirectory) {
       const subDir = register(dirPath + '/' + nextPath);
@@ -54,11 +58,25 @@ const register = function (dirPath) {
 };
 
 
-console.log('\n--- registering .js files in ' + DIR + ' ---\n');
+console.log('\n--- registering .js & .html files in ' + DIR + ' ---\n');
 const registered = register(DIR);
 registered.lastBuild = (new Date()).toJSON();
 registered.title = TITLE;
 registered.path = '';
+delete registered.files;
+
+console.log('\n--- identifying project sub-directories ---\n');
+const isProject = (virDir) => {
+  if (virDir.files && !virDir.files
+    .every(file => !file.path.includes('.html'))) {
+    virDir.isProject = true;
+  }
+  if (virDir.dirs) {
+    virDir.dirs.forEach(subDir => isProject(subDir));
+  }
+};
+isProject(registered);
+delete registered.isProject;
 
 console.log('\n--- writing ' + DIR + '/index.json ---\n');
 const stringifiedReg = JSON.stringify(registered, null, '  ');
