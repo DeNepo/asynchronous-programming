@@ -36,14 +36,12 @@ Using `import` & `export` to organize your code.
 
 ### Isolate
 
-* `fetch`: [examples](../isolate/fetch-examples), [exercises](../isolate/fetch-exercises)
+To study these examples and exercises you will need to open each folder's `index.html` file with a server.  You can use the `server.js` file provided in [../isolate](../isolate).
+
+* `import` and `export`: [examples](../isolate/import-export-examples)
 
 ### Integrate
 
-* [Explore Albums](../integrate/explore-albums)
-* [Explore Posts](../integrate/explore-posts)
-* [Explore Users](../integrate/explore-users-obfuscated) (obfuscated)
-* [in-class project](https://github.com/hackyourfuturebelgium/explore-users) (starter repository)
 
 ---
 
