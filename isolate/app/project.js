@@ -21,7 +21,7 @@ export default class Project {
   render() {
 
     const runButtonEl = document.createElement('button');
-    runButtonEl.innerHTML = this.path.rel;
+    runButtonEl.innerHTML = this.path.rel.replace('/index.html', '');
     runButtonEl.onclick = () => window.open(this.path.abs, '_blank');
 
     const container = document.createElement('text');
