@@ -38,10 +38,12 @@ Using `import` & `export` to organize your code.
 
 To study these examples and exercises you will need to open each folder's `index.html` file with a server.  You can use the `server.js` file provided in [../isolate](../isolate).
 
-* `import` and `export`: [examples](../isolate/import-export-examples)
+* `import` and `export`: [examples](../isolate/import-export-examples),  [exercises](../isolate/import-export-exercises)
 
 ### Integrate
 
+* [Explore Pokemon](../integrate/explore-pokemon-obfuscated) (obfuscated)
+* [in-class project](https://github.com/hackyourfuturebelgium/explore-pokemon) (starter repository)
 
 ---
 
