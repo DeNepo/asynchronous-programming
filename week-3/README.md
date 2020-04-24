@@ -76,7 +76,9 @@ To study these examples and exercises you will need to open each folder's `index
 * [github-api-crash-course tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE).  (hint: avoid pushing your GitHub auth token!)
 * [what is CORS?](https://www.codecademy.com/articles/what-is-cors)
 
-### Project: `<username>.github.io`
+### Project
+
+#### `<username>.github.io`
 
 > [Open-Ended](https://github.com/HackYourFutureBelgium/homework-submission/#projects)
 
