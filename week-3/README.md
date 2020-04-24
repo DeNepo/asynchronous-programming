@@ -98,7 +98,7 @@ Your finished repository must include:
 * A complete README
 * A live demo
 
-You will be assessed not on completion, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.
+You will be assessed not only completion, but also on the quality of your code, the correctness of your branches, the organization of your code, and the completeness of your README.
 
 
 ---
