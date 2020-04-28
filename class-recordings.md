@@ -14,9 +14,13 @@ Screen recordings of class.  Coaches, when sending your PR's with links please m
 
 1. week 1:
     * Part 1: [The Event Loop](https://vimeo.com/406780143) - [Anthony](https://github.com/Toinne/)
-    * Part 2: [In-Class Project](https://vimeo.com/408313126) - [Kevin](https://github.com/kevintss/)
+    * Part 2: [Whack-a-Mole](https://vimeo.com/408313126) - [Kevin](https://github.com/kevintss/)
 1. week 2:
-    * Part 1: [`fetch` & REST](ttps://vimeo.com/409437916) - [Kevin](https://github.com/kevintss/)
-    * Part 2: [In-Class Project](https://vimeo.com/409459062) - [Anthony](https://github.com/Toinne/)
+    * Part 1: [`fetch` & REST](https://vimeo.com/409437916) - [Kevin](https://github.com/kevintss/)
+    * Part 2: [Explore Users](https://vimeo.com/409459062) - [Anthony](https://github.com/Toinne/)
+1. week 3:
+    * Part 1: [`import` and `export`](https://vimeo.com/412299042) - [Anthony](https://github.com/Toinne/)
+    * Part 2: [Explore Pokemon](https://vimeo.com/412616444) - [Anthony](https://github.com/Toinne/)
+
 
 
