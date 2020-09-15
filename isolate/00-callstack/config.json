@@ -1,0 +1,13 @@
+{
+  "buttons": [
+    {
+      "console": true
+    },
+    {
+      "debugger": true
+    },
+    {
+      "jsTutor": true
+    }
+  ]
+}

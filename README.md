@@ -1,56 +1,322 @@
-<h1 id='top' align="center">Asynchronous Programming</h1>
-
-<div align="center">
-  <a href="https://hackyourfuture.be" target="_blank">
-    <img src="https://user-images.githubusercontent.com/18554853/63941625-4c7c3d00-ca6c-11e9-9a76-8d5e3632fe70.jpg" width="250" height="250"/>
-  </a>
-</div>
+# Asynchronous Programming
 
 > "Synchronous basically means that you can only execute one thing at a time. Asynchronous means that you can execute multiple things at a time and you don't have to finish executing the current thing in order to move on to next one."
-> * [StackOverflow](https://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
-
-### Overview
-
-* [Module Summary](#module-summary)
-* [Learning Objectives](#learning-objectives)
-* [Week 1](./week-1)
-  * [Prep Work](./week-1#prep-work)
-  * [Lesson Plan](./week-1#lesson-plan)
-  * [Assignments](./week-1#assignments)
-* [Week 2](./week-2)
-  * [Prep Work](./week-2#prep-work)
-  * [Lesson Plan](./week-2#lesson-plan)
-  * [Assignments](./week-2#assignments)
-* [Week 3](./week-3)
-  * [Prep Work](./week-3#prep-work)
-  * [Lesson Plan](./week-3#lesson-plan)
-  * [Assignments](./week-3#assignments)
-* [Isolate - examples & exercises](./isolate)
-* [Integrate - example projects](./integrate)
-* [Class Recordings](./class-recordings.md)
-* [Study Links](https://study.hackyourfuture.be) (external)
-* [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
+> - [Mike](https://stackoverflow.com/a/33585047)
 
 ---
 
-## Module Summary
+"The Internet", "The Web", "Web Apps".  All of these terms describe something that is interconnected.  If you zoom out a bit, the entire internet is basically billions of computers all sharing information and software!  But so far your projects have been all alone on your computer :(
 
-[TOP](#overview)
+Everything you have learned so far happens on the _callstack_, everything on the callstack executes _synchronously_. Synchronous means that each line of code will finish executing before the next one starts.  Think of infinite loops, your browser freezes because nothing else can happen while the loop is looping!
+
+What makes web development so cool is the ... web.  Being able to build applications that connect computers form across the internet.  This also introduces some challenges, it can take some time for computers to talk to each other across the internet.  You don't want your apps freezing while you wait to hear back from another computer.
+
+Enter _asynchronous programming_: writing code that tells your browser to start one task and move on to a new task while you wait for the first to finish.  This is possible because of the _Event Loop_.
+
+
+## Contents
+
+- [Learning Objectives](#learning-objectives)
+- [Suggested Study](#suggested-study)
+  - [Isolate](./isolate/index.html)
+  - [Integrate](./integrate/README.md)
+- Sundays & Projects
+  - [Week 1](#week-1)
+  - [Week 2](#week-2)
+  - [Week 3](#week-3)
+- [Class Recordings](#class-recordings)
+- [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
+- [HYF Home](https://home.hackyourfuture.be/) (external)
 
 ---
 
 ## Learning Objectives
 
-* Use `setTimeout` and `setInterval` to schedule tasks
-* Write and consume promises
-* Refactor promises to async/await syntax
-* Use `fetch` to get data from an API
-* Use `import` and `export` to organize your projects
-* Read and write files using the `fs` node module
+- Browser
+  - Using `setTimeout` and `setInterval` to schedule tasks on the _Event Loop_
+  - Using `Promise` to write more manageable asynchronous code
+  - Refactoring promises to `async`/`await`
+  - Using `fetch` to get and consume data from APIs
+- Node
+  - Using `node-fetch` to make API calls from Node
+  - Using `fs` to read and write files
+  - Using `utils.promisify` to convert `fs` from callbacks to promises
 
-[TOP](#overview)
+[TOP](#asynchronous-programming)
 
 ---
+
+## About the Projects
+
+Projects in this module will build on what you learned in the last module by adding in _network calls_ to APIS and scheduled tasks on the event loop.
+
+[TOP](#asynchronous-programming)
+
 ---
 
-### <a href="https://hackyourfuture.be" target="_blank"><img src="https://user-images.githubusercontent.com/18554853/63941625-4c7c3d00-ca6c-11e9-9a76-8d5e3632fe70.jpg" width="100" height="100" alt="Hack Your Future: Belgium"></a>
+## Suggested Study
+
+References and Practice to help you master this module.
+
+<details>
+<summary>expand/collapse</summary>
+
+### Closure & Callstack
+
+- `this` and `() => {}`
+  - [tyler mcginnis](https://tylermcginnis.com/arrow-functions/)
+  - [dario garcia moya](https://www.codementor.io/@dariogarciamoya/understanding-this-in-javascript-with-arrow-functions-gcpjwfyuc)
+  - [youtube search](https://www.youtube.com/results?search_query=arrow+function+binding+this)
+
+### The Event Loop
+
+- [Loupe](http://latentflip.com/loupe/) (+10)
+- [In the Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) (+10)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+- [flavicops](https://flaviocopes.com/javascript-event-loop/)
+- [javascript.info/settimeout-setinterval](https://javascript.info/settimeout-setinterval)
+- [Beau from FCC](https://www.youtube.com/watch?v=kOcFZV3c75I) (timeouts & intervals)
+
+### Callbacks, Promises, Async
+
+- References
+  - [Coding Train](https://www.youtube.com/watch?v=QO4NXhWo_NM&list=PLRqwX-V7Uu6bKLPQvPRNNE65kBL62mVfx)
+  - [Dev Ed](https://www.youtube.com/watch?v=_8gHHBlbziw)
+  - [Traversy](https://www.youtube.com/watch?v=PoRJizFvM7s)
+  - [javascript.info](https://javascript.info/fetch)
+  - MDN: [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+  - HYF ... [AMS](https://github.com/HackYourFuture/JavaScript3/), [CPH](https://github.com/HackYourFuture-CPH/JavaScript/tree/master/javascript3)
+- Practice
+  - [learn-promises](https://github.com/oliverjam/learn-promises)
+  - [promise-practice](https://github.com/oliverjam/promise-practice)
+  - JS 30:
+    - Whack-a-Mole
+    - Slide in on Scroll
+    - Countdown Timer
+    - JS & CSS Clock
+    - Webcam Fun
+
+### APIs
+
+- [What is JSON?](https://www.youtube.com/watch?v=JuFdz8f-cT4)
+- APIs 101
+  - [How do they work?](https://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
+  - [Like a Restaurant](https://www.youtube.com/watch?v=s7wmiS2mSXY)
+- **DevTools**, the Network Tab: [chrome/ium](https://developers.google.com/web/tools/chrome-devtools/network/), [firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor)
+- What is RESTful
+  - [jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/guide.html)
+  - [restfulapi.net](https://restfulapi.net/)
+* [restfulapi.net](https://restfulapi.net/)
+- [what is CORS?](https://www.codecademy.com/articles/what-is-cors)
+
+
+### `fetch`
+
+- References
+  - [Javascript Promises and Fetch for beginners](https://www.youtube.com/watch?v=IHjzyhjKxtc)
+  - [javascript.info/fetch](https://javascript.info/fetch)
+  - [Traversy](https://www.youtube.com/watch?v=Oive66jrwBs)
+  - [Coding Train](https://www.youtube.com/watch?v=tc8DU14qX6I)
+  - [Fetch API Introduction](https://www.youtube.com/watch?v=PoRJizFvM7s)
+  - [Learn Fetch API](https://www.youtube.com/watch?v=cuEtnrL9-H0)
+  - [Async/Await Javascript and Promises - Fetch API vs Axios](https://www.youtube.com/watch?v=XCLtVQl1if0)
+- Practice
+  - [learn-fetch](https://github.com/oliverjam/learn-fetch)
+  - [real-world-fetch](https://github.com/oliverjam/real-world-fetch)
+  - [github-api-crash-course tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE).  (hint: avoid pushing your GitHub auth token!)
+  - JS 30: Type Ahead
+
+
+### Node.js
+
+- `node-fetch`
+- `fs`
+- `utils.promisify`
+- [Mosh: Node.js in 1 Hour](https://www.youtube.com/watch?v=TlB_eWDSMt4)
+- [Friendly Node.js `fs` guide](https://areknawo.com/node-js-file-system-api-beginner-friendly-guide/)
+- [Node.js examples to study](https://github.com/tertiarycourses/NodeJSTraining)
+- [learnyounode](https://github.com/workshopper/learnyounode) through `MAKE IT MODULAR`
+
+### Other
+
+take your frontend skills above and beyond:
+
+- [client-side-routing](https://github.com/oliverjam/learn-client-side-routing)
+- [learn-component-architecture](https://github.com/oliverjam/learn-component-architecture)
+
+</details>
+
+[TOP](#asynchronous-programming)
+
+---
+
+## Week 1
+
+The Event Loop!
+
+<details>
+<summary>expand/collapse</summary>
+
+### Prep Work
+
+> before class
+
+- The Event Loop
+  - [Loupe](http://latentflip.com/loupe/) (+10)
+  - [In the Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) (+10)
+  - `setTimeout` and `setInterval`: [js.info](https://javascript.info/settimeout-setinterval), [Beau](https://www.youtube.com/watch?v=kOcFZV3c75I)
+- [Isolate](./isolate/index.html)
+  - 0. Callstack
+  - 0. Closure
+
+### Lesson Plan
+
+> during class
+
+#### Before Break
+
+- [Isolate](./isolate/index.html)
+  - 1. Event Loop
+
+#### After break
+
+- Integrate
+  1. Event Loop
+
+### Project
+
+> after class
+
+Reverse-Engineer [pomofocus.io](https://pomofocus.io/) (minus the Report, Settings and Login buttons).
+
+</details>
+
+[TOP](#asynchronous-programming)
+
+---
+
+## Week 2
+
+Promises & `fetch`
+
+<details>
+<summary>expand/collapse</summary>
+
+
+### Prep Work
+
+> before class
+
+- promises
+- [Isolate](./isolate/index.html)
+  - 2. Promises
+- [APIs](#apis)
+
+### Lesson Plan
+
+> during class
+
+#### Before Break
+
+- [Isolate](./isolate/index.html)
+  - 3. `fetch` promises
+
+#### After Break
+
+- Integrate
+  - 2. `fetch`
+
+### Project
+
+> after class
+
+_individual project_
+
+You've made it this far, time to show off a bit!  Build yourself a sick portfolio to showcase all of your work so far.  Using the GitHub API gather stats, links and collaborators to showcase your best work.
+
+Challenges, Try to implement these concepts:
+
+- [learn-component-architecture](https://github.com/oliverjam/learn-component-architecture)
+- [client-side-routing](https://github.com/oliverjam/learn-client-side-routing)
+
+</details>
+
+[TOP](#asynchronous-programming)
+
+---
+
+## Week 3
+
+`async`/`await`
+
+<details>
+<summary>expand/collapse</summary>
+
+### Prep Work
+
+> before class
+
+- [isolate](./isolate/index.html)
+  - 5. `async`/`await`
+
+### Lesson Plan
+
+> during class
+
+#### Before Break
+
+- [isolate](./isolate/index.html)
+  - 6. `fetch` with `async`/`await`
+
+#### After Break
+
+
+### Project
+
+> after class
+
+[restful-pjs](https://github.com/HackYourFutureBelgium/restful-pjs). to study - [this-to-fetch](https://github.com/hackyourfuturebelgium/this-to-fetch-example)
+
+
+### Deployment
+
+Because this project has a backend it's not possible to deploy it with GitHub Pages. Choose one person in your group to be responsible for _dev-ops_ and _deployment_. We have provided a GitHub action to deploy to heroku, someone in your group needs to make sure it's working correctly:
+
+* [FCC Article](https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/)
+* [Heroku CI](https://www.heroku.com/continuous-integration)
+
+</details>
+
+[TOP](#asynchronous-programming)
+
+---
+
+## Class Recordings
+
+- **Students**: Here you can find recordings of this module from past classes.  Enjoy!
+- **Coaches**: When sending your PR's with links please ...
+  - Indicate which class you were teaching
+  - Which week it was (if the module is more than 1 week)
+  - Give your name
+  - and a helpful description
+
+---
+
+### Class 7 & 8
+
+> [Anthony](https://github.com/Toinne/), [Kevin](https://github.com/kevintss/)
+
+1. week 1:
+    - Part 1: [The Event Loop](https://vimeo.com/406780143)
+    - Part 2: [Whack-a-Mole](https://vimeo.com/408313126)
+2. week 2:
+    - Part 1: [`fetch` & REST](https://vimeo.com/409437916)
+    - Part 2: [Explore Users](https://vimeo.com/409459062)
+3. week 3:
+    - Part 1: [`import` and `export`](https://vimeo.com/412299042)
+    - Part 2: [Explore Pokemon](https://vimeo.com/412616444)
+
+---
+
+### Class 9 & 10
+

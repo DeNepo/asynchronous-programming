@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>incrementor</title>
+  <style></style>
+  <script id='app'>
+    const incrementor = {
+      state: {
+        current: 0,
+        stepSize: 1,
+      },
+      increment: function () {
+        const newCurrent = this.state.current + this.state.stepSize;
+        this.state.current = newCurrent;
+      },
+      renderCurrent: function () {
+        const initialLi = document.createElement('li');
+        initialLi.innerHTML = this.state.current;
+        return initialLi;
+      },
+      renderStep: function (stepSize, value) {
+        const li = document.createElement('li');
+        li.innerHTML = '... + ' + this.state.stepSize
+          + ' = ' + this.state.current;
+        return li;
+      }
+    };
+  </script>
+  <script id='log'>
+    const log = [];
+  </script>
+  <script id='init'>
+    function init() {
+      document.getElementById('step-size-input').value = incrementor.state.stepSize;
+      const initialItem = incrementor.renderCurrent();
+      document.getElementById('steps-history').appendChild(initialItem);
+      log.push({
+        initialItem,
+        initialState: JSON.parse(JSON.stringify(incrementor))
+      });
+    };
+    window.onload = init;
+  </script>
+</head>
+
+<body>
+  <section id='user-interface'>
+    <form>
+      <input id='step-size-input' type='number' name='newStepSize' /> <br>
+      <input id='set-step-size-button' type='button' value='set step size' /> <br>
+    </form>
+    <hr>
+    <button id='increment-button'>increment</button> <br>
+    <ul id='steps-history'></ul>
+    <hr>
+    <button id='reset-button'>reset</button>
+  </section>
+
+  <script id='interactions'>
+    function incrementHandler() {
+      incrementor.increment();
+      const newStepComponent = incrementor.renderStep();
+      document.getElementById('steps-history').appendChild(newStepComponent);
+      log.push({
+        interaction: 'increment',
+        newStepComponent,
+        newState: JSON.parse(JSON.stringify(incrementor.state))
+      });
+    }
+    document.getElementById('increment-button').addEventListener('click', incrementHandler);
+
+    function setStepSizeHandler(event) {
+      const newStepSizeStr = event.target.form.newStepSize.value;
+      const newStepSize = Number(newStepSizeStr);
+      incrementor.state.stepSize = newStepSize;
+      log.push({
+        interaction: 'set step size',
+        newStepSize,
+        newState: JSON.parse(JSON.stringify(incrementor.state))
+      });
+    }
+    document.getElementById('set-step-size-button').addEventListener('click', setStepSizeHandler);
+
+    function resetHandler() {
+      debugger;
+      // reset state
+      incrementor.state.current = 0;
+      incrementor.state.stepSize = 1;
+      // reset DOM
+      document.getElementById('step-size-input').value = incrementor.state.stepSize;
+      const initialItem = incrementor.renderCurrent();
+      document.getElementById('steps-history').innerHTML = '';
+      document.getElementById('steps-history').appendChild(initialItem);
+      // log handler
+      log.push({ handler: 'reset' });
+    };
+    document.getElementById('reset-button').addEventListener('click', resetHandler);
+  </script>
+</body>

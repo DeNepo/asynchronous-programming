@@ -1,438 +1,190 @@
 {
-  "path": "",
+  "path": "/",
   "dirs": [
     {
-      "path": "/event-loop-examples",
+      "path": "/00-callstack",
       "files": [
         {
-          "path": "/callbacks.js"
+          "path": "/readme.js"
         },
         {
-          "path": "/clear-interval.js"
+          "path": "/1-the-callstack.js"
         },
         {
-          "path": "/clear-timeout.js"
+          "path": "/2-callstack-error-messages.js"
         },
         {
-          "path": "/passing-arguments.js"
+          "path": "/3-console-trace.js"
         },
         {
-          "path": "/set-interval.js"
+          "path": "/4-functions-as-arguments.js"
         },
         {
-          "path": "/set-timeout.js"
+          "path": "/5-callbacks.js"
         },
         {
-          "path": "/zero-delays.js"
+          "path": "/6-in-a-loop.js"
         }
       ],
-      "isExample": true
+      "config": {
+        "buttons": [
+          {
+            "console": true
+          },
+          {
+            "debugger": true
+          },
+          {
+            "jsTutor": true
+          }
+        ]
+      }
     },
     {
-      "path": "/event-loop-exercises",
-      "files": [
-        {
-          "path": "/exercise-1.js"
-        },
-        {
-          "path": "/exercise-2.js"
-        },
-        {
-          "path": "/exercise-3.js"
-        },
-        {
-          "path": "/exercise-4.js"
-        },
-        {
-          "path": "/exercise-5.js"
-        },
-        {
-          "path": "/exercise-6.js"
-        }
-      ]
-    },
-    {
-      "path": "/fetch-examples",
-      "files": [
-        {
-          "path": "/comments-postid-1.js"
-        },
-        {
-          "path": "/posts-1-comments.js"
-        },
-        {
-          "path": "/posts-1.js"
-        },
-        {
-          "path": "/todos-1.js"
-        },
-        {
-          "path": "/todos-40.js"
-        }
-      ],
-      "isExample": true
-    },
-    {
-      "path": "/fetch-exercises",
-      "files": [
-        {
-          "path": "/exercise-1.js"
-        },
-        {
-          "path": "/exercise-2.js"
-        },
-        {
-          "path": "/exercise-3.js"
-        },
-        {
-          "path": "/exercise-4.js"
-        },
-        {
-          "path": "/exercise-5.js"
-        },
-        {
-          "path": "/exercise-6.js"
-        },
-        {
-          "path": "/exercise-7.js"
-        },
-        {
-          "path": "/exercise-8.js"
-        },
-        {
-          "path": "/exercise-9.js"
-        }
-      ]
-    },
-    {
-      "path": "/import-export-examples",
+      "path": "/00-closure",
       "dirs": [
         {
-          "path": "/0-hello-user",
+          "path": "/1-identifying-closure-examples",
           "files": [
             {
-              "path": "/index.html"
+              "path": "/1-returning-functions.js"
             },
             {
-              "path": "/user.js"
+              "path": "/2-never-creates-closure.js"
+            },
+            {
+              "path": "/3-always-creates-closure.js"
             }
           ],
-          "isProject": true
+          "isExample": true
         },
         {
-          "path": "/1-hello-user",
+          "path": "/2-closing-parameters",
           "files": [
             {
-              "path": "/hello.js"
+              "path": "/example-parent-and-own-values.js",
+              "isExample": true
             },
             {
-              "path": "/index.html"
+              "path": "/exercise-1.js"
             },
             {
-              "path": "/user.js"
+              "path": "/exercise-2.js"
+            },
+            {
+              "path": "/exercise-3.js"
+            },
+            {
+              "path": "/exercise-4.js"
             }
-          ],
-          "isProject": true
+          ]
         },
         {
-          "path": "/2-export-before-declarations",
+          "path": "/3-closing-local",
           "files": [
             {
-              "path": "/index.html"
+              "path": "/example-1-a-free-variable.js",
+              "isExample": true
             },
             {
-              "path": "/script.js"
+              "path": "/example-2-not-from-closure.js",
+              "isExample": true
+            },
+            {
+              "path": "/example-3-from-closure.js",
+              "isExample": true
+            },
+            {
+              "path": "/exercise-1.js"
+            },
+            {
+              "path": "/exercise-2.js"
             }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/3-export-apart-from-declarations",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/script.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/4-import-star",
-          "files": [
-            {
-              "path": "/greetings.js"
-            },
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/5-import-as",
-          "files": [
-            {
-              "path": "/greetings.js"
-            },
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/6-export-as",
-          "files": [
-            {
-              "path": "/greetings.js"
-            },
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/7-export-default",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            },
-            {
-              "path": "/user.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/8-re-export",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            }
-          ],
-          "dirs": [
-            {
-              "path": "/auth",
-              "files": [
-                {
-                  "path": "/helpers.js"
-                },
-                {
-                  "path": "/index.js"
-                },
-                {
-                  "path": "/user.js"
-                }
-              ]
-            }
-          ],
-          "isProject": true
+          ]
         }
       ],
-      "isExample": true
+      "config": {
+        "buttons": [
+          {
+            "console": true
+          },
+          {
+            "debugger": true
+          },
+          {
+            "jsTutor": true
+          }
+        ]
+      }
     },
     {
-      "path": "/import-export-exercises",
+      "path": "/01-event-loop",
       "dirs": [
         {
-          "path": "/exercise-01",
+          "path": "/examples",
           "files": [
             {
-              "path": "/index.html"
+              "path": "/0-labeled-logger.js"
             },
             {
-              "path": "/user.js"
+              "path": "/1-set-timeout.js"
+            },
+            {
+              "path": "/2-clear-timeout.js"
+            },
+            {
+              "path": "/3-set-interval.js"
+            },
+            {
+              "path": "/4-clear-interval.js"
+            },
+            {
+              "path": "/5-zero-delays.js"
+            },
+            {
+              "path": "/6-passing-arguments.js"
             }
           ],
-          "isProject": true
+          "isExample": true
         },
         {
-          "path": "/exercise-02",
+          "path": "/exercises",
           "files": [
             {
-              "path": "/hello.js"
+              "path": "/exercise-1.js"
             },
             {
-              "path": "/index.html"
+              "path": "/exercise-2.js"
             },
             {
-              "path": "/user.js"
+              "path": "/exercise-3.js"
+            },
+            {
+              "path": "/exercise-4.js"
+            },
+            {
+              "path": "/exercise-5.js"
             }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-03",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/script.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-04",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/script.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-05",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/script.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-06",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/script.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-07",
-          "files": [
-            {
-              "path": "/hello.js"
-            },
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/user.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-08",
-          "files": [
-            {
-              "path": "/greetings.js"
-            },
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-09",
-          "files": [
-            {
-              "path": "/greetings.js"
-            },
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-10",
-          "files": [
-            {
-              "path": "/greetings.js"
-            },
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-11",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            },
-            {
-              "path": "/user.js"
-            }
-          ],
-          "isProject": true
-        },
-        {
-          "path": "/exercise-12",
-          "files": [
-            {
-              "path": "/index.html"
-            },
-            {
-              "path": "/main.js"
-            }
-          ],
-          "dirs": [
-            {
-              "path": "/auth",
-              "files": [
-                {
-                  "path": "/helpers.js"
-                },
-                {
-                  "path": "/index.js"
-                },
-                {
-                  "path": "/user.js"
-                }
-              ]
-            }
-          ],
-          "isProject": true
+          ]
         }
-      ]
+      ],
+      "config": {
+        "loopGuard": false,
+        "clearScheduled": true
+      }
     }
   ],
-  "lastBuild": "2020-04-23T15:39:32.284Z",
-  "title": " Isolate: Asynchronous Programming"
+  "config": {
+    "title": "asynchronous-programming/isolate",
+    "path": "/",
+    "loopGuard": false,
+    "buttons": [
+      {
+        "console": true
+      },
+      {
+        "debugger": true
+      }
+    ]
+  }
 }

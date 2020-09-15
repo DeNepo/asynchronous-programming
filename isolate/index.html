@@ -1,17 +1,71 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
   <title id='title'></title>
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-  <script>
-    window.onload = () => import('./app/index.js');
-  </script>
+
+  <link rel="stylesheet" href="../app/style.css">
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="../app/monaco/min/vs/editor/editor.main.css">
+
+  <script src='../app/lib/chai-and-chai-dom.js'></script>
+
 </head>
 
 <body>
 
-  <h1 id='header'></h1>
-  <div id='root'></div>
+  <main>
+
+    <nav style='display:flex; flex-direction: row;'>
+      <h1 id='header' style='padding-right: 3%;'></h1>
+      <div class="dropdown">
+        <h2 id='current-path'></h2>
+        <div id='drop-down' class="dropdown-content"></div>
+      </div>
+    </nav>
+
+    <section>
+      <div id='study-buttons'></div>
+    </section>
+
+    <div style='display:flex; flex-direction:row; height:90%;'>
+      <div id="container" style="width:100%;height:90%;border:1px solid grey;"></div>
+      <div id='viz' style="display:none; width:50%;height:90%;"></div>
+    </div>
+
+  </main>
+
+  <script>var require = { paths: { 'vs': '../app/monaco/min/vs' } };</script>
+  <script src="../app/monaco/min/vs/loader.js"></script>
+  <script src="../app/monaco/min/vs/editor/editor.main.nls.js"></script>
+  <script src="../app/monaco/min/vs/editor/editor.main.js"></script>
+
+  <script>
+    var editor = monaco.editor.create(document.getElementById('container'), {
+      language: 'javascript',
+      roundedSelection: true,
+      scrollBeyondLastLine: false,
+      theme: "vs-dark",
+      wrappingIndent: "indent",
+      wordWrap: 'wordWrapColumn',
+      wordWrapColumn: 100,
+      automaticLayout: true,
+    });
+
+    editor.getModel().updateOptions({ tabSize: 2 })
+  </script>
+
+  <script type='module' src='../app/init.js'> </script>
+
+  <script src='../app/lib/describe-it.js'></script>
+
+  <script src='../app/lib/deep-clone.js'></script>
+
+  <script src='../app/lib/clear-all-scheduled.js'></script>
+
+  <script src='../app/lib/labeled-logger.js'></script>
+
+  <!-- <script src='../app/lib/debounce.js'></script> -->
 
 </body>
 

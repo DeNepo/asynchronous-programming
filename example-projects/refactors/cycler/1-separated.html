@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>cycler: separated</title>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <p id='current-number'></p>
+  </div>
+
+
+  <script id='state'>
+    const state = {
+      min: 0,
+      max: 5,
+      current: 0
+    };
+  </script>
+
+  <script id='logic'>
+    const step = (data) => {
+      const nextStep = data.current + 1;
+      if (nextStep <= data.max) {
+        return nextStep;
+      } else {
+        return data.min;
+      }
+    };
+  </script>
+
+  <script id='handlers'>
+    const handleClick = () => {
+      state.current = step(state);
+
+      document.getElementById('current-number')
+        .innerHTML = state.current;
+
+      log.push(Object.assign({}, state));
+    };
+
+    const handleRightClick = () => {
+      console.log(log);
+    };
+  </script>
+
+
+  <script id='init'>
+    const log = [];
+    log.push(Object.assign({}, state));
+
+    const currentNumberEl = document.getElementById('current-number');
+    currentNumberEl.innerHTML = state.current;
+    currentNumberEl.addEventListener('click', handleClick);
+    currentNumberEl.addEventListener('contextmenu', handleRightClick);
+  </script>
+
+</body>
+
+</html>

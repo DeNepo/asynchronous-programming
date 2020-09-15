@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>cycler: script</title>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <p id='current-number'></p>
+  </div>
+
+
+  <script>
+    const MIN = 0;
+    const MAX = 5;
+    let current = 0;
+
+    const log = [current];
+
+    const currentNumberEl = document.getElementById('current-number');
+    currentNumberEl.innerHTML = current;
+
+    currentNumberEl.addEventListener('click', () => {
+      if (current + 1 <= MAX) {
+        current += 1;
+      } else {
+        current = MIN;
+      };
+      currentNumberEl.innerHTML = current;
+      log.push(current);
+    });
+
+    currentNumberEl.addEventListener('contextmenu', () => {
+      console.log(log);
+    });
+  </script>
+
+</body>
+
+</html>

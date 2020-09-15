@@ -1,0 +1,23 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "the testing module for HYF Belgium",
+  "main": "server.js",
+  "scripts": {
+    "register-isolate": "node isolate/register.js",
+    "register-integrate": "node integrate/register.js",
+    "register-example-projects": "node example-projects/register.js",
+    "register": "npm run register-isolate && npm run register-integrate && npm run register-example-projects",
+    "start": "npm run register && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackYourFutureBelgium/testing.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/HackYourFutureBelgium/testing/issues"
+  },
+  "homepage": "https://github.com/HackYourFutureBelgium/testing#readme"
+}

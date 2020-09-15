@@ -1,0 +1,13 @@
+{
+  "title": "asynchronous-programming/isolate",
+  "path": "/",
+  "loopGuard": false,
+  "buttons": [
+    {
+      "console": true
+    },
+    {
+      "debugger": true
+    }
+  ]
+}

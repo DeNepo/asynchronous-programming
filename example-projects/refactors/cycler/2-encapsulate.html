@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>cycler: encapsulated</title>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <p id='current-number'></p>
+  </div>
+
+
+  <script id='cycler-app-object'>
+    const cycler = {
+      state: {
+        min: 0,
+        max: 5,
+        current: 0
+      },
+      get current() {
+        return this.state.current;
+      },
+      step: function () {
+        const nextStep = this.state.current + 1;
+        if (nextStep <= this.state.max) {
+          this.state.current = nextStep;
+        } else {
+          this.state.current = this.state.min;
+        }
+      }
+    };
+  </script>
+
+  <script id='handlers'>
+    const handleClick = () => {
+      cycler.step();
+
+      document.getElementById('current-number')
+        .innerHTML = cycler.current;
+
+      log.push(Object.assign({}, cycler.state));
+    };
+
+    const handleRightClick = () => {
+      console.log(log);
+    };
+  </script>
+
+  <script id='init'>
+    const log = [];
+    log.push(Object.assign({}, cycler.state));
+
+    const currentNumberEl = document.getElementById('current-number');
+    currentNumberEl.innerHTML = cycler.current;
+    currentNumberEl.addEventListener('click', handleClick);
+    currentNumberEl.addEventListener('contextmenu', handleRightClick);
+  </script>
+
+</body>
+
+</html>
