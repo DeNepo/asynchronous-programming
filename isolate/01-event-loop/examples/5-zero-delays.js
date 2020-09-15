@@ -10,17 +10,19 @@ const log = labeledLogger('5. zero delays');
 const zeroDelays_cb_1 = () => {
   log('executing callback 1');
 };
-setTimeout(zeroDelays_cb_1, 0);
 
 log('launching timeout 1');
+setTimeout(zeroDelays_cb_1, 0);
+
 
 
 const zeroDelays_cb_2 = () => {
   log('executing callback 1');
 };
-setTimeout(zeroDelays_cb_2, 0);
 
 log('launching timeout 2');
+setTimeout(zeroDelays_cb_2, 0);
+
 
 
 log('hello!');

@@ -162,7 +162,7 @@ export default class LiveStudy {
 
 
     const permalinkButton = document.createElement('button');
-    permalinkButton.innerHTML = 'generate permalink';
+    permalinkButton.innerHTML = 'permalink';
     permalinkButton.onclick = () => {
       const text = window.location.origin + window.location.pathname + '?code=' + encodeURIComponent(this.editor.getValue())
         .replace(/\(/g, '%28')
@@ -203,6 +203,123 @@ export default class LiveStudy {
     }
     container.appendChild(permalinkButton);
 
+
+    /// -------------------
+
+    const parsonizeButton = document.createElement('button');
+    parsonizeButton.style = 'display: inline;';
+    parsonizeButton.appendChild(document.createTextNode('parsonize selection'));
+    let onceClicked = false;
+    parsonizeButton.onclick = async () => {
+      if (!onceClicked) {
+        [
+          '../app/parsonizer/component.js',
+          '../app/parsonizer/jquery.min.js',
+          '../app/parsonizer/lis.js',
+          '../app/parsonizer/parsons-de-underscored.js',
+          '../app/parsonizer/prettify.js',
+          '../app/lib/strip-comments.js',
+        ].forEach(path => {
+          var newScript = document.createElement("script");
+          newScript.src = path;
+          document.body.appendChild(newScript);
+        });
+        [
+          "../app/parsonizer/parsons.css",
+          "../app/parsonizer/prettify.css",
+        ].forEach(path => {
+          var newLink = document.createElement("link");
+          newLink.rel = 'stylesheet';
+          newLink.href = path;
+          document.body.appendChild(newLink);
+        });
+
+        onceClicked = true;
+
+        setTimeout(() => {
+          [
+            '../app/parsonizer/jquery-ui.min.js',
+            '../app/parsonizer/jquery.ui.touch-punch.min.js',
+          ].forEach(path => {
+            var newScript = document.createElement("script");
+            newScript.src = path;
+            document.body.appendChild(newScript);
+          });
+        }, 500);
+        setTimeout(theParsonsRest, 1000);
+        return;
+      }
+      // render and append a new js-parsons component
+
+      theParsonsRest();
+
+    };
+    container.appendChild(parsonizeButton);
+
+
+    const theParsonsRest = () => {
+
+      const code = getSelection();
+      if (!code) {
+        alert('no code selected');
+        return;
+      }
+
+      const parsonsComponent = new JSParsons(strip(code));
+      parsonsComponent.style = 'height:90vh; width:100vw;';
+
+      const modalId = Math.random().toString(36).substring(7);
+      const modalContainer = document.createElement('div');
+      modalContainer.id = modalId;
+      modalContainer.style = 'height:90vh; width:100vw;';
+      modalContainer.className = 'modal-window';
+      modalContainer.innerHTML = `<div>
+        <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+      </div>`;
+      modalContainer.firstElementChild.appendChild(parsonsComponent);
+      modalContainer.firstElementChild.style = 'height:90vh; width:100vw;';
+      modalContainer.firstElementChild.firstElementChild.addEventListener('click', () => document.body.removeChild(modalContainer));
+      document.body.appendChild(modalContainer);
+      const url = location.href;
+      location.href = "#" + modalId;
+      history.replaceState(null, null, url);
+
+    }
+
+    const getSelection = () => {
+      const editorSelection = editor.getSelection();
+      const editorSelectionEntries = Object.entries(editorSelection);
+      const columnEntries = [];
+      const lineEntries = [];
+      for (const entry of editorSelectionEntries) {
+        if (entry[0].includes('Column')) {
+          columnEntries.push(entry);
+        } else {
+          lineEntries.push(entry);
+        }
+      }
+      const firstLine = lineEntries[0][1];
+      const firstColum = columnEntries[0][1];
+      const noSelection = columnEntries.every((entry) => entry[1] === firstColum)
+        && lineEntries.every((entry) => entry[1] === firstLine);
+
+
+      if (noSelection) {
+        return '';
+      }
+
+      let selection = '';
+      const start = editorSelection.startLineNumber;
+      const end = editorSelection.endLineNumber;
+      for (let i = start; i <= end; i++) {
+        selection += editor.getModel().getLineContent(i) + '\n';
+      }
+
+      return selection;
+    }
+
+
+    /// -----------------------
 
     container.appendChild(document.createElement('br'));
 
