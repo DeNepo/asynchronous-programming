@@ -216,7 +216,6 @@ export default class LiveStudy {
           '../app/parsonizer/component.js',
           '../app/parsonizer/jquery.min.js',
           '../app/parsonizer/lis.js',
-          '../app/parsonizer/parsons-de-underscored.js',
           '../app/parsonizer/prettify.js',
           '../app/lib/strip-comments.js',
         ].forEach(path => {
@@ -240,12 +239,13 @@ export default class LiveStudy {
           [
             '../app/parsonizer/jquery-ui.min.js',
             '../app/parsonizer/jquery.ui.touch-punch.min.js',
+            '../app/parsonizer/parsons-de-underscored.js',
           ].forEach(path => {
             var newScript = document.createElement("script");
             newScript.src = path;
             document.body.appendChild(newScript);
           });
-        }, 500);
+        }, 800);
         setTimeout(theParsonsRest, 1000);
         return;
       }
