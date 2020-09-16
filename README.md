@@ -120,10 +120,12 @@ References and Practice to help you master this module.
   - [Fetch API Introduction](https://www.youtube.com/watch?v=PoRJizFvM7s)
   - [Learn Fetch API](https://www.youtube.com/watch?v=cuEtnrL9-H0)
   - [Async/Await Javascript and Promises - Fetch API vs Axios](https://www.youtube.com/watch?v=XCLtVQl1if0)
+  - [this-to-fetch](https://github.com/hackyourfuturebelgium/this-to-fetch-example)
 - Practice
   - [learn-fetch](https://github.com/oliverjam/learn-fetch)
   - [real-world-fetch](https://github.com/oliverjam/real-world-fetch)
   - [github-api-crash-course tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE).  (hint: avoid pushing your GitHub auth token!)
+  - [Fetching REST](https://github.com/HackYourFutureBelgium/fetching-rest)
   - JS 30: Type Ahead
 
 

@@ -211,7 +211,11 @@ export default class LiveStudy {
     parsonizeButton.appendChild(document.createTextNode('parsonize selection'));
     let onceClicked = false;
     parsonizeButton.onclick = async () => {
+      console.log(onceClicked)
       if (!onceClicked) {
+
+        onceClicked = true;
+
         [
           '../app/parsonizer/component.js',
           '../app/parsonizer/jquery.min.js',
@@ -232,8 +236,6 @@ export default class LiveStudy {
           newLink.href = path;
           document.body.appendChild(newLink);
         });
-
-        onceClicked = true;
 
         setTimeout(() => {
           [

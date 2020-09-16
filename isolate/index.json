@@ -172,6 +172,35 @@
         "loopGuard": false,
         "clearScheduled": true
       }
+    },
+    {
+      "path": "/02-sync-vs-async",
+      "files": [
+        {
+          "path": "/readme.js"
+        },
+        {
+          "path": "/01-synchronous-delays.js"
+        },
+        {
+          "path": "/02-asynchronous-scheduling.js"
+        },
+        {
+          "path": "/03-async-before-sync.js"
+        },
+        {
+          "path": "/04-sync-before-async.js"
+        },
+        {
+          "path": "/05-mixed-1.js"
+        },
+        {
+          "path": "/06-mixed-2.js"
+        },
+        {
+          "path": "/07-mixed-3.js"
+        }
+      ]
     }
   ],
   "config": {
