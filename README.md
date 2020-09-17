@@ -189,7 +189,23 @@ The Event Loop!
 
 > after class
 
-Reverse-Engineer [pomofocus.io](https://pomofocus.io/) (minus the Report, Settings and Login buttons).
+Reverse-Engineer [pomofocus.io](https://pomofocus.io/) (minus the Report, Settings and Login buttons).  Here is a [boilerplate repository](https://github.com/HackYourFutureBelgium/starter-basic-import-export) to get you started.
+
+#### Checklist
+
+```md
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [live demo](https://_.github.io/_)
+- Project Planning
+  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
+  - [ ] [Project board](https://github.com/_/_/projects/_)
+- Implementation
+  - [ ] ES Modules (`import`/`export`)
+  - [ ] at least one `class`
+  - [ ] at least one `setTimeout` and one `setInterval`
+  - [ ] Logs of each user interaction
+```
 
 </details>
 
