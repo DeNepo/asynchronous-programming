@@ -1,6 +1,6 @@
 'use strict';
 
-const log = labeledLog('4. clearInterval');
+const log = labeledLogger('4. clearInterval');
 
 // you can also stop a setInterval using it's id
 //  this happens by passing the id as an argument to clearTimeout
