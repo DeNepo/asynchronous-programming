@@ -15,7 +15,7 @@ To break down how to create something like Sketchpad (reverse engineer), we need
 
   We don't have to work on a big board. To help us focus on the behavior of a single box, we can change the board size to a smaller one, even 1x1.
   ```javascript
-  // board.js
+  // init.js
   const  newBoard  =  new  Board(ColorSquare, 2, 2); // This will change the board size to 2 x 2.
   ```
 </details>
@@ -55,10 +55,10 @@ To break down how to create something like Sketchpad (reverse engineer), we need
   // color-square.js
   handleClick(view) {
     if (this.isChanging) {
-      clearTimeout(this.timeoutId); // This will pause the color change
+      clearTimeout(this.timeoutId); // This will stop the color change
     } else {
       this.timeoutId = setTimeout(
-        this.timeoutCallback.bind(this, view),  // This will continue its changing behavior.
+        this.timeoutCallback.bind(this, view),  // This will continue its color changing behavior.
         this.msDelay
       );
     }
