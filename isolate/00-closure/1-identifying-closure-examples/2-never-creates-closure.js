@@ -18,13 +18,13 @@ const never = (x) => {
 }
 
 const whenPassed4 = doesItClose(never, 4);
-console.assert(whenPassed4 === null, "... when passed 4");
+console.assert(whenPassed4 === _, "... when passed 4");
 
 const whenPassedAFunction = doesItClose(never, () => { });
-console.assert(whenPassedAFunction === null, "... when passed a function");
+console.assert(whenPassedAFunction === _, "... when passed a function");
 
 const whenPassedAnArray = doesItClose(never, []);
-console.assert(whenPassedAnArray === null, "... when passed an array");
+console.assert(whenPassedAnArray === _, "... when passed an array");
 
 const whenPassedItself = doesItClose(never, never);
-console.assert(whenPassedItself === null, "... when passed itself");
+console.assert(whenPassedItself === _, "... when passed itself");
