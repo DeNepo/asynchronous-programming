@@ -75,6 +75,8 @@ References and Practice to help you master this module.
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 - [flavicops](https://flaviocopes.com/javascript-event-loop/)
 - [javascript.info/settimeout-setinterval](https://javascript.info/settimeout-setinterval)
+- [https://javascript.info/event-loop](https://javascript.info/event-loop)
+- [Use case for using setTimeout(0)](https://javascript.info/event-loop#use-case-3-doing-something-after-the-event)
 - [Beau from FCC](https://www.youtube.com/watch?v=kOcFZV3c75I) (timeouts & intervals)
 
 ### Callbacks, Promises, Async
