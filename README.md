@@ -75,6 +75,8 @@ References and Practice to help you master this module.
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 - [flavicops](https://flaviocopes.com/javascript-event-loop/)
 - [javascript.info/settimeout-setinterval](https://javascript.info/settimeout-setinterval)
+- [https://javascript.info/event-loop](https://javascript.info/event-loop)
+- [Use case for using setTimeout(0)](https://javascript.info/event-loop#use-case-3-doing-something-after-the-event)
 - [Beau from FCC](https://www.youtube.com/watch?v=kOcFZV3c75I) (timeouts & intervals)
 
 ### Callbacks, Promises, Async
@@ -338,7 +340,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 
 ### Class 9 & 10
 
-> [Bram](https://github.com/bramdevries)
+> [Bram](https://github.com/bramdevries), [Deni](https://github.com/denichodev)
 
 1. week 1:
     - Part 1: [Isolate - The Event Loop](https://vimeo.com/459858141)
