@@ -338,3 +338,9 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 
 ### Class 9 & 10
 
+> [Bram](https://github.com/bramdevries)
+
+1. week 2:
+    - Part 1: [Isolate - The Event Loop](https://vimeo.com/459858141)
+    - Part 2: [Integrate]
+
