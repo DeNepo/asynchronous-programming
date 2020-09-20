@@ -343,5 +343,6 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 > [Bram](https://github.com/bramdevries), [Deni](https://github.com/denichodev)
 
 1. week 1:
-   - Part 1: [Isolate / The Event Loop](https://vimeo.com/459858141)
+    - Part 1: [Isolate - The Event Loop](https://vimeo.com/459858141)
+    - Part 2: [Integrate]
 
