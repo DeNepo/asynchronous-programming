@@ -17,7 +17,7 @@ setTimeout(zeroDelays_cb_1, 0);
 
 
 const zeroDelays_cb_2 = () => {
-  log('executing callback 1');
+  log('executing callback 2');
 };
 
 log('launching timeout 2');
