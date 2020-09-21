@@ -344,5 +344,6 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 
 1. week 1:
     - Part 1: [Isolate - The Event Loop](https://vimeo.com/459858141)
-    - Part 2: [Integrate]
+    - Part 2: [Integrate - Event Loop](https://vimeo.com/460082162)
+    - Part 3: [Recap & Project Intro](https://vimeo.com/460082763)
 
