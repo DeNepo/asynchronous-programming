@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>explore pokemon (compressed)</title>
+
+</head>
+
+<body>
+  <form>
+    <input type='number' name='userId' min='1' max='10' />
+    <input type='button' id='add-pokemon-button' value='add pokemon' />
+  </form>
+
+  <div id='poke-root'></div>
+
+  <script>
+    const a = ['https://pokeapi.co/api/v2/pokemon/', 'click', 'div', 'then', 'addEventListener', 'front_shiny', 'catch', 'getElementById', 'src', 'appendChild', '\x0afetching\x20pokemon\x20with\x20id\x20', 'createElement', 'innerHTML', 'pokemon\x20data\x20from\x20API', 'userId', 'render', 'poke-root', 'img', 'json', 'spriteURL', 'form', 'target', 'sprites', 'value', 'name', 'log']; (function (b, c) { const d = function (e) { while (--e) { b['push'](b['shift']()); } }; d(++c); }(a, 0xea)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; const h = b; class Pokemon { constructor(c) { const g = b; this[g('0x18')] = c[g('0x18')], this[g('0x13')] = c[g('0x16')][g('0x5')], this['id'] = c['id']; } [h('0xf')]() { const i = h, c = document[i('0xb')](i('0x11')); c[i('0x8')] = this['spriteURL']; const d = document[i('0xb')]('p'); d[i('0xc')] = this['id'] + '.\x20' + this['name']; const e = document[i('0xb')](i('0x2')); return e[i('0x9')](d), e[i('0x9')](c), e; } } const addPokemonHandler = c => { const j = h, d = c[j('0x15')][j('0x14')][j('0xe')][j('0x17')]; console[j('0x19')](j('0xa'), d), fetch(j('0x0') + d)[j('0x3')](e => e[j('0x12')]())['then'](e => { const k = j; return console[k('0x19')](k('0xd'), e), new Pokemon(e); })[j('0x3')](e => { const l = j; console[l('0x19')]('new\x20pokemon\x20instance', e); const f = e[l('0xf')](); document['getElementById'](l('0x10'))[l('0x9')](f); })[j('0x6')](e => console['error'](e)); }, choosePokemonButton = document[h('0x7')]('add-pokemon-button'); choosePokemonButton[h('0x4')](h('0x1'), addPokemonHandler);
+  </script>
+</body>
+
+</html>

@@ -201,6 +201,164 @@
           "path": "/07-mixed-3.js"
         }
       ]
+    },
+    {
+      "path": "/03-promises",
+      "files": [
+        {
+          "path": "/readme.js"
+        },
+        {
+          "path": "/01-new-promise.js"
+        },
+        {
+          "path": "/02-pending-vs-settled.js"
+        },
+        {
+          "path": "/03-dot-catch-consumer.js"
+        },
+        {
+          "path": "/04-dot-then-consumer.js"
+        },
+        {
+          "path": "/05-using-promises-1.js"
+        },
+        {
+          "path": "/06-many-thens.js"
+        },
+        {
+          "path": "/07-errors-in-thens.js"
+        },
+        {
+          "path": "/08-using-promises-2.js"
+        },
+        {
+          "path": "/09-using-promises-3.js"
+        },
+        {
+          "path": "/10-return-promise-from-promises.js"
+        }
+      ],
+      "config": {
+        "loopGuard": false,
+        "buttons": [
+          {
+            "console": true
+          },
+          {
+            "debugger": true
+          },
+          {
+            "promisees": true
+          }
+        ]
+      }
+    },
+    {
+      "path": "/04-fetch",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/01-hello-world.js"
+            },
+            {
+              "path": "/02-json-types.js"
+            },
+            {
+              "path": "/03-dry-foods.js"
+            },
+            {
+              "path": "/04-wavy-fungi.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/01-write-url.js"
+            },
+            {
+              "path": "/02-write-url.js"
+            },
+            {
+              "path": "/03-write-url.js"
+            },
+            {
+              "path": "/04-pass-test.js"
+            },
+            {
+              "path": "/05-pass-test.js"
+            },
+            {
+              "path": "/06-pass-test.js"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "path": "/readme.js"
+        }
+      ]
+    },
+    {
+      "path": "/05-fetch-rest",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/01-resource-routes.js"
+            },
+            {
+              "path": "/02-resource-id.js"
+            },
+            {
+              "path": "/03-related-resources.js"
+            },
+            {
+              "path": "/04-filter-with-params.js"
+            },
+            {
+              "path": "/05-limit-number-of-results.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/exercise-1.js"
+            },
+            {
+              "path": "/exercise-2.js"
+            },
+            {
+              "path": "/exercise-3.js"
+            },
+            {
+              "path": "/exercise-4.js"
+            },
+            {
+              "path": "/exercise-5.js"
+            },
+            {
+              "path": "/exercise-6.js"
+            },
+            {
+              "path": "/exercise-7.js"
+            },
+            {
+              "path": "/exercise-8.js"
+            }
+          ]
+        }
+      ]
     }
   ],
   "config": {

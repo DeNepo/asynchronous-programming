@@ -43,6 +43,14 @@ const mime = {
   '.gif': 'image/gif',
 };
 
+// https://bigcodenerd.org/enable-cors-node-js-without-express/
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET",
+  "Access-Control-Max-Age": 2592000, // 30 days
+  /** add other headers as per requirement */
+};
+
 
 console.log('\n--- launching server ---\n');
 
@@ -70,9 +78,9 @@ const handleRequest = (req, res) => {
     if (error) {
       if (error.code === 'ENOENT') {
         const html404 = `<!DOCTYPE html><html><head><title>404</title></head><body><h1>404: ${relPath}</h1></body></html>`;
-        res.writeHead(404, { 'Content-Type': 'text/html' });
+        res.writeHead(404, Object.assign({}, headers, { 'Content-Type': 'text/html' }));
         res.end(html404, 'utf-8');
-        logMsg = 'response: 404 ' + relPath;
+        logMsg = 'res: 404 ' + relPath;
       } else {
         const errMsg = `Server error: ${error.code} ..`;
         res.writeHead(500);
@@ -81,7 +89,7 @@ const handleRequest = (req, res) => {
         logMsg = errMsg;
       }
     } else {
-      res.writeHead(200, { 'Content-Type': contentType });
+      res.writeHead(200, Object.assign({}, headers, { 'Content-Type': contentType }));
       const finalContent = extension === '.md'
         ? `<!DOCTYPE html>\n` +
         `<html>\n` +

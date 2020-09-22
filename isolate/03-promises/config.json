@@ -1,0 +1,14 @@
+{
+  "loopGuard": false,
+  "buttons": [
+    {
+      "console": true
+    },
+    {
+      "debugger": true
+    },
+    {
+      "promisees": true
+    }
+  ]
+}
