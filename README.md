@@ -232,7 +232,7 @@ Promises & `fetch`
 
 - Promises
   - [js.info](https://javascript.info/async): 1 -> 4
-  - [Isolate](./isolate/index.html): 2. Promises
+  - [Isolate](./isolate/index.html): 3. Promises
   - [Callbacks, Promises, Async](#callbacks-promises-async)
 - APIs & REST
   - [Restful Routes?](https://medium.com/@atingenkay/restful-routes-what-are-they-8fe221521bb)
@@ -241,6 +241,7 @@ Promises & `fetch`
   - [chrome/ium](https://developers.google.com/web/tools/chrome-devtools/network/)
   - [firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor)
 - [`fetch`](#fetch)
+  - [Isolate](./isolate/index.html): 4. `fetch` (examples)
 
 ### Lesson Plan
 
