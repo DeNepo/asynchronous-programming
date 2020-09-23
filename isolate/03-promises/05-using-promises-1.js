@@ -27,7 +27,7 @@ const handleRejection = (err) => {
 const userInputExecutor = (resolve, reject) => {
   const userInput = prompt('enter a number');
   const isANumber = !isNaN(userInput) && userInput !== '';
-  if (!isANumber) {
+  if (isANumber) {
     resolve('you entered the number: ' + userInput);
   } else {
     reject('is not a number: ' + userInput)
