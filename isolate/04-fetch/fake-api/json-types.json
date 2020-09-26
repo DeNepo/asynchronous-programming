@@ -1,0 +1,32 @@
+{
+  "numbers": [
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+  ],
+  "strings": [
+    "only double quotes!",
+    "there is no 'undefined' in JSON",
+    ""
+  ],
+  "boolean": [
+    true,
+    false
+  ],
+  "null": null,
+  "array": [
+    1,
+    true,
+    "hello",
+    null
+  ],
+  "object": {
+    "aNumber": 1,
+    "aBoolean": true,
+    "aString": "hello",
+    "null": null
+  }
+}
