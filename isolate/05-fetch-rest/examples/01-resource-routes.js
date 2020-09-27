@@ -28,25 +28,25 @@ const handleRejection = (err) => {
 const albumsPath = '/albums';
 const logAlbums = logData(albumsPath);
 fetch(origin + albumsPath)
-  .then(parseResponse)
-  .then(logAlbums)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logAlbums(data))
+  .catch(err => handleRejection(err));
 
 
 const postsPath = '/posts';
 const logPosts = logData(postsPath);
 fetch(origin + postsPath)
-  .then(parseResponse)
-  .then(logPosts)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logPosts(data))
+  .catch(err => handleRejection(err));
 
 
 const usersPath = '/users';
 const logUsers = logData(usersPath);
 fetch(origin + usersPath)
-  .then(parseResponse)
-  .then(logUsers)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logUsers(data))
+  .catch(err => handleRejection(err));
 
 
 
