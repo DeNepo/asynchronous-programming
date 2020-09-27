@@ -40,10 +40,10 @@ const handleRejection = (err) => {
 
 
 fetch(requestURL)
-  .then(parseResponse)
-  .then(separateWavyFungi)
-  .then(testWavyFungi)
-  .catch(handleRejection);
+  .then(res =>parseResponse(res))
+  .then(data => separateWavyFungi(data))
+  .then(filteredData => testWavyFungi(filteredData))
+  .catch(err => handleRejection(err));
 
 
 
