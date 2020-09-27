@@ -28,41 +28,41 @@ const handleRejection = (err) => {
 const threeUsers = '/users?_limit=3';
 const logThreeUsers = logData(threeUsers);
 fetch(origin + threeUsers)
-  .then(parseResponse)
-  .then(logThreeUsers)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logThreeUsers(data))
+  .catch(err => handleRejection(err));
 
 const fiveUsers = '/users?_limit=5';
 const logFiveUsers = logData(fiveUsers);
 fetch(origin + fiveUsers)
-  .then(parseResponse)
-  .then(logFiveUsers)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logFiveUsers(data))
+  .catch(err => handleRejection(err));
 
 
 
 const sixPostsByUser3 = '/users/3/posts?_limit=6';
 const logSixPostsByUser3 = logData(sixPostsByUser3);
 fetch(origin + sixPostsByUser3)
-  .then(parseResponse)
-  .then(logSixPostsByUser3)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logSixPostsByUser3(data))
+  .catch(err => handleRejection(err));
 
 
 
 const twoPhotosFromAlbum6 = '/albums/6/photos?_limit=2';
 const logTwoPhotosFromAlbum6 = logData(twoPhotosFromAlbum6);
 fetch(origin + twoPhotosFromAlbum6)
-  .then(parseResponse)
-  .then(logTwoPhotosFromAlbum6)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logTwoPhotosFromAlbum6(data))
+  .catch(err => handleRejection(err));
 
 const fivePhotosFromAlbum1 = '/photos?albumId=1&_limit=5';
 const logFivePhotosFromAlbum1 = logData(fivePhotosFromAlbum1);
 fetch(origin + fivePhotosFromAlbum1)
-  .then(parseResponse)
-  .then(logFivePhotosFromAlbum1)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logFivePhotosFromAlbum1(data))
+  .catch(err => handleRejection(err));
 
 
 
