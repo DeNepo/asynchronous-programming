@@ -50,10 +50,10 @@ const resolveFiveExecutor = (resolve, reject) => {
   resolve(5);
 };
 const resolvedFivePromise = new Promise(resolveFiveExecutor)
-  .then(logResolvedValue)
-  .then(valueIsNumber)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(resolved => logResolvedValue(resolved))
+  .then(value => valueIsNumber(value))
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err));
 log('settled, resolved 5:', resolvedFivePromise);
 
 
@@ -64,10 +64,10 @@ const resolveHelloExecutor = (resolve, reject) => {
   resolve("hello");
 };
 const resolvedHelloPromise = new Promise(resolveHelloExecutor)
-  .then(logResolvedValue)
-  .then(valueIsNumber)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(resolved => logResolvedValue(resolved))
+  .then(value => valueIsNumber(value))
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err));
 log('settled, resolved "hello":', resolvedHelloPromise);
 
 
@@ -77,10 +77,10 @@ const rejectExecutor = (resolve, reject) => {
   reject('settled: rejected');
 };
 const rejectedPromise = new Promise(rejectExecutor)
-  .then(logResolvedValue)
-  .then(valueIsNumber)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(resolved => logResolvedValue(resolved))
+  .then(value => valueIsNumber(value))
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err));
 log('settled: rejected (intentional):', rejectedPromise);
 
 
