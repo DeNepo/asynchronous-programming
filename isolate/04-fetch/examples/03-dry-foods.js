@@ -12,7 +12,7 @@ const log = labeledLogger('Dry Foods');
 const expect = chai.expect;
 
 const origin = window.location.origin;
-const path = '/isolate/04-fetchs/fake-api/food/dry/grains.json';
+const path = '/isolate/04-fetch/fake-api/food/dry/grains.json';
 const requestURL = origin + path;
 log("requestURL: ", requestURL);
 
