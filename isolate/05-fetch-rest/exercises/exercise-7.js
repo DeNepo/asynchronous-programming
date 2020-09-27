@@ -42,10 +42,10 @@ const handleRejection = (err) => {
 
 
 fetch(origin + path)
-  .then(parseResponse)
-  .then(processData)
-  .then(testData)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => processData(data))
+  .then(processedData => testData(processedData))
+  .catch(err => handleRejection(err));
 
 
 
