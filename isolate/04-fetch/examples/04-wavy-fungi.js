@@ -12,7 +12,7 @@ const log = labeledLogger('Wavy Fungi');
 const expect = chai.expect;
 
 const origin = window.location.origin;
-const path = '/isolate/04-fetch/fake-api/animals/fungi.json';
+const path = '/asynchronous-programming/isolate/04-fetch/fake-api/animals/fungi.json';
 const requestURL = origin + path;
 log("requestURL: ", requestURL);
 
