@@ -41,8 +41,8 @@ const resolveExecutor = (resolve, reject) => {
   resolve('settled: resolved');
 };
 const resolvedPromise = new Promise(resolveExecutor)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err));
 log('settled: resolved:', resolvedPromise);
 
 
@@ -52,8 +52,8 @@ const rejectExecutor = (resolve, reject) => {
   reject('settled: rejected');
 };
 const rejectedPromise = new Promise(rejectExecutor)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err));
 log('settled: rejected (intentional):', rejectedPromise);
 
 
