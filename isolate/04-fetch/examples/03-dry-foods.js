@@ -42,9 +42,9 @@ const handleRejection = (err) => {
 
 
 fetch(requestURL)
-  .then(parseResponse)
-  .then(testGrains)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => testGrains(data))
+  .catch(err => handleRejection(err));
 
 
 
