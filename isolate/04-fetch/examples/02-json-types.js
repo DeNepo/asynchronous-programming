@@ -38,9 +38,9 @@ const handleRejection = (err) => {
 
 
 fetch(requestURL)
-  .then(parseResponse)
-  .then(logData)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logData(data))
+  .catch(err => handleRejection(err));
 
 
 
