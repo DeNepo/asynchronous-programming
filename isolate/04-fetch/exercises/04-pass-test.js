@@ -39,7 +39,7 @@ fetch(requestURL)
   .then(res => parseResponse(res))
   .then(filteredData => testFilteredMushes(filteredData))
   .then(data => filterMushes(data))
-  .catch(handleRejection);
+  .catch(err => handleRejection(err));
 
 
 
