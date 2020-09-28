@@ -237,6 +237,7 @@ Promises & `fetch`
 - APIs & REST
   - [Restful Routes?](https://medium.com/@atingenkay/restful-routes-what-are-they-8fe221521bb)
   - JSON Placeholder:[live](https://jsonplaceholder.typicode.com/guide.html), [more docs](https://github.com/typicode/json-server)
+  - [Presentation - Javascript Fetch and REST API](./slides/fetch-and-rest-api.html)
 - **DevTools**, the Network Tab:
   - [chrome/ium](https://developers.google.com/web/tools/chrome-devtools/network/)
   - [firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor)
