@@ -63,11 +63,11 @@ const handleRejection = (err) => {
 
 
 const isValidNumberPromise = new Promise(inputANumberExecutor)
-  .then(mustBeGreaterThanZero)
-  .then(logResolvedValue)
-  .then(isEvenNumber)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(value => mustBeGreaterThanZero(value))
+  .then(resolved =>logResolvedValue(resolved))
+  .then(number => isEvenNumber(number))
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err));
 
 console.log('isValidNumberPromise:', isValidNumberPromise);
 

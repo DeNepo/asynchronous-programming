@@ -264,7 +264,7 @@ Promises & `fetch`
 
 _individual project_
 
-You've made it this far, time to show off a bit!  Build yourself a sick portfolio to showcase all of your work so far.  Using the GitHub API gather stats, links and collaborators to showcase your best work. Here is a [boilerplate repository](https://github.com/HackYourFutureBelgium/starter-basic-import-export), and a [helpful tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE) to get you rolling (hint: avoid pushing your GitHub auth token!).
+You've made it this far, time to show off a bit!  Build yourself a sick portfolio to showcase all of your work so far.  Using the [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest) gather stats, links and collaborators to showcase your best work. Here is a [boilerplate repository](https://github.com/HackYourFutureBelgium/starter-basic-import-export), and a [helpful tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE) to get you rolling (hint: avoid pushing your GitHub auth token!).
 
 #### Checklist
 

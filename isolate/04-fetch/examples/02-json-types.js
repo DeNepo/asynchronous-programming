@@ -17,7 +17,7 @@
 const log = labeledLogger('JSON Types');
 
 const origin = window.location.origin;
-const path = '/isolate/04-fetchs/fake-api/json-types.json';
+const path = '/asynchronous-programming/isolate/04-fetch/fake-api/json-types.json';
 const requestURL = origin + path;
 log("requestURL: ", requestURL);
 
@@ -38,9 +38,9 @@ const handleRejection = (err) => {
 
 
 fetch(requestURL)
-  .then(parseResponse)
-  .then(logData)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(data => logData(data))
+  .catch(err => handleRejection(err));
 
 
 
