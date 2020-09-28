@@ -34,8 +34,8 @@ const userInputExecutor = (resolve, reject) => {
   }
 };
 const userInputPromise = new Promise(userInputExecutor)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err) );
 log('userInputPromise:', userInputPromise);
 
 
@@ -49,8 +49,8 @@ const randomNumberExecutor = (resolve, reject) => {
   }
 };
 const randomNumberPromise = new Promise(randomNumberExecutor)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err) );
 log('randomNumberPromise:', randomNumberPromise);
 
 
@@ -66,8 +66,8 @@ const inputLengthExecutor = (resolve, reject) => {
   }
 };
 const inputLengthPromise = new Promise(inputLengthExecutor)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+  .then(resolved => logResolvedValue(resolved))
+  .catch(err => handleRejection(err) );
 log('inputLengthPromise:', inputLengthPromise);
 
 

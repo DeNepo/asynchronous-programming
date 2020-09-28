@@ -36,10 +36,10 @@ const handleRejection = (err) => {
 
 // careful, this might not be right
 fetch(requestURL)
-  .then(parseResponse)
-  .then(testFilteredMushes)
-  .then(filterMushes)
-  .catch(handleRejection);
+  .then(res => parseResponse(res))
+  .then(filteredData => testFilteredMushes(filteredData))
+  .then(data => filterMushes(data))
+  .catch(err => handleRejection(err));
 
 
 
