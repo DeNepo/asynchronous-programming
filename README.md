@@ -375,3 +375,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
     - Part 2: [Integrate - Event Loop](https://vimeo.com/460082162)
     - Part 3: [Recap & Project Intro](https://vimeo.com/460082763)
 
+1. week 2:
+    - Part 1: [Isolate - Fetch & REST](https://home.hackyourfuture.be/coaches)
+    - Part 2: [Integrate - Fetch & REST](
+
