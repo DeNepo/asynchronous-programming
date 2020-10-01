@@ -12,7 +12,7 @@
     "there is no 'undefined' in JSON",
     ""
   ],
-  "boolean": [
+  "booleans": [
     true,
     false
   ],

@@ -62,7 +62,7 @@ const handleRejection = (err) => {
 const isValidNumberPromise = new Promise(inputANumberExecutor)
   .then(value => mustBeGreaterThanZero(value))
   .then(resolved => logResolvedValue(resolved))
-  .then(number => isEvenNumber (number))
+  .then(number => isEvenNumber(number))
   .then(resolved => alertSuccessFailure(resolved))
   .catch(err => handleRejection(err));
 

@@ -13,7 +13,6 @@ What makes web development so cool is the ... web.  Being able to build applicat
 
 Enter _asynchronous programming_: writing code that tells your browser to start one task and move on to a new task while you wait for the first to finish.  This is possible because of the _Event Loop_.
 
-
 ## Contents
 
 - [Learning Objectives](#learning-objectives)
@@ -88,6 +87,8 @@ References and Practice to help you master this module.
   - [javascript.info](https://javascript.info/async)
   - MDN: [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
   - HYF ... [AMS](https://github.com/HackYourFuture/JavaScript3/), [CPH](https://github.com/HackYourFuture-CPH/JavaScript/tree/master/javascript3)
+  - [Async/Await - FunFunFunction](https://www.youtube.com/watch?v=568g8hxJJp4)
+  - [`return await` (advanced)](https://stackoverflow.com/questions/38708550/difference-between-return-await-promise-and-return-promise)
 - Practice
   - [learn-promises](https://github.com/oliverjam/learn-promises)
   - [promise-practice](https://github.com/oliverjam/promise-practice)
@@ -304,8 +305,14 @@ Looking for an extra challenge? Try to implement these concepts:
 
 > before class
 
+- `async`/`await`
+  - Coding Train: [pt 1](https://www.youtube.com/watch?v=XO77Fib9tSI), [pt 2](https://www.youtube.com/watch?v=chavThlNz3s&feature=emb_rel_pause)
+  - [FunFunFunction](https://www.youtube.com/watch?v=568g8hxJJp4)
+  - [javascript.info](https://javascript.info/async-await)
+- URI encoding: [URI or component?](https://stackoverflow.com/questions/4540753/should-i-use-encodeuri-or-encodeuricomponent-for-encoding-urls), [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
 - [isolate](./isolate/index.html)
-  - 5. `async`/`await`
+  - 6. `await` vs. `then`
+  - 7. `async`/`await` - `fetch` (examples)
 
 ### Lesson Plan
 
@@ -314,24 +321,42 @@ Looking for an extra challenge? Try to implement these concepts:
 #### Before Break
 
 - [isolate](./isolate/index.html)
-  - 6. `fetch` with `async`/`await`
+  - 7. `async`/`await` - `fetch` (exercises)
+  - 8. `async`/`await` - `fetch` REST
 
 #### After Break
 
+- [integrate](./integrate/README.md)
+  - 3. `async`/`await` refactor
 
 ### Project
 
 > after class
 
-[restful-pjs](https://github.com/HackYourFutureBelgium/restful-pjs). to study - [this-to-fetch](https://github.com/hackyourfuturebelgium/this-to-fetch-example)
+Remember todo lists?  Here's another to add to yours :) There are more detailed instructions in `INSTRUCTIONS.md`
+
+- [restful-pjs](https://github.com/HackYourFutureBelgium/restful-pjs).
 
 
-### Deployment
+#### Checklist
 
-Because this project has a backend it's not possible to deploy it with GitHub Pages. Choose one person in your group to be responsible for _dev-ops_ and _deployment_. We have provided a GitHub action to deploy to heroku, someone in your group needs to make sure it's working correctly:
+```md
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- Project Planning
+  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
+  - [ ] [Project board](https://github.com/_/_/projects/_)
+- Implementation
+  - [ ] ES Modules (`import`/`export`)
+  - [ ] at least one `class`
+  - [ ] `async`/`await`
+  - [ ] Logs of each user interaction
+- [ ] [deployed demo]() (optional challenge)
+```
 
-* [FCC Article](https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/)
-* [Heroku CI](https://www.heroku.com/continuous-integration)
+#### Deployment (challenge)
+
+Because this project has a backend it's not possible to deploy it with GitHub Pages. Choose one person in your group to be responsible for _dev-ops_ and _deployment_.  There's more info on deployment in the starter repository.
 
 </details>
 

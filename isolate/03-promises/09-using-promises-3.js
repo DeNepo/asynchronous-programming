@@ -59,7 +59,7 @@ const isEvenNumber = (resolvedValue) => {
 const isEvenNumberPromise = new Promise(inputEvenNumberExecutor)
   .then(value => mustBeGreaterThanZero(value))
   .then(resolved => logResolvedValue(resolved))
-  .then(number => isEvenNumber (number))
+  .then(number => isEvenNumber(number))
   .then(resolved => alertSuccessFailure(resolved))
   .catch(err => handleRejection(err));
 console.log('isEvenNumberPromise:', isEvenNumberPromise);

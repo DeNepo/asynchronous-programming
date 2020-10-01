@@ -183,7 +183,7 @@
           "path": "/01-synchronous-delays.js"
         },
         {
-          "path": "/02-asynchronous-scheduling.js"
+          "path": "/02-asynchronous-delays.js"
         },
         {
           "path": "/03-async-before-sync.js"
@@ -355,6 +355,133 @@
             },
             {
               "path": "/exercise-8.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/06-await-vs-then",
+      "files": [
+        {
+          "path": "/00-promise-resolve-reject.js"
+        },
+        {
+          "path": "/01-async-functions-are-still-functions.js"
+        },
+        {
+          "path": "/02-async-functions-are-also-promises.js"
+        },
+        {
+          "path": "/03-await-ing.js"
+        },
+        {
+          "path": "/03-then-ing.js"
+        },
+        {
+          "path": "/04-await-ing-a-promise.js"
+        },
+        {
+          "path": "/04-then-ing-a-promise.js"
+        },
+        {
+          "path": "/05-async-functions-return-promises.js"
+        },
+        {
+          "path": "/06-await-return-promise.js"
+        },
+        {
+          "path": "/06-then-return-promise.js"
+        }
+      ]
+    },
+    {
+      "path": "/07-async-await-fetch",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/00-multiple-fetches.js"
+            },
+            {
+              "path": "/01-await-fetching-function.js"
+            },
+            {
+              "path": "/01-then-fetching-function.js"
+            },
+            {
+              "path": "/02-await-bad-response.js"
+            },
+            {
+              "path": "/02-then-bad-response.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/1-basic-fetcher.js"
+            },
+            {
+              "path": "/2-json-type-fetcher.js"
+            },
+            {
+              "path": "/3-dry-food-fetcher.js"
+            },
+            {
+              "path": "/4-wet-food-fetcher.js"
+            },
+            {
+              "path": "/5-animal-fetcher.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/08-async-await-fetch-rest",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/01-resource-routes.js"
+            },
+            {
+              "path": "/02-resource-id.js"
+            },
+            {
+              "path": "/03-related-resources.js"
+            },
+            {
+              "path": "/04-filter-with-params.js"
+            },
+            {
+              "path": "/05-limit-number-of-results.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/exercise-1.js"
+            },
+            {
+              "path": "/exercise-2.js"
+            },
+            {
+              "path": "/exercise-3.js"
+            },
+            {
+              "path": "/exercise-4.js"
+            },
+            {
+              "path": "/exercise-5.js"
             }
           ]
         }

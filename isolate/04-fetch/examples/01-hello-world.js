@@ -15,7 +15,7 @@
 const log = labeledLogger('Hello World');
 
 const origin = window.location.origin;
-const path = '/asynchronous-programming/isolate/04-fetch/fake-api/hello.json';
+const path = '/isolate/fake-api/hello.json';
 const requestURL = origin + path;
 log("requestURL: ", requestURL);
 
