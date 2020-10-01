@@ -47,29 +47,25 @@ Examples and exercises to study
 </ul></details></li>
 </ul></details></li>  <li style='list-style-type: none;'><details><summary>/exercises</summary>
 
-<ul>    <li style='list-style-type: none;'><details><summary>/explore-pokemon</summary>
-
-<ul><ul>      <li><a href="./02-fetch-rest/exercises/explore-pokemon/index.html" target="_blank">/index.html</a></li>
-</ul>
-</ul></details></li>    <li style='list-style-type: none;'><details><summary>/explore-pokemon-demo</summary>
+<ul>    <li style='list-style-type: none;'><details><summary>/explore-pokemon-demo</summary>
 
 <ul><ul>      <li><a href="./02-fetch-rest/exercises/explore-pokemon-demo/index.html" target="_blank">/index.html</a></li>
 </ul>
 </ul></details></li>
 </ul></details></li>
-</ul></details></li><li style='list-style-type: none;'><details><summary>/03-async-await</summary>
+</ul></details></li><li style='list-style-type: none;'><details><summary>/03-async-await-refactor</summary>
 
 <ul>  <li style='list-style-type: none;'><details><summary>/explore-albums</summary>
 
-<ul><ul>    <li><a href="./03-async-await/explore-albums/index.html" target="_blank">/index.html</a></li>
+<ul><ul>    <li><a href="./03-async-await-refactor/explore-albums/index.html" target="_blank">/index.html</a></li>
 </ul>
 </ul></details></li>  <li style='list-style-type: none;'><details><summary>/explore-posts</summary>
 
-<ul><ul>    <li><a href="./03-async-await/explore-posts/index.html" target="_blank">/index.html</a></li>
+<ul><ul>    <li><a href="./03-async-await-refactor/explore-posts/index.html" target="_blank">/index.html</a></li>
 </ul>
 </ul></details></li>  <li style='list-style-type: none;'><details><summary>/explore-users</summary>
 
-<ul><ul>    <li><a href="./03-async-await/explore-users/index.html" target="_blank">/index.html</a></li>
+<ul><ul>    <li><a href="./03-async-await-refactor/explore-users/index.html" target="_blank">/index.html</a></li>
 </ul>
 </ul></details></li>
 </ul></details></li>
