@@ -238,6 +238,7 @@ Promises & `fetch`
 - APIs & REST
   - [Restful Routes?](https://medium.com/@atingenkay/restful-routes-what-are-they-8fe221521bb)
   - JSON Placeholder:[live](https://jsonplaceholder.typicode.com/guide.html), [more docs](https://github.com/typicode/json-server)
+  - [Presentation - Javascript Fetch and REST API](./slides/fetch-and-rest-api.html)
 - **DevTools**, the Network Tab:
   - [chrome/ium](https://developers.google.com/web/tools/chrome-devtools/network/)
   - [firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor)
@@ -399,4 +400,8 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
     - Part 1: [Isolate - The Event Loop](https://vimeo.com/459858141)
     - Part 2: [Integrate - Event Loop](https://vimeo.com/460082162)
     - Part 3: [Recap & Project Intro](https://vimeo.com/460082763)
+
+1. week 2:
+    - Part 1: [Isolate - Fetch & REST](https://vimeo.com/462531506)
+    - Part 2: [Integrate - Fetch & REST](https://vimeo.com/462536889)
 
