@@ -65,7 +65,7 @@ window.onload = async () => {
       document.getElementById('drop-down').appendChild(view);
 
       if (url.searchParams.get("code")) {
-        console.log(5)
+
         document.getElementById('current-path').innerHTML = 'permalink';
         const code = decodeURIComponent(url.searchParams.get("code"));
         setTimeout(() => {

@@ -211,7 +211,7 @@ export default class LiveStudy {
     parsonizeButton.appendChild(document.createTextNode('parsonize selection'));
     let onceClicked = false;
     parsonizeButton.onclick = async () => {
-      console.log(onceClicked)
+
       if (!onceClicked) {
 
         onceClicked = true;

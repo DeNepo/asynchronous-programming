@@ -24,7 +24,15 @@ const fetchPhotoWithTitle = async (title = '') => {
 };
 
 
-
+const testPhoto = (title) => {
+  return (photo) => {
+    log("title:", title);
+    it(`Photo should have title "${title}"`, () => {
+      expect(photo.title).to.equal(title);
+    });
+    console.log('');
+  }
+};
 
 const title1 = 'error magni fugiat dolorem impedit molestiae illo ullam debitis';
 const testPhoto1 = testPhoto(title1);
