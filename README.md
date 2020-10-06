@@ -405,3 +405,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
     - Part 1: [Isolate - Fetch & REST](https://vimeo.com/462531506)
     - Part 2: [Integrate - Fetch & REST](https://vimeo.com/462536889)
 
+1. week 3:
+    - Part 1: [Isolate](https://vimeo.com/465272582)
+    - Part 2: [Integrate](https://vimeo.com/465276266)
+
