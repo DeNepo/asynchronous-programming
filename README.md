@@ -403,7 +403,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 1. week 2:
     - Part 1: [Isolate - Fetch & REST](https://vimeo.com/462531506)
     - Part 2: [Integrate - Fetch & REST](https://vimeo.com/462536889)
-1. week 3:
+2. week 3:
     - Part 1: [Isolate - `async`/`await`](https://vimeo.com/465272582)
     - Part 2: [Integrate - `async`/`await`](https://vimeo.com/465276266)
     - Wednesday Review: [Deploying to Heroku](https://vimeo.com/466119979)
