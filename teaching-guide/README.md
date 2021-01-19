@@ -57,7 +57,11 @@ In the previous module ([encapsulation](https://github.com/HackYourFutureBelgium
 
 ## After this Module
 
-In the next module ([web-apps](https://github.com/HackYourFutureBelgium/web-apps), 4 weeks) students will learn how to build simple fullstack applications that read/write data from the file system. Along the way they will learn about Express (routing, middleware, error handling, ...), RESTful APIs, Postman, simple deployment, using NPM modules, and much much more.
+In the next module ([web-apps](https://github.com/HackYourFutureBelgium/web-apps), 4 weeks) students will learn how to build simple fullstack applications that read/write data from the file system. Along the way they will learn about Express (routing, middleware, error handling, ...), RESTful APIs, Postman, simple deployment, data validation, using NPM modules, and much much more.
+
+Frontends in the Web Apps module are the same as what they learned in the Async module, just served statically from the root of their APIs.
+
+Web Apps is the magic module where everything the students have learned at HYF pulls together into the big picture.
 
 [TOP](#teaching-guide)
 
