@@ -5,7 +5,7 @@
 
 
 const log = labeledLogger('6. Pass Test');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 const origin = window.location.origin;
 const path = _;

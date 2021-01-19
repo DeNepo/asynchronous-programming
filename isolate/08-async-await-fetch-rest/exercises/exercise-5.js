@@ -2,7 +2,7 @@
 
 
 const log = labeledLogger('Exercise 3');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 
 // hint: ctr-f "q" -> https://github.com/typicode/json-server

@@ -2,7 +2,7 @@
 
 
 const log = labeledLogger('Exercise 2');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 
 

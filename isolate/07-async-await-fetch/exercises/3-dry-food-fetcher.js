@@ -1,7 +1,7 @@
 'use strict';
 
 const log = labeledLogger('dry food fetcher');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 // refactor this function to use async/await
 

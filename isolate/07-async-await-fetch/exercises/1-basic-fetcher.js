@@ -1,7 +1,7 @@
 'use strict';
 
 const log = labeledLogger('basic fetcher');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 // refactor this fetching function to async/await
 

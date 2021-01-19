@@ -1,7 +1,7 @@
 'use strict';
 
 const log = labeledLogger('animal fetcher');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 // write this function to pass the tests below
 

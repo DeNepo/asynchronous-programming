@@ -2,7 +2,7 @@
 
 
 const log = labeledLogger('Exercise 1');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 const origin = 'https://jsonplaceholder.typicode.com';
 const path = '/photos';

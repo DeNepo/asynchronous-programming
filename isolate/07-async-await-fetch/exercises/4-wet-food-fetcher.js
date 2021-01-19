@@ -1,7 +1,7 @@
 'use strict';
 
 const log = labeledLogger('wet food fetcher');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 // write this function to replace the first two .thens of the three fetches below
 

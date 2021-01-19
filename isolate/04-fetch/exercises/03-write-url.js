@@ -2,7 +2,7 @@
 
 
 const log = labeledLogger('3. Write URL');
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 const origin = window.location.origin;
 const path = _;

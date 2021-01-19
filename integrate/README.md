@@ -47,7 +47,11 @@ Examples and exercises to study
 </ul></details></li>
 </ul></details></li>  <li style='list-style-type: none;'><details><summary>/exercises</summary>
 
-<ul>    <li style='list-style-type: none;'><details><summary>/explore-pokemon-demo</summary>
+<ul>    <li style='list-style-type: none;'><details><summary>/explore-pokemon</summary>
+
+<ul><ul>      <li><a href="./02-fetch-rest/exercises/explore-pokemon/index.html" target="_blank">/index.html</a></li>
+</ul>
+</ul></details></li>    <li style='list-style-type: none;'><details><summary>/explore-pokemon-demo</summary>
 
 <ul><ul>      <li><a href="./02-fetch-rest/exercises/explore-pokemon-demo/index.html" target="_blank">/index.html</a></li>
 </ul>
