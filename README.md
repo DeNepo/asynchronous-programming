@@ -1,17 +1,18 @@
 # Asynchronous Programming
 
 > "Synchronous basically means that you can only execute one thing at a time. Asynchronous means that you can execute multiple things at a time and you don't have to finish executing the current thing in order to move on to next one."
+>
 > - [Mike](https://stackoverflow.com/a/33585047)
 
 ---
 
-"The Internet", "The Web", "Web Apps".  All of these terms describe something that is interconnected.  If you zoom out a bit, the entire internet is basically billions of computers all sharing information and software!  But so far your projects have been all alone on your computer :(
+"The Internet", "The Web", "Web Apps". All of these terms describe something that is interconnected. If you zoom out a bit, the entire internet is basically billions of computers all sharing information and software! But so far your projects have been all alone on your computer :(
 
-Everything you have learned so far happens on the _callstack_, everything on the callstack executes _synchronously_. Synchronous means that each line of code will finish executing before the next one starts.  Think of infinite loops, your browser freezes because nothing else can happen while the loop is looping!
+Everything you have learned so far happens on the _callstack_, everything on the callstack executes _synchronously_. Synchronous means that each line of code will finish executing before the next one starts. Think of infinite loops, your browser freezes because nothing else can happen while the loop is looping!
 
-What makes web development so cool is the ... web.  Being able to build applications that connect computers form across the internet.  This also introduces some challenges, it can take some time for computers to talk to each other across the internet.  You don't want your apps freezing while you wait to hear back from another computer.
+What makes web development so cool is the ... web. Being able to build applications that connect computers form across the internet. This also introduces some challenges, it can take some time for computers to talk to each other across the internet. You don't want your apps freezing while you wait to hear back from another computer.
 
-Enter _asynchronous programming_: writing code that tells your browser to start one task and move on to a new task while you wait for the first to finish.  This is possible because of the _Event Loop_.
+Enter _asynchronous programming_: writing code that tells your browser to start one task and move on to a new task while you wait for the first to finish. This is possible because of the _Event Loop_.
 
 ## Contents
 
@@ -26,6 +27,42 @@ Enter _asynchronous programming_: writing code that tells your browser to start 
 - [Class Recordings](#class-recordings)
 - [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
 - [HYF Home](https://home.hackyourfuture.be/) (external)
+
+## Getting Started
+
+How to study the code in this repo.
+
+<details>
+<summary>expand/collapse</summary>
+<br>
+
+> You will need [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) on your computer to study this material
+>
+> Using a browser with good DevTools will make your life easier: [Chromium](http://www.chromium.org/getting-involved/download-chromium), [FireFox](https://www.mozilla.org/en-US/firefox/new/), [Edge](https://www.microsoft.com/edge), [Chrome](https://www.google.com/chrome/)
+
+1. Install or update the `study-lenses` package globally
+   - `npm install -g study-lenses` (if you do not have it already)
+   - `npm update -g study-lenses` (if you already have it installed)
+1. Clone this repository:
+   - `git clone git@github.com:HackYourFutureBelgium/asynchronous-programming.git` (SSH) (recommended)
+   - `git clone https://github.com/HackYourFutureBelgium/asynchronous-programming.git` (HTTPS)
+   - `gh repo clone HackYourFutureBelgium/asynchronous-programming` (GH CLI)
+1. `cd` into the repository
+   - `cd asynchronous-programming`
+1. Run the `study` command from your CLI
+   - `study`
+1. The material will open in your default browser, you're good to go!
+
+> If you have a windows computer and get this error:
+>
+> - `... /study.ps1 cannot be loaded because running scripts ...`
+>
+> follow the instructions in [this StackOverflow answer](https://stackoverflow.com/a/63424744), that should take care of it ; )
+
+</details>
+<br>
+
+[TOP](#asynchronous-programming)
 
 ---
 
@@ -114,7 +151,6 @@ References and Practice to help you master this module.
 - [Coding Train](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X)
 - [what is CORS?](https://www.codecademy.com/articles/what-is-cors)
 
-
 ### `fetch`
 
 - References
@@ -130,10 +166,9 @@ References and Practice to help you master this module.
 - Practice
   - [learn-fetch](https://github.com/oliverjam/learn-fetch)
   - [real-world-fetch](https://github.com/oliverjam/real-world-fetch)
-  - [github-api-crash-course tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE).  (hint: avoid pushing your GitHub auth token!)
+  - [github-api-crash-course tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE). (hint: avoid pushing your GitHub auth token!)
   - [Fetching REST](https://github.com/HackYourFutureBelgium/fetching-rest)
   - JS 30: Type Ahead
-
 
 ### Node.js
 
@@ -153,6 +188,7 @@ take your frontend skills above and beyond:
 - [learn-component-architecture](https://github.com/oliverjam/learn-component-architecture)
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -165,9 +201,7 @@ The Event Loop!
 <details>
 <summary>expand/collapse</summary>
 
-### Prep Work
-
-> before class
+### Before Class
 
 - The Event Loop
   - [Loupe](http://latentflip.com/loupe/) (+10)
@@ -177,9 +211,7 @@ The Event Loop!
   - 0. Callstack
   - 0. Closure
 
-### Lesson Plan
-
-> during class
+### During Class
 
 #### Before Break
 
@@ -191,21 +223,20 @@ The Event Loop!
 - Integrate
   1. Event Loop
 
-### Project
+### After Class
 
-> after class
+_individual project_
 
-Reverse-Engineer [pomofocus.io](https://pomofocus.io/) (minus the Report, Settings and Login buttons).  Here is a [boilerplate repository](https://github.com/HackYourFutureBelgium/starter-basic-import-export) to get you started.
+Reverse-Engineer [pomofocus.io](https://pomofocus.io/) (minus the Report, Settings and Login buttons). You can use the [classes-starter](https://github.com/HackYourFutureBelgium/classes-starter).
 
 #### Checklist
 
 ```md
 - [ ] [repo](https://github.com/_/_) (with a complete README)
 - [ ] [live demo](https://_.github.io/_)
-- Project Planning
+- Planning
   - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
   - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
   - [ ] ES Modules (`import`/`export`)
   - [ ] at least one `class`
@@ -214,6 +245,7 @@ Reverse-Engineer [pomofocus.io](https://pomofocus.io/) (minus the Report, Settin
 ```
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -226,10 +258,7 @@ Promises & `fetch`
 <details>
 <summary>expand/collapse</summary>
 
-
-### Prep Work
-
-> before class
+### Before Class
 
 - Promises
   - [js.info](https://javascript.info/async): 1 -> 4
@@ -245,9 +274,7 @@ Promises & `fetch`
 - [`fetch`](#fetch)
   - [Isolate](./isolate/index.html): 4. `fetch` (examples)
 
-### Lesson Plan
-
-> during class
+### During Class
 
 #### Before Break
 
@@ -258,25 +285,22 @@ Promises & `fetch`
 #### After Break
 
 - Integrate
-   `fetch` REST
+  `fetch` REST
 
-### Project
-
-> after class
+### After Class
 
 _individual project_
 
-You've made it this far, time to show off a bit!  Build yourself a sick portfolio to showcase all of your work so far.  Using the [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest) gather stats, links and collaborators to showcase your best work. Here is a [boilerplate repository](https://github.com/HackYourFutureBelgium/starter-basic-import-export), and a [helpful tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE) to get you rolling (hint: avoid pushing your GitHub auth token!).
+You've made it this far, time to show off a bit! Build yourself a sick portfolio to showcase all of your work so far. Using the [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest) gather stats, links and collaborators to showcase your best work. You can again use the [classes-starter](https://github.com/HackYourFutureBelgium/classes-starter) repo, and here's a [helpful tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE) to get you rolling (hint: avoid pushing your GitHub auth token!).
 
 #### Checklist
 
 ```md
 - [ ] [repo](https://github.com/_/_) (with a complete README)
 - [ ] [live demo](https://_.github.io/_)
-- Project Planning
+- Planning
   - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
   - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
   - [ ] ES Modules (`import`/`export`)
   - [ ] at least one `class`
@@ -290,6 +314,7 @@ Looking for an extra challenge? Try to implement these concepts:
 - [client-side-routing](https://github.com/oliverjam/learn-client-side-routing)
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -302,9 +327,7 @@ Looking for an extra challenge? Try to implement these concepts:
 <details>
 <summary>expand/collapse</summary>
 
-### Prep Work
-
-> before class
+### Before Class
 
 - `async`/`await`
   - Coding Train: [pt 1](https://www.youtube.com/watch?v=XO77Fib9tSI), [pt 2](https://www.youtube.com/watch?v=chavThlNz3s&feature=emb_rel_pause)
@@ -315,9 +338,7 @@ Looking for an extra challenge? Try to implement these concepts:
   - 6. `await` vs. `then`
   - 7. `async`/`await` - `fetch` (examples)
 
-### Lesson Plan
-
-> during class
+### During Class
 
 #### Before Break
 
@@ -330,23 +351,22 @@ Looking for an extra challenge? Try to implement these concepts:
 - [integrate](./integrate/README.md)
   - 3. `async`/`await` refactor
 
-### Project
+### After Class
 
-> after class
+_group project_
 
-Remember todo lists?  Here's another to add to yours :) There are more detailed instructions in `INSTRUCTIONS.md`
+Remember todo lists? Here's another to add to yours :) There are more detailed instructions in `INSTRUCTIONS.md`
 
 - [restful-pjs](https://github.com/HackYourFutureBelgium/restful-pjs).
-
 
 #### Checklist
 
 ```md
 - [ ] [repo](https://github.com/_/_) (with a complete README)
-- Project Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
+- Planning
+- [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
+- [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
+- [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
   - [ ] ES Modules (`import`/`export`)
   - [ ] at least one `class`
@@ -357,9 +377,10 @@ Remember todo lists?  Here's another to add to yours :) There are more detailed 
 
 #### Deployment (challenge)
 
-Because this project has a backend it's not possible to deploy it with GitHub Pages. Choose one person in your group to be responsible for _dev-ops_ and _deployment_.  There's more info on deployment in the starter repository.
+Because this project has a backend it's not possible to deploy it with GitHub Pages. Choose one person in your group to be responsible for _dev-ops_ and _deployment_. There's more info on deployment in the starter repository.
 
 </details>
+<br>
 
 [TOP](#asynchronous-programming)
 
@@ -367,7 +388,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 
 ## Class Recordings
 
-- **Students**: Here you can find recordings of this module from past classes.  Enjoy!
+- **Students**: Here you can find recordings of this module from past classes. Enjoy!
 - **Coaches**: When sending your PR's with links please ...
   - Indicate which class you were teaching
   - Which week it was (if the module is more than 1 week)
@@ -381,14 +402,14 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 > [Anthony](https://github.com/Toinne/), [Kevin](https://github.com/kevintss/)
 
 1. week 1:
-    - Part 1: [The Event Loop](https://vimeo.com/406780143)
-    - Part 2: [Whack-a-Mole](https://vimeo.com/408313126)
+   - Part 1: [The Event Loop](https://vimeo.com/406780143)
+   - Part 2: [Whack-a-Mole](https://vimeo.com/408313126)
 2. week 2:
-    - Part 1: [`fetch` & REST](https://vimeo.com/409437916)
-    - Part 2: [Explore Users](https://vimeo.com/409459062)
+   - Part 1: [`fetch` & REST](https://vimeo.com/409437916)
+   - Part 2: [Explore Users](https://vimeo.com/409459062)
 3. week 3:
-    - Part 1: [`import` and `export`](https://vimeo.com/412299042)
-    - Part 2: [Explore Pokemon](https://vimeo.com/412616444)
+   - Part 1: [`import` and `export`](https://vimeo.com/412299042)
+   - Part 2: [Explore Pokemon](https://vimeo.com/412616444)
 
 ---
 
@@ -397,13 +418,13 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 > [Bram](https://github.com/bramdevries), [Deni](https://github.com/denichodev)
 
 1. week 1:
-    - Part 1: [Isolate - The Event Loop](https://vimeo.com/459858141)
-    - Part 2: [Integrate - Event Loop](https://vimeo.com/460082162)
-    - Part 3: [Recap & Project Intro](https://vimeo.com/460082763)
+   - Part 1: [Isolate - The Event Loop](https://vimeo.com/459858141)
+   - Part 2: [Integrate - Event Loop](https://vimeo.com/460082162)
+   - Part 3: [Recap & Project Intro](https://vimeo.com/460082763)
 1. week 2:
-    - Part 1: [Isolate - Fetch & REST](https://vimeo.com/462531506)
-    - Part 2: [Integrate - Fetch & REST](https://vimeo.com/462536889)
-2. week 3:
-    - Part 1: [Isolate - `async`/`await`](https://vimeo.com/465272582)
-    - Part 2: [Integrate - `async`/`await`](https://vimeo.com/465276266)
-    - Wednesday Review: [Deploying to Heroku](https://vimeo.com/466119979)
+   - Part 1: [Isolate - Fetch & REST](https://vimeo.com/462531506)
+   - Part 2: [Integrate - Fetch & REST](https://vimeo.com/462536889)
+1. week 3:
+   - Part 1: [Isolate - `async`/`await`](https://vimeo.com/465272582)
+   - Part 2: [Integrate - `async`/`await`](https://vimeo.com/465276266)
+   - Wednesday Review: [Deploying to Heroku](https://vimeo.com/466119979)

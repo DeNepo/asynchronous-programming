@@ -1,48 +1,38 @@
 'use strict';
 
-
 const log = labeledLogger('3. Write URL');
-const expect = require('chai').expect;
 
 const origin = window.location.origin;
 const path = _;
 const requestURL = origin + path;
-log("requestURL: ", requestURL);
-
+log('requestURL: ', requestURL);
 
 // careful!  these are not in order ;)
 
-const testWormsTypes = (wormsTypes) => {
-  log('wormsTypes: ', wormsTypes);
-  it('these worms can be found in Siberia', () => {
-    expect(wormsTypes).to.deep.equal({
-      striped: [
-        "siberia",
-        "europe",
-        "antarctica",
-        "pacific islands",
-        "indian subcontinent"
-      ],
-      wavy: [
-        "siberia",
-        "south america"
-      ]
-    });
+const testWormsTypes = wormsTypes => {
+  // these worms can be found in Siberia
+  log('actual wormsTypes: ', wormsTypes, '\nexpected wormsTypes:', {
+    striped: [
+      'siberia',
+      'europe',
+      'antarctica',
+      'pacific islands',
+      'indian subcontinent',
+    ],
+    wavy: ['siberia', 'south america'],
   });
 };
 
-const parseResponse = (response) => {
-  const parsedResponse = response.json();
-  log('response: ', response, '\n',
-    'parsed: ', parsedResponse);
-  return parsedResponse;
+const parseResponse = response => {
+  log(response);
+  return response.json();
 };
 
-const handleRejection = (err) => {
+const handleRejection = err => {
   log(err);
 };
 
-const separateAustralianTypes = (worms) => {
+const separateAustralianTypes = worms => {
   log('worms:', worms);
   const siberianWorms = {};
   for (let kind in worms) {
@@ -53,19 +43,7 @@ const separateAustralianTypes = (worms) => {
   return siberianWorms;
 };
 
-
-
-
-fetch(requestURL)
-  .then(_)
-  .then(_)
-  .then(_)
-  .catch(_);
-
-
-
-
+// write the consumers
+fetch(requestURL)._;
 
 log('end of synchronous tasks');
-
-

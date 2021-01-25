@@ -1,53 +1,33 @@
 'use strict';
 
-
 // which data entry has 5 entries?
 
-
 const log = labeledLogger('5. Pass Test');
-const expect = require('chai').expect;
 
 const origin = window.location.origin;
 const path = _;
 const requestURL = origin + path;
-log("requestURL: ", requestURL);
+log('requestURL: ', requestURL);
 
-
-
-
-const parseResponse = (response) => {
-  const parsedResponse = response.json();
-  log('response: ', response, '\n',
-    'parsed: ', parsedResponse);
-  return parsedResponse;
+const parseResponse = response => {
+  log(response);
+  return response.json();
 };
 
-const lengthOfData = (data) => {
+const lengthOfData = data => {
   // write me!
 };
 
-const testDataLength = (dataLength) => {
-  log('dataLength: ', dataLength);
-  it('data should have length 5', () => {
-    expect(dataLength).to.equal(5);
-  });
+const testDataLength = dataLength => {
+  // data should have length 5
+  log('actual dataLength: ', dataLength, '\nexpected dataLength:', 5);
 };
 
-const handleRejection = (err) => {
+const handleRejection = err => {
   log(err);
 };
 
-
-fetch(requestURL)
-  .then(_)
-  .then(_)
-  .then(_)
-  .catch(_);
-
-
-
-
+// write the consumers
+fetch(requestURL)._;
 
 log('end of synchronous tasks');
-
-

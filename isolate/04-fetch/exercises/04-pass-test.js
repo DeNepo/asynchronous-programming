@@ -1,50 +1,34 @@
 'use strict';
 
-
 const log = labeledLogger('4. Pass Test');
-const expect = require('chai').expect;
 
 const origin = window.location.origin;
 const path = _;
 const requestURL = origin + path;
-log("requestURL: ", requestURL);
+log('requestURL: ', requestURL);
 
-
-
-const parseResponse = (response) => {
-  const parsedResponse = response.json();
-  log('response: ', response, '\n',
-    'parsed: ', parsedResponse);
-  return parsedResponse;
+const parseResponse = response => {
+  log(response);
+  return response.json();
 };
 
-const filterMushes = (mushes) => {
+const filterMushes = mushes => {
   // write me!
 };
 
-const testFilteredMushes = (trueMush) => {
-  log('trueMush: ', trueMush);
-  it('these mush are true', () => {
-    expect(trueMush).to.deep.equal(['grey', 'orange']);
-  });
+const testFilteredMushes = trueMush => {
+  log('actual trueMush: ', trueMush, '\nexpected trueMush', ['grey', 'orange']);
 };
 
-const handleRejection = (err) => {
+const handleRejection = err => {
   log(err);
 };
 
-
 // careful, this might not be right
 fetch(requestURL)
-  .then(res => parseResponse(res))
+  .catch(err => handleRejection(err))
   .then(filteredData => testFilteredMushes(filteredData))
-  .then(data => filterMushes(data))
-  .catch(err => handleRejection(err));
-
-
-
-
+  .then(res => parseResponse(res))
+  .then(data => filterMushes(data));
 
 log('end of synchronous tasks');
-
-

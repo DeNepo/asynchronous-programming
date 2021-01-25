@@ -1,0 +1,10 @@
+{
+  "study": {
+    "dependencies": [
+      {
+        "path": "./lib/labeled-logger.js"
+      }
+    ],
+    "testExtensions": ["test"]
+  }
+}

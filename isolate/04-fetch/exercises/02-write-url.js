@@ -1,39 +1,30 @@
 'use strict';
 
-
 const log = labeledLogger('2. Write URL');
-const expect = require('chai').expect;
 
 const origin = window.location.origin;
 const path = _;
 const requestURL = origin + path;
-log("requestURL: ", requestURL);
+log('requestURL: ', requestURL);
 
-
-
-const parseResponse = (response) => {
-  const parsedResponse = response.json();
-  log('response: ', response, '\n',
-    'parsed: ', parsedResponse);
-  return parsedResponse;
+const parseResponse = response => {
+  log(response);
+  return response.json();
 };
 
-const separateBrazilNut = (nuts) => {
+const separateBrazilNut = nuts => {
   log('nuts:', nuts);
   return nuts[1];
 };
 
-const testNut = (brazilNut) => {
-  log('brazilNut: ', brazilNut);
-  it('this one is also a country', () => {
-    expect(brazilNut).to.equal('brazil');
-  });
+const testNut = nutName => {
+  // this one is also a country
+  log('actual nutName: ', nutName, '\nexpected nutName:', 'brazil');
 };
 
-const handleRejection = (err) => {
+const handleRejection = err => {
   log(err);
 };
-
 
 // careful, these might not be right
 fetch(requestURL)
@@ -42,10 +33,4 @@ fetch(requestURL)
   .then(testNut())
   .catch(handleRejection());
 
-
-
-
-
 log('end of synchronous tasks');
-
-

@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* JSON Types
 
   JSON is a data format used all the time in web development
@@ -13,35 +12,28 @@
 
 */
 
-
 const log = labeledLogger('JSON Types');
 
 const origin = window.location.origin;
-const path = '/isolate/fake-api/json-types.json';
+const path = '/fake-api-data/json-types.json';
 const requestURL = origin + path;
-log("requestURL: ", requestURL);
+log('requestURL: ', requestURL);
 
-
-const parseResponse = (response) => {
+const parseResponse = response => {
   const parsedResponse = response.json();
-  log('response: ', response, '\n',
-    'parsed: ', parsedResponse);
+  log(response, '\n\nparsed response:', parsedResponse);
   return parsedResponse;
 };
-const logData = (data) => {
+const logData = data => {
   log('data:', data);
 };
-const handleRejection = (err) => {
+const handleRejection = err => {
   log(err);
 };
-
-
 
 fetch(requestURL)
   .then(res => parseResponse(res))
   .then(data => logData(data))
   .catch(err => handleRejection(err));
-
-
 
 log('end of synchronous tasks');

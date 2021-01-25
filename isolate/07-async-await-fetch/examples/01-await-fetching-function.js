@@ -10,25 +10,19 @@
 
 */
 
-
 const log = labeledLogger('await: fetching function');
 
-
 const fetchFromFakeApi = async (dataPath = '') => {
-
-  const requestURL = window.location.origin + '/isolate/fake-api' + dataPath;
-  log("requestURL: ", requestURL);
+  const requestURL = window.location.origin + '/fake-api-data' + dataPath;
+  log('requestURL: ', requestURL);
 
   const response = await fetch(requestURL);
   log(dataPath, response);
 
   const parsedData = await response.json();
 
-  return parsedData
-
+  return parsedData;
 };
-
-
 
 const helloPath = '/hello.json';
 fetchFromFakeApi(helloPath)
@@ -38,8 +32,6 @@ fetchFromFakeApi(helloPath)
   })
   .catch(err => log(helloPath + ' -', err));
 
-
-
 const jsonTypesPath = '/json-types.json';
 fetchFromFakeApi(jsonTypesPath)
   .then(data => {
@@ -48,8 +40,5 @@ fetchFromFakeApi(jsonTypesPath)
     log(logMessage);
   })
   .catch(err => log(jsonTypesPath + ' -', err));
-
-
-
 
 log('--- end of synchronous tasks ---');

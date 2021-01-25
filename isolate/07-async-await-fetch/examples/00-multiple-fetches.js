@@ -9,13 +9,10 @@
 
 */
 
-
 const log = labeledLogger('Multiple Fetches');
 
 const origin = window.location.origin;
-const basePath = '/isolate/fake-api';
-
-
+const basePath = '/fake-api-data';
 
 const helloUrl = origin + basePath + '/hello.json';
 log(helloUrl);
@@ -25,15 +22,13 @@ fetch(helloUrl)
     if (!res.ok) {
       throw new Error('response was not ok');
     }
-    return res.json()
+    return res.json();
   })
   .then(data => {
     const logMessage = Object.entries(data)[0].join(' ');
     log(logMessage);
   })
   .catch(err => log('/hello.json error:', err));
-
-
 
 const jsonTypesUrl = origin + basePath + '/json-types.json';
 log(jsonTypesUrl);
@@ -43,7 +38,7 @@ fetch(jsonTypesUrl)
     if (!res.ok) {
       throw new Error('response was not ok');
     }
-    return res.json()
+    return res.json();
   })
   .then(data => {
     const numberOfTypes = Object.keys(data).length;
@@ -51,8 +46,6 @@ fetch(jsonTypesUrl)
     log(logMessage);
   })
   .catch(err => log('/json-types.json error:', err));
-
-
 
 const doesNotExistUrl = origin + basePath + '/does-not-exist.json';
 log(doesNotExistUrl);
@@ -62,13 +55,11 @@ fetch(doesNotExistUrl)
     if (!res.ok) {
       throw new Error('response was not ok');
     }
-    return res.json()
+    return res.json();
   })
   .then(data => {
     // this never happens!
   })
   .catch(err => log('/does-not-exist.json error:', err));
-
-
 
 log('--- end of synchronous tasks ---');

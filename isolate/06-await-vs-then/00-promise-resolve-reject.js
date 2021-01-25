@@ -2,7 +2,6 @@
 
 const log = labeledLogger('Promise.resolve(), Promise.reject()');
 
-
 /*
 
   these are two static methods on the Promise class
@@ -19,46 +18,36 @@ const log = labeledLogger('Promise.resolve(), Promise.reject()');
 
 */
 
-
 // Promise.resolve('hello') is the same as a new promise that resolves to 'hello'
 
 const PromiseResolveHello = Promise.resolve('hello');
-PromiseResolveHello
-  .then(value => log('PromiseResolveHello.then:', value));
+PromiseResolveHello.then(value => log('PromiseResolveHello.then:', value));
 
-log("PromiseResolveHello:", PromiseResolveHello);
-
+log('PromiseResolveHello:', PromiseResolveHello);
 
 const executorResolveToHello = (resolve, reject) => {
   resolve('hello');
 };
 const newPromiseResolveHello = new Promise(executorResolveToHello);
-newPromiseResolveHello
-  .then(value => log('newPromiseResolveHello.then:', value));
+newPromiseResolveHello.then(value =>
+  log('newPromiseResolveHello.then:', value)
+);
 
-log("newPromiseResolveHello:", newPromiseResolveHello);
-
-
-
+log('newPromiseResolveHello:', newPromiseResolveHello);
 
 // Promise.reject('bye') is the same as a new promise that rejects to 'bye'
 
 const PromiseRejectBye = Promise.reject('bye');
-PromiseRejectBye
-  .catch(value => log('PromiseRejectBye.catch:', value));
+PromiseRejectBye.catch(value => log('PromiseRejectBye.catch:', value));
 
-log("PromiseRejectBye:", PromiseRejectBye);
-
+log('PromiseRejectBye:', PromiseRejectBye);
 
 const executorRejectsBye = (resolve, reject) => {
   reject('bye');
 };
 const newPromiseRejectBye = new Promise(executorRejectsBye);
-newPromiseRejectBye
-  .catch(value => log('newPromiseRejectBye.catch:', value));
+newPromiseRejectBye.catch(value => log('newPromiseRejectBye.catch:', value));
 
-log("newPromiseRejectBye:", newPromiseRejectBye);
-
-
+log('newPromiseRejectBye:', newPromiseRejectBye);
 
 log('--- end of synchronous tasks ---');

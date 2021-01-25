@@ -1,51 +1,31 @@
 'use strict';
 
-
 // what data in which .json file sums to 0?
 
-
 const log = labeledLogger('6. Pass Test');
-const expect = require('chai').expect;
 
 const origin = window.location.origin;
 const path = _;
 const requestURL = origin + path;
-log("requestURL: ", requestURL);
+log('requestURL: ', requestURL);
 
-
-
-
-const sumNumbers = (data) => {
+const sumNumbers = data => {
   // write me!
 };
 
-const handleRejection = (err) => {
+const handleRejection = err => {
   log(err);
 };
 
-const testSum = (sum) => {
-  log('sum: ', sum);
-  it('sum should be 3', () => {
-    expect(sum).to.equal(3);
-  });
+const testSum = sum => {
+  log('actual sum: ', sum, '\nexpected sum:', 3);
 };
 
-const parseResponse = (response) => {
-  const parsedResponse = response.json();
-  log('response: ', response, '\n',
-    'parsed: ', parsedResponse);
-  return parsedResponse;
+const parseResponse = response => {
+  log(response);
+  return response.json();
 };
-
-
-
 
 // something is missing ....
 
-
-
-
-
 log('end of synchronous tasks');
-
-

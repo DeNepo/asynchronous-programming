@@ -3,7 +3,7 @@
 let log = console.log;
 try {
   log = labeledLogger('Pending vs. Settled');
-} catch (o_0) { };
+} catch (o_0) {}
 
 /*
   promises can be in one of two states:
@@ -18,10 +18,9 @@ try {
     PromiseResult : the value passed into `resolve` or `reject`
 */
 
-
 // always pending
 const pendingExecutor = (resolve, reject) => {
-  log('in pendingExecutor')
+  log('in pendingExecutor');
 };
 const pendingPromise = new Promise(pendingExecutor);
 log('always pending, never settled:', pendingPromise);
@@ -34,7 +33,6 @@ const resolveExecutor = (resolve, reject) => {
 const resolvedPromise = new Promise(resolveExecutor);
 log('settled: resolved:', resolvedPromise);
 
-
 // settled: rejected (intentional)
 const rejectExecutor = (resolve, reject) => {
   log('in rejectExecutor');
@@ -43,7 +41,6 @@ const rejectExecutor = (resolve, reject) => {
 const rejectedPromise = new Promise(rejectExecutor);
 log('settled: rejected (intentional):', rejectedPromise);
 
-
 // settled: rejected (by error)
 const errorExecutor = (resolve, reject) => {
   log('in errorExecutor');
@@ -51,8 +48,5 @@ const errorExecutor = (resolve, reject) => {
 };
 const errorPromise = new Promise(errorExecutor);
 log('settled: rejected (by error):', errorPromise);
-
-
-
 
 log('synchronous tasks on the callstack have completed');
