@@ -301,6 +301,7 @@ You've made it this far, time to show off a bit! Build yourself a sick portfolio
 - Planning
   - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
   - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
+  - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
   - [ ] ES Modules (`import`/`export`)
   - [ ] at least one `class`
@@ -364,9 +365,9 @@ Remember todo lists? Here's another to add to yours :) There are more detailed i
 ```md
 - [ ] [repo](https://github.com/_/_) (with a complete README)
 - Planning
-- [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-- [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-- [ ] [Project board](https://github.com/_/_/projects/_)
+  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
+  - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
   - [ ] ES Modules (`import`/`export`)
   - [ ] at least one `class`
