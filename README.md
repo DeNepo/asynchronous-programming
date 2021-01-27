@@ -201,6 +201,7 @@ The Event Loop!
 - Isolate
   - 0. Callstack
   - 0. Closure
+  - 0. Labeled Logger
 
 ### During Class
 
