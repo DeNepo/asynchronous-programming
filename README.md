@@ -200,7 +200,7 @@ The Event Loop!
   - `setTimeout` and `setInterval`: [js.info](https://javascript.info/settimeout-setinterval), [Beau](https://www.youtube.com/watch?v=kOcFZV3c75I)
 - Isolate
   - 0. Callstack
-  - 0. Closure
+  - 0. Closure (1. identifying closure)
   - 0. Labeled Logger
 
 ### During Class
