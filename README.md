@@ -18,8 +18,6 @@ Enter _asynchronous programming_: writing code that tells your browser to start 
 
 - [Learning Objectives](#learning-objectives)
 - [Suggested Study](#suggested-study)
-  - [Isolate](./isolate/index.html)
-  - [Integrate](./integrate/README.md)
 - Sundays & Projects
   - [Week 1](#week-1)
   - [Week 2](#week-2)
@@ -32,10 +30,6 @@ Enter _asynchronous programming_: writing code that tells your browser to start 
 
 How to study the code in this repo.
 
-<details>
-<summary>expand/collapse</summary>
-<br>
-
 > You will need [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) on your computer to study this material
 >
 > Using a browser with good DevTools will make your life easier: [Chromium](http://www.chromium.org/getting-involved/download-chromium), [FireFox](https://www.mozilla.org/en-US/firefox/new/), [Edge](https://www.microsoft.com/edge), [Chrome](https://www.google.com/chrome/)
@@ -43,24 +37,21 @@ How to study the code in this repo.
 1. Install or update the `study-lenses` package globally
    - `npm install -g study-lenses` (if you do not have it already)
    - `npm update -g study-lenses` (if you already have it installed)
-1. Clone this repository:
+2. Clone this repository:
    - `git clone git@github.com:HackYourFutureBelgium/asynchronous-programming.git` (SSH) (recommended)
    - `git clone https://github.com/HackYourFutureBelgium/asynchronous-programming.git` (HTTPS)
    - `gh repo clone HackYourFutureBelgium/asynchronous-programming` (GH CLI)
-1. `cd` into the repository
+3. `cd` into the repository
    - `cd asynchronous-programming`
-1. Run the `study` command from your CLI
+4. Run the `study` command from your CLI
    - `study`
-1. The material will open in your default browser, you're good to go!
+5. The material will open in your default browser, you're good to go!
 
 > If you have a windows computer and get this error:
 >
 > - `... /study.ps1 cannot be loaded because running scripts ...`
 >
 > follow the instructions in [this StackOverflow answer](https://stackoverflow.com/a/63424744), that should take care of it ; )
-
-</details>
-<br>
 
 [TOP](#asynchronous-programming)
 
@@ -207,7 +198,7 @@ The Event Loop!
   - [Loupe](http://latentflip.com/loupe/) (+10)
   - [In the Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) (+10)
   - `setTimeout` and `setInterval`: [js.info](https://javascript.info/settimeout-setinterval), [Beau](https://www.youtube.com/watch?v=kOcFZV3c75I)
-- [Isolate](./isolate/index.html)
+- Isolate
   - 0. Callstack
   - 0. Closure
 
@@ -215,7 +206,7 @@ The Event Loop!
 
 #### Before Break
 
-- [Isolate](./isolate/index.html)
+- Isolate
   - 1. Event Loop
 
 #### After break
@@ -262,7 +253,7 @@ Promises & `fetch`
 
 - Promises
   - [js.info](https://javascript.info/async): 1 -> 4
-  - [Isolate](./isolate/index.html): 3. Promises
+  - Isolate: 3. Promises
   - [Callbacks, Promises, Async](#callbacks-promises-async)
 - APIs & REST
   - [Restful Routes?](https://medium.com/@atingenkay/restful-routes-what-are-they-8fe221521bb)
@@ -272,13 +263,13 @@ Promises & `fetch`
   - [chrome/ium](https://developers.google.com/web/tools/chrome-devtools/network/)
   - [firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor)
 - [`fetch`](#fetch)
-  - [Isolate](./isolate/index.html): 4. `fetch` (examples)
+  - Isolate: 4. `fetch` (examples)
 
 ### During Class
 
 #### Before Break
 
-- [Isolate](./isolate/index.html)
+- Isolate
   - `fetch`
   - `fetch` REST
 
@@ -335,7 +326,7 @@ Looking for an extra challenge? Try to implement these concepts:
   - [FunFunFunction](https://www.youtube.com/watch?v=568g8hxJJp4)
   - [javascript.info](https://javascript.info/async-await)
 - URI encoding: [URI or component?](https://stackoverflow.com/questions/4540753/should-i-use-encodeuri-or-encodeuricomponent-for-encoding-urls), [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
-- [isolate](./isolate/index.html)
+- isolate
   - 6. `await` vs. `then`
   - 7. `async`/`await` - `fetch` (examples)
 
@@ -343,7 +334,7 @@ Looking for an extra challenge? Try to implement these concepts:
 
 #### Before Break
 
-- [isolate](./isolate/index.html)
+- isolate
   - 7. `async`/`await` - `fetch` (exercises)
   - 8. `async`/`await` - `fetch` REST
 
