@@ -426,7 +426,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 
 > [Bram](https://github.com/bramdevries), [Thibault](https://github.com/ThibaultLesuisse)
 
-1. week 1:
+1. week 1: Scheduling & The Event Loop. `setTimeout`, `setInterval`
    - [slides](./slides/week-1-bram.pd)
    - [isolate](https://vimeo.com/507186101)
    - [integrate](https://vimeo.com/507186832)
