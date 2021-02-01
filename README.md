@@ -406,7 +406,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 
 ---
 
-### Class 9 & 10
+### [class-9-10](https://github.com/hackyourfuturebelgium/class-9-10)
 
 > [Bram](https://github.com/bramdevries), [Deni](https://github.com/denichodev)
 
@@ -421,3 +421,13 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
    - Part 1: [Isolate - `async`/`await`](https://vimeo.com/465272582)
    - Part 2: [Integrate - `async`/`await`](https://vimeo.com/465276266)
    - Wednesday Review: [Deploying to Heroku](https://vimeo.com/466119979)
+
+### [class-11-12](https://github.com/hackyourfuturebelgium/class-11-12)
+
+> [Bram](https://github.com/bramdevries), [Thibault](https://github.com/ThibaultLesuisse)
+
+1. week 1:
+   - [slides](./slides/week-1-bram.pd)
+   - [isolate](https://vimeo.com/507186101)
+   - [integrate](https://vimeo.com/507186832)
+   - [homework](https://vimeo.com/507187398)
