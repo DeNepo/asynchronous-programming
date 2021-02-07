@@ -432,3 +432,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
    - [integrate](https://vimeo.com/507186832)
    - [homework](https://vimeo.com/507187398)
    - [wednesday review](https://vimeo.com/508373774)
+2. week 2: Promises & `fetch`
+   - [isolate](https://vimeo.com/509470203), [exercises](https://vimeo.com/509470785)
+   - [integrate](https://vimeo.com/509471044), [exercises](https://vimeo.com/509470529)
+   - [homework](https://vimeo.com/509471326)
