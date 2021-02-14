@@ -427,12 +427,15 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
 > [Bram](https://github.com/bramdevries), [Thibault](https://github.com/ThibaultLesuisse)
 
 1. week 1: Scheduling & The Event Loop. `setTimeout`, `setInterval`
-   - [slides](./slides/week-1-bram.pd)
+   - [slides](./slides/week-1-bram.pdf)
    - [isolate](https://vimeo.com/507186101)
    - [integrate](https://vimeo.com/507186832)
    - [homework](https://vimeo.com/507187398)
    - [wednesday review](https://vimeo.com/508373774)
 2. week 2: Promises & `fetch`
+   - [slides](./slides/week-2-bram.pdf)
    - [isolate](https://vimeo.com/509470203), [exercises](https://vimeo.com/509470785)
    - [integrate](https://vimeo.com/509471044), [exercises](https://vimeo.com/509470529)
    - [homework](https://vimeo.com/509471326)
+3. week 3: Async / Await
+   - [slides](./slides/week-3-bram.pdf)
