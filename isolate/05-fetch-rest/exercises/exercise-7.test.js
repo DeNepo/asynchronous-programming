@@ -28,7 +28,7 @@ const testData = actual => {
     const user = actual[i];
     it(`user ${i} has the correct keys`, () => {
       const userKeys = Object.keys(user);
-      expect(userKeys).to.have.members(['id', 'name', 'userName']);
+      expect(userKeys).to.have.members(['id', 'name', 'username']);
     });
   }
 };
