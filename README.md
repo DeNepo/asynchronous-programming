@@ -436,3 +436,7 @@ Because this project has a backend it's not possible to deploy it with GitHub Pa
    - [isolate](https://vimeo.com/509470203), [exercises](https://vimeo.com/509470785)
    - [integrate](https://vimeo.com/509471044), [exercises](https://vimeo.com/509470529)
    - [homework](https://vimeo.com/509471326)
+3. week 3: `async`/`await` & `fetch`
+   - [isolate](https://vimeo.com/512490603), [exercises](https://vimeo.com/512490977)
+   - [integrate](https://vimeo.com/512491395), [exercises](https://vimeo.com/512491562)
+   - [homework](https://vimeo.com/512491928)

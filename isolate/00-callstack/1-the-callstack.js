@@ -15,7 +15,6 @@ const func1 = () => {
 console.log('this callstack is 1 call deep');
 func1();
 
-
 const func2 = () => {
   console.log('entering func 2');
   depth++;
@@ -28,7 +27,6 @@ const func2 = () => {
 //  2 will open first, but 1 will close first
 console.log('this callstack is 2 calls deep');
 func2();
-
 
 const func3 = () => {
   console.log('entering func 3');
