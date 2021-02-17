@@ -9,7 +9,7 @@ const log = labeledLogger('wet food fetcher');
 const wetFoodSearch = async (type = '', value) => {};
 
 // these API calls work, but are very repetitive
-// your goal is to refactor the first to .thens of each fetch
+// your goal is to refactor the first two .thens of each fetch
 //  refactor them into the empty async function above
 
 fetch(window.location.origin + '/fake-api-data/food/wet/soups.json')
