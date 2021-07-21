@@ -93,6 +93,8 @@ References and Practice to help you master this module.
 - `this` and `() => {}`
   - [tyler mcginnis](https://tylermcginnis.com/arrow-functions/)
   - [dario garcia moya](https://www.codementor.io/@dariogarciamoya/understanding-this-in-javascript-with-arrow-functions-gcpjwfyuc)
+  - [academind](https://www.youtube.com/watch?v=Pv9flm-80vM)
+  - [uidotdev](https://www.youtube.com/watch?v=zE9iro4r918)
   - [youtube search](https://www.youtube.com/results?search_query=arrow+function+binding+this)
 
 ### The Event Loop
