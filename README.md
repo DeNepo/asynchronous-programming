@@ -97,6 +97,7 @@ References and Practice to help you master this module.
 
 ### The Event Loop
 
+- [Java Brains](https://www.youtube.com/watch?v=EI7sN1dDwcY)
 - [Loupe](http://latentflip.com/loupe/) (+10)
 - [In the Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) (+10)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
