@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>explore users (demo)</title>
+
+    <style>
+      .todo {
+        border-top: solid black 1px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <input type="number" name="userId" min="1" max="100" value="1" />
+      <input type="button" id="choose-user-button" value="view user" />
+    </form>
+    <div id="root"></div>
+
+    <script>
+      const _0x1cba = [
+        'createElement',
+        'form',
+        'log',
+        'comments',
+        '1391225XkVGPU',
+        '7477nDjNpu',
+        'json',
+        'target',
+        '_blank',
+        '710195aljHKp',
+        'code',
+        'root',
+        'user',
+        'input',
+        'addEventListener',
+        'HTTP\x20error!\x20status:\x20',
+        'div',
+        '25AGeXqo',
+        '19fpzUUL',
+        'className',
+        'href',
+        '815589JRdHjX',
+        'status',
+        'checked',
+        '4805WdcjPb',
+        'username',
+        'appendChild',
+        'title',
+        'website:\x20',
+        'todos',
+        'choose-user-button',
+        'reduce',
+        'name:\x20',
+        'email:\x20',
+        'user-',
+        'users',
+        'todo-',
+        '787420eMeMEX',
+        'click',
+        '823622MJdmXw',
+        'innerHTML',
+        'all',
+        'website',
+        'join',
+        'http://',
+        'getElementById',
+        '2NvtQbw',
+        'type',
+      ];
+      const _0xea3e22 = _0x5723;
+      (function(_0xb9c3a5, _0x4baef6) {
+        const _0x5d1cc1 = _0x5723;
+        while (!![]) {
+          try {
+            const _0xe7338 =
+              -parseInt(_0x5d1cc1(0x96)) +
+              -parseInt(_0x5d1cc1(0xa5)) +
+              parseInt(_0x5d1cc1(0xa6)) * -parseInt(_0x5d1cc1(0x83)) +
+              parseInt(_0x5d1cc1(0x98)) +
+              parseInt(_0x5d1cc1(0x89)) * parseInt(_0x5d1cc1(0x82)) +
+              parseInt(_0x5d1cc1(0x86)) +
+              -parseInt(_0x5d1cc1(0xaa)) * -parseInt(_0x5d1cc1(0x9f));
+            if (_0xe7338 === _0x4baef6) break;
+            else _0xb9c3a5['push'](_0xb9c3a5['shift']());
+          } catch (_0x4ee498) {
+            _0xb9c3a5['push'](_0xb9c3a5['shift']());
+          }
+        }
+      })(_0x1cba, 0xd1b8a);
+      function _0x5723(_0x18c4a7, _0x127496) {
+        return (
+          (_0x5723 = function(_0x1cba84, _0x57232d) {
+            _0x1cba84 = _0x1cba84 - 0x7d;
+            let _0x5ed36e = _0x1cba[_0x1cba84];
+            return _0x5ed36e;
+          }),
+          _0x5723(_0x18c4a7, _0x127496)
+        );
+      }
+      const state = { user: {}, todos: [] },
+        origin = 'https://jsonplaceholder.typicode.com',
+        typicodeResource = async (..._0x42fd84) => {
+          const _0x28528c = _0x5723,
+            _0x51de2e = _0x42fd84[_0x28528c(0x9c)]('/'),
+            _0x222b93 = origin + '/' + _0x51de2e;
+          console[_0x28528c(0xa3)](_0x222b93);
+          const _0x402342 = encodeURI(_0x222b93),
+            _0xaed79f = await fetch(_0x402342);
+          if (!_0xaed79f['ok'])
+            throw new Error(
+              _0x28528c(0x80) +
+                _0xaed79f[_0x28528c(0x87)] +
+                '\x0a->\x20' +
+                _0x222b93
+            );
+          const _0xa5b4cd = await _0xaed79f[_0x28528c(0xa7)]();
+          return _0xa5b4cd;
+        },
+        renderTodo = (_0x258158 = {}) => {
+          const _0x8cf5cc = _0x5723,
+            _0x449460 = document[_0x8cf5cc(0xa1)](_0x8cf5cc(0x81));
+          (_0x449460['id'] = _0x8cf5cc(0x95) + _0x258158['id']),
+            (_0x449460[_0x8cf5cc(0x84)] = 'todo');
+          const _0x57b392 = document[_0x8cf5cc(0xa1)](_0x8cf5cc(0x7e));
+          (_0x57b392[_0x8cf5cc(0xa0)] = 'checkbox'),
+            (_0x57b392[_0x8cf5cc(0x88)] = _0x258158['completed']),
+            _0x449460[_0x8cf5cc(0x8b)](_0x57b392);
+          const _0x26ece5 = document[_0x8cf5cc(0xa1)](_0x8cf5cc(0xab));
+          return (
+            (_0x26ece5['innerHTML'] = _0x258158[_0x8cf5cc(0x8c)]),
+            _0x449460[_0x8cf5cc(0x8b)](_0x26ece5),
+            _0x449460
+          );
+        },
+        renderUser = () => {
+          const _0x1b399a = _0x5723,
+            { user: _0x20a1a0, todos: _0x38d968 } = state,
+            _0x49aa71 = document[_0x1b399a(0xa1)](_0x1b399a(0x81));
+          _0x49aa71['id'] = _0x1b399a(0x93) + _0x20a1a0['id'];
+          const _0x576ecc = document['createElement']('h1');
+          (_0x576ecc['innerHTML'] = _0x20a1a0[_0x1b399a(0x8a)]),
+            _0x49aa71[_0x1b399a(0x8b)](_0x576ecc);
+          const _0x467ffb = document['createElement']('p');
+          (_0x467ffb['innerHTML'] = _0x1b399a(0x91) + _0x20a1a0['name']),
+            _0x49aa71[_0x1b399a(0x8b)](_0x467ffb);
+          const _0x2d9439 = document[_0x1b399a(0xa1)]('p');
+          (_0x2d9439[_0x1b399a(0x99)] = _0x1b399a(0x92) + _0x20a1a0['email']),
+            _0x49aa71['appendChild'](_0x2d9439);
+          const _0x3c5b9c = document['createElement']('p');
+          _0x3c5b9c[_0x1b399a(0x99)] = _0x1b399a(0x8d);
+          const _0x406a57 = document[_0x1b399a(0xa1)]('a');
+          (_0x406a57[_0x1b399a(0x99)] = _0x20a1a0[_0x1b399a(0x9b)]),
+            (_0x406a57[_0x1b399a(0x85)] =
+              _0x1b399a(0x9d) + _0x20a1a0[_0x1b399a(0x9b)]),
+            (_0x406a57[_0x1b399a(0xa8)] = _0x1b399a(0xa9)),
+            _0x3c5b9c['appendChild'](_0x406a57),
+            _0x49aa71['appendChild'](_0x3c5b9c);
+          const _0x2db5ac = _0x38d968['map'](_0x3429a7 =>
+            renderTodo(_0x3429a7)
+          )[_0x1b399a(0x90)]((_0x368b94, _0x517578) => {
+            const _0x46a448 = _0x1b399a;
+            return _0x368b94[_0x46a448(0x8b)](_0x517578), _0x368b94;
+          }, document[_0x1b399a(0xa1)](_0x1b399a(0x81)));
+          return (
+            (_0x2db5ac['id'] = _0x1b399a(0xa4)),
+            _0x49aa71[_0x1b399a(0x8b)](_0x2db5ac),
+            _0x49aa71
+          );
+        },
+        chooseUser = async _0xc3fb41 => {
+          const _0x4874b3 = _0x5723,
+            _0x4fcb9e =
+              _0xc3fb41[_0x4874b3(0xa8)][_0x4874b3(0xa2)]['userId']['value'],
+            [_0x1b9a8b, _0x103824] = await Promise[_0x4874b3(0x9a)]([
+              typicodeResource(_0x4874b3(0x94), _0x4fcb9e),
+              typicodeResource(_0x4874b3(0x94), _0x4fcb9e, _0x4874b3(0x8e)),
+            ]);
+          (state[_0x4874b3(0x7d)] = _0x1b9a8b),
+            (state['todos'] = _0x103824),
+            console['log'](state);
+          const _0x3d448d = renderUser();
+          (document['getElementById'](_0x4874b3(0xac))[_0x4874b3(0x99)] = ''),
+            document[_0x4874b3(0x9e)](_0x4874b3(0xac))[_0x4874b3(0x8b)](
+              _0x3d448d
+            );
+        };
+      document[_0xea3e22(0x9e)](_0xea3e22(0x8f))[_0xea3e22(0x7f)](
+        _0xea3e22(0x97),
+        chooseUser
+      );
+    </script>
+  </body>
+</html>

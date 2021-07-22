@@ -64,10 +64,6 @@ How to study the code in this repo.
   - Using `Promise` to write more manageable asynchronous code
   - Refactoring promises to `async`/`await`
   - Using `fetch` to get and consume data from APIs
-- Node
-  - Using `node-fetch` to make API calls from Node
-  - Using `fs` to read and write files
-  - Using `utils.promisify` to convert `fs` from callbacks to promises
 
 [TOP](#asynchronous-programming)
 
@@ -97,6 +93,8 @@ References and Practice to help you master this module.
 
 ### The Event Loop
 
+- [Coding Nomad](https://www.youtube.com/watch?v=5YcMKYTZZvk) - short clear example
+- [Java Brains](https://www.youtube.com/watch?v=EI7sN1dDwcY) - restaurant analogy
 - [Loupe](http://latentflip.com/loupe/) (+10)
 - [In the Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) (+10)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
@@ -161,23 +159,6 @@ References and Practice to help you master this module.
   - [Fetching REST](https://github.com/HackYourFutureBelgium/fetching-rest)
   - JS 30: Type Ahead
 
-### Node.js
-
-- `node-fetch`
-- `fs`
-- `utils.promisify`
-- [Mosh: Node.js in 1 Hour](https://www.youtube.com/watch?v=TlB_eWDSMt4)
-- [Friendly Node.js `fs` guide](https://areknawo.com/node-js-file-system-api-beginner-friendly-guide/)
-- [Node.js examples to study](https://github.com/tertiarycourses/NodeJSTraining)
-- [learnyounode](https://github.com/workshopper/learnyounode) through `MAKE IT MODULAR`
-
-### Other
-
-take your frontend skills above and beyond:
-
-- [client-side-routing](https://github.com/oliverjam/learn-client-side-routing)
-- [learn-component-architecture](https://github.com/oliverjam/learn-component-architecture)
-
 </details>
 <br>
 
@@ -194,47 +175,33 @@ The Event Loop!
 
 ### Before Class
 
-- The Event Loop
-  - [Loupe](http://latentflip.com/loupe/) (+10)
-  - [In the Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) (+10)
-  - `setTimeout` and `setInterval`: [js.info](https://javascript.info/settimeout-setinterval), [Beau](https://www.youtube.com/watch?v=kOcFZV3c75I)
-- Isolate
-  - 0. Callstack
-  - 0. Closure (1. identifying closure)
-  - 0. Labeled Logger
+- [./the-event-loop](./the-event-loop)
+  - watch a couple of the videos
+  - step through the timeout examples in [jsv9000.app](https://www.jsv9000.app/)
+- [./isolate](./isolate)
+  - `labeled-logger`
+  - `event-loop` examples
 
 ### During Class
 
 #### Before Break
 
-- Isolate
-  - 1. Event Loop
+- [./the-event-loop](./the-event-loop)
+  - timeouts
+- [./isolate](./isolate)
+  - timeout exercises
+  - sync vs. async
 
 #### After break
 
-- Integrate
-  1. Event Loop
+- [./the-event-loop](./the-event-loop)
+  - promises
+- [./isolate](./isolate)
+  - promises
 
 ### After Class
 
-_individual project_
-
-Reverse-Engineer [pomofocus.io](https://pomofocus.io/) (minus the Report, Settings and Login buttons). You can use the [classes-starter](https://github.com/HackYourFutureBelgium/classes-starter).
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-- Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] at least one `class`
-  - [ ] at least one `setTimeout` and one `setInterval`
-  - [ ] Logs of each user interaction
-```
+No project! Take this week to focus on the Event Loop and Promises.
 
 </details>
 <br>
@@ -245,7 +212,7 @@ Reverse-Engineer [pomofocus.io](https://pomofocus.io/) (minus the Report, Settin
 
 ## Week 2
 
-Promises & `fetch`
+Fetching Data
 
 <details>
 <summary>expand/collapse</summary>
@@ -263,48 +230,28 @@ Promises & `fetch`
 - **DevTools**, the Network Tab:
   - [chrome/ium](https://developers.google.com/web/tools/chrome-devtools/network/)
   - [firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor)
-- [`fetch`](#fetch)
-  - Isolate: 4. `fetch` (examples)
+- [./isolate](./isolate)
+  - `returning-promises` & `async-await`: examples
 
 ### During Class
 
 #### Before Break
 
-- Isolate
-  - `fetch`
-  - `fetch` REST
+- APIs - https://jsonplaceholder.typicode.com/users/1
+  - put this URL into the browser URL bar, what happens?
+  - now try `fetch("https://jsonplaceholder.typicode.com/users/1")` in your console, what do you see?
+  - how can you get the data from the response?
+- API Call functions
+  - examples
 
 #### After Break
 
-- Integrate
-  `fetch` REST
+- API Call functions
+  - exercises
 
 ### After Class
 
-_individual project_
-
-You've made it this far, time to show off a bit! Build yourself a sick portfolio to showcase all of your work so far. Using the [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest) gather stats, links and collaborators to showcase your best work. You can again use the [classes-starter](https://github.com/HackYourFutureBelgium/classes-starter) repo, and here's a [helpful tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE) to get you rolling (hint: avoid pushing your GitHub auth token!).
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] at least one `class`
-  - [ ] at least one call to the GitHub API
-  - [ ] Logs of each user interaction
-```
-
-Looking for an extra challenge? Try to implement these concepts:
-
-- [learn-component-architecture](https://github.com/oliverjam/learn-component-architecture)
-- [client-side-routing](https://github.com/oliverjam/learn-client-side-routing)
+> coming soon: build a home page using the GitHub API to showcase your projects.
 
 </details>
 <br>
@@ -322,55 +269,20 @@ Looking for an extra challenge? Try to implement these concepts:
 
 ### Before Class
 
-- `async`/`await`
-  - Coding Train: [pt 1](https://www.youtube.com/watch?v=XO77Fib9tSI), [pt 2](https://www.youtube.com/watch?v=chavThlNz3s&feature=emb_rel_pause)
-  - [FunFunFunction](https://www.youtube.com/watch?v=568g8hxJJp4)
-  - [javascript.info](https://javascript.info/async-await)
-- URI encoding: [URI or component?](https://stackoverflow.com/questions/4540753/should-i-use-encodeuri-or-encodeuricomponent-for-encoding-urls), [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
-- isolate
-  - 6. `await` vs. `then`
-  - 7. `async`/`await` - `fetch` (examples)
+- [./isolate](./isolate)
+  - `error-handling`
+- [./fetch-and-render](./fetch-and-render)
+  - example
 
 ### During Class
 
 #### Before Break
 
-- isolate
-  - 7. `async`/`await` - `fetch` (exercises)
-  - 8. `async`/`await` - `fetch` REST
-
 #### After Break
-
-- [integrate](./integrate/README.md)
-  - 3. `async`/`await` refactor
 
 ### After Class
 
-_group project_
-
-Remember todo lists? Here's another to add to yours :) There are more detailed instructions in `INSTRUCTIONS.md`
-
-- [restful-pjs](https://github.com/HackYourFutureBelgium/restful-pjs).
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] at least one `class`
-  - [ ] `async`/`await`
-  - [ ] Logs of each user interaction
-- [ ] [deployed demo]() (optional challenge)
-```
-
-#### Deployment (challenge)
-
-Because this project has a backend it's not possible to deploy it with GitHub Pages. Choose one person in your group to be responsible for _dev-ops_ and _deployment_. There's more info on deployment in the starter repository.
+keep working on your home page.
 
 </details>
 <br>

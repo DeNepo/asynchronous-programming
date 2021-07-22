@@ -1,7 +1,11 @@
 {
   "study": {
+    "run": true,
+    "debug": true,
     "save": true,
-    "eval": true
+    "environment": true,
+    "type": "module",
+    "tests": [".spec.js", ".test.js"]
   },
-  "port": 4010
+  "--port": 4007
 }

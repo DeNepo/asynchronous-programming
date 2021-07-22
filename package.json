@@ -1,23 +1,25 @@
 {
-  "name": "testing",
+  "name": "asynchronous-programming",
   "version": "1.0.0",
-  "description": "the testing module for HYF Belgium",
-  "main": "server.js",
+  "description": "the Async module for HYF Belgium",
   "scripts": {
-    "register-isolate": "node isolate/register.js",
-    "register-integrate": "node integrate/register.js",
-    "register-example-projects": "node example-projects/register.js",
-    "register": "npm run register-isolate && npm run register-integrate && npm run register-example-projects",
-    "start": "npm run register && node server.js"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --silent "
   },
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HackYourFutureBelgium/testing.git"
+    "url": "git+https://github.com/HackYourFutureBelgium/asynchronous-programming.git"
   },
   "author": "",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/HackYourFutureBelgium/testing/issues"
+    "url": "https://github.com/HackYourFutureBelgium/asynchronous-programming/issues"
   },
-  "homepage": "https://github.com/HackYourFutureBelgium/testing#readme"
+  "homepage": "https://github.com/HackYourFutureBelgium/asynchronous-programming#readme",
+  "devDependencies": {
+    "jest": "^27.0.4"
+  },
+  "jest": {
+    "verbose": true
+  }
 }
