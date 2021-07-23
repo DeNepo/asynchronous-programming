@@ -83,7 +83,6 @@ References and Practice to help you master this module.
 
 <details>
 <summary>expand/collapse</summary>
-/
 
 ### The Event Loop
 
