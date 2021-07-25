@@ -179,22 +179,25 @@ The Event Loop!
 
 #### Before Break
 
-- [./the-event-loop](./the-event-loop)
-  - timeouts
-- [./isolate](./isolate)
-  - timeout exercises
-  - sync vs. async
+- _All Together_:
+  - [The Event Loop](https://www.youtube.com/watch?v=EI7sN1dDwcY) - restaurant analogy
+  - [./the-event-loop](./the-event-loop): timeouts examples
+- _In Small Groups_:
+  - [./isolate](./isolate): timeout exercises & sync vs. async
 
 #### After break
 
-- [./the-event-loop](./the-event-loop)
-  - promises
-- [./isolate](./isolate)
-  - promises
+- _All Together_:
+  - Callback Hell at the Restaurant
+  - [./the-event-loop](./the-event-loop): promises
+- _In Small Groups_:
+  - [./isolate](./isolate): promises
 
 ### After Class
 
-No project! Take this week to focus on the Event Loop and Promises.
+> individual project
+
+Build a timer. details coming soon
 
 </details>
 <br>
