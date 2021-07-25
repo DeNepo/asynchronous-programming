@@ -352,3 +352,9 @@ keep working on your home page.
    - [integrate](https://vimeo.com/512491395), [exercises](https://vimeo.com/512491562)
    - [homework](https://vimeo.com/512491928)
    - [Wednesday Review](https://vimeo.com/513451907)
+
+### [Class 13-14](https://github.com/hackyourfuturebelgium/class-13-14)
+1. week 1 - by Yoshi and Joel:
+  - [Part 1](https://vimeo.com/579091811)
+  - [Part 2](https://vimeo.com/579095696)
+
