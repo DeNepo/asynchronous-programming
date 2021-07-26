@@ -197,7 +197,26 @@ The Event Loop!
 
 > individual project
 
-Build a timer. details coming soon
+Try to reverse-engineer [stopwatch.net](https://stopwatch.net/) 3 times:
+
+1. using `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval`
+2. using Promises
+3. using `async` and `await`
+
+There is not starter repository and you do not need to write a full Single Page App, one JS script for each version is ok. You should focus on the event loop and the user experience.
+
+```markdown
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [live demo](https://_.github.io/_)
+  - with one page for each version
+  - each version can be identical for the user, but have different code
+- [/planning](https://github.com/_/_/tree/master/planning)
+  - [ ] constraints
+  - [ ] backlog
+  - [ ] wireframe
+  - [ ] development strategy
+  - [ ] retrospective
+```
 
 </details>
 <br>

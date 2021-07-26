@@ -17,15 +17,23 @@ const synchronousTimeout = (callback, delay, ...callbackArgs) => {
 const callback = message => console.log(message);
 
 console.log('begin synchronous 0 ms');
-synchronousTimeout(() => console.log('end synchronous 0 ms'), 0);
+synchronousTimeout(() => {
+  console.log('end synchronous 0 ms');
+}, 0);
 
 console.log('schedule async 0 ms');
-setTimeout(() => console.log('executing async 0 ms'), 0);
+setTimeout(() => {
+  console.log('executing async 0 ms');
+}, 0);
 
-console.log('begin synchronous 1000 ms');
-synchronousTimeout(() => console.log('end synchronous 1000 ms'), 1000);
+console.log('begin synchronous 5000 ms');
+synchronousTimeout(() => {
+  console.log('end synchronous 5000 ms');
+}, 5000);
 
-console.log('schedule async 1000 ms');
-setTimeout(() => console.log('executing async 1000 ms'), 1000);
+console.log('schedule async 5000 ms');
+setTimeout(() => {
+  console.log('executing async 5000 ms');
+}, 5000);
 
 console.log('= =  the call stack is empty  = =');
