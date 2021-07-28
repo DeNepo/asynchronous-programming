@@ -227,7 +227,7 @@ There is not starter repository and you do not need to write a full Single Page 
 
 ## Week 2
 
-Fetching Data
+`async`/`await`, Fetching Data and RESTful APIs
 
 <details>
 <summary>expand/collapse</summary>
@@ -252,6 +252,7 @@ Fetching Data
 
 #### Before Break
 
+- What is `async`/`await`? Cover some examples together.
 - APIs - https://jsonplaceholder.typicode.com/users/1
   - put this URL into the browser URL bar, what happens?
   - now try `fetch("https://jsonplaceholder.typicode.com/users/1")` in your console, what do you see?
@@ -266,7 +267,30 @@ Fetching Data
 
 ### After Class
 
-> coming soon: build a home page using the GitHub API to showcase your projects.
+> individual project
+
+You've made it this far, time to show off a bit! Build yourself a new home page + portfolio to show off what you've built. You will use the GitHub API to fetch data about your profile, your projects, your contributions, whatever you're most proud of. (hint: avoid pushing your GitHub auth token!). Here's some links to get you started:
+
+- [The Docs](https://docs.github.com/en/rest) - GitHub API documentation
+- [HamScript](https://www.youtube.com/watch?v=sJspH620ZsU) (good intro)
+- [Johnny](https://www.youtube.com/watch?v=Yd8dU-XpsRI) (intro to fetch)
+- [Dev By RayRay](https://www.youtube.com/watch?v=8MgqZf4Qtas) (build a component)
+- [Hussein Nasser](https://www.youtube.com/watch?v=5QlE6o-iYcE) (long intro with DOM)
+- [Coding Shiksha](https://www.youtube.com/watch?v=y7mR7BEzx0s) (quick demo)
+
+And a checklist:
+
+```markdown
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [live demo](https://_.github.io/_)
+- [/planning](https://github.com/_/_/tree/master/planning)
+  - [ ] constraints
+  - [ ] backlog
+  - [ ] wireframe
+  - [ ] development strategy
+  - [ ] retrospective
+- [ ] [project board](https://github.com/_/_/projects/1)
+```
 
 </details>
 <br>
@@ -277,27 +301,23 @@ Fetching Data
 
 ## Week 3
 
-`async`/`await`
+Project week, no new material!
 
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-- [./isolate](./isolate)
-  - `error-handling`
-- [./fetch-and-render](./fetch-and-render)
-  - example
+Take it easy, focus on your portfolio
 
 ### During Class
 
-#### Before Break
-
-#### After Break
+- Questions and answers + code review
+- All together then in small groups
 
 ### After Class
 
-keep working on your home page.
+Keep working on your home page. No worries if you don't finish it this week! It's always a work in progress, and you'll have much more to add after next module.
 
 </details>
 <br>
@@ -373,7 +393,8 @@ keep working on your home page.
    - [Wednesday Review](https://vimeo.com/513451907)
 
 ### [Class 13-14](https://github.com/hackyourfuturebelgium/class-13-14)
-1. week 1 - by Yoshi and Joel:
-  - [Part 1](https://vimeo.com/579091811)
-  - [Part 2](https://vimeo.com/579095696)
 
+1. week 1 - by Yoshi and Joel:
+
+- [Part 1](https://vimeo.com/579091811)
+- [Part 2](https://vimeo.com/579095696)
