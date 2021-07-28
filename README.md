@@ -271,6 +271,7 @@ There is not starter repository and you do not need to write a full Single Page 
 
 You've made it this far, time to show off a bit! Build yourself a new home page + portfolio to show off what you've built. You will use the GitHub API to fetch data about your profile, your projects, your contributions, whatever you're most proud of. (hint: avoid pushing your GitHub auth token!). Here's some links to get you started:
 
+- [Starter Repository](https://github.com/HackYourFutureBelgium/starter-github-api-home-page)
 - [The Docs](https://docs.github.com/en/rest) - GitHub API documentation
 - [HamScript](https://www.youtube.com/watch?v=sJspH620ZsU) (good intro)
 - [Johnny](https://www.youtube.com/watch?v=Yd8dU-XpsRI) (intro to fetch)
