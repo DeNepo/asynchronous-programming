@@ -12,7 +12,7 @@ import { origin } from '../origin.js';
  */
 export const searchResources = async (resourceType = '', searchQuery = '') => {
   // --- declare your resource's URL ---
-  // hint: ctr-f "?q=" -> https://github.com/typicode/json-server
+  // hint: https://github.com/typicode/json-server#full-text-search
   const URL = _;
 
   // --- fetch, validate and parse the API data (this works!) ---
