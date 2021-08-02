@@ -218,6 +218,8 @@ There is not starter repository and you do not need to write a full Single Page 
   - [ ] retrospective
 ```
 
+Studying the [/promistaurant](./promistaurant), this will help you understand to solve asynchronous problems by thinking about what needs to be done in a specific order and what can be done at the same time.
+
 </details>
 <br>
 
