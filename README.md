@@ -401,3 +401,9 @@ Keep working on your home page. No worries if you don't finish it this week! It'
 
 - [Part 1](https://vimeo.com/579091811)
 - [Part 2](https://vimeo.com/579095696)
+
+1. week 2 - by Yoshi:
+- [Part 1](https://vimeo.com/582102001)
+- [Part 2](https://vimeo.com/582103554)
+- [Part 3](https://vimeo.com/582104038)
+- 
