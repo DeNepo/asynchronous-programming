@@ -267,7 +267,7 @@ Study the [/promistaurant](./promistaurant) too, this will help you understand t
 
 > individual project
 
-You've made it this far, time to show off a bit! Build yourself a new home page + portfolio to show off what you've built. You will use the GitHub API to fetch data about your profile, your projects, your contributions, whatever you're most proud of. (hint: avoid pushing your GitHub auth token!). Here's some links to get you started:
+You've made it this far, time to show off a bit! Build yourself a new home page + portfolio to show off what you've built. You will use the GitHub API to fetch data about your profile, your projects, your contributions, whatever you're most proud of. Here's some links to get you started:
 
 - [Starter Repository](https://github.com/HackYourFutureBelgium/starter-github-api-home-page)
 - [The Docs](https://docs.github.com/en/rest) - GitHub API documentation
@@ -290,6 +290,25 @@ And a checklist:
   - [ ] retrospective
 - [ ] [project board](https://github.com/_/_/projects/1)
 ```
+<details>
+<summary>Hints For Individual Project</summary>
+
+- Avoid pushing your GitHub auth token!
+- You can use GitHub API without authentication:
+  - Try [GitHub API](https://api.github.com/)
+  - user URL format: https://api.github.com/users/{username}
+- For user search:
+  - https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-users
+  - https://api.github.com/search/users?q=joe+in%3Alogin&type=Users
+- For organization search:
+  - https://api.github.com/orgs/hackyourfuture
+- An repository search example:
+  - [AsynchronousProgramming](https://api.github.com/search/repositories?q=asynchronous-programming%20in%3Aname%0A)
+- What and where can you use in your homepage:
+  - Automatically loading your projects, repos, gists, followers, etc.  to your homepage
+  - Automatically updating your repo definitions, live demo links, labels, etc. from GitHub
+
+</details>
 
 </details>
 <br>
