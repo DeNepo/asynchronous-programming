@@ -197,11 +197,7 @@ The Event Loop!
 
 > individual project
 
-Try to reverse-engineer [stopwatch.net](https://stopwatch.net/) 3 times:
-
-1. using `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval`
-2. using Promises
-3. using `async` and `await`
+Try to reverse-engineer [stopwatch.net](https://stopwatch.net/) using `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval`
 
 There is not starter repository and you do not need to write a full Single Page App, one JS script for each version is ok. You should focus on the event loop and the user experience.
 
@@ -218,7 +214,7 @@ There is not starter repository and you do not need to write a full Single Page 
   - [ ] retrospective
 ```
 
-Studying the [/promistaurant](./promistaurant), this will help you understand to solve asynchronous problems by thinking about what needs to be done in a specific order and what can be done at the same time.
+Study the [/promistaurant](./promistaurant) too, this will help you understand to solve asynchronous problems by thinking about what needs to be done in a specific order and what can be done at the same time.
 
 </details>
 <br>

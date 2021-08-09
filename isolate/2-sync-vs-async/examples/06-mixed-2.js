@@ -1,5 +1,5 @@
-import { labeledLogger } from '../../../lib/labeled-logger.js';
-import { synchronousTimeout } from '../../lib/synchronous-timeout.js';
+import { labeledLogger } from '/lib/labeled-logger.js';
+import { synchronousTimeout } from '/lib/synchronous-timeout.js';
 
 const log = labeledLogger(Date.now());
 

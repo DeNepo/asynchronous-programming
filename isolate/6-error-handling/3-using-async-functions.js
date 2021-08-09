@@ -1,4 +1,4 @@
-import { fakeFetch } from '../../lib/fake-fetch.js';
+import { fakeFetch } from '/lib/fake-fetch.js';
 
 /*
 

@@ -1,4 +1,4 @@
-import { labeledLogger } from '../../../lib/labeled-logger.js';
+import { labeledLogger } from '/lib/labeled-logger.js';
 import { origin } from '../origin.js';
 
 /* Filter with Params
