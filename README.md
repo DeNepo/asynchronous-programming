@@ -296,10 +296,11 @@ And a checklist:
 ```
 <details>
 <summary>Hints For Individual Project</summary>
+
 - Avoid pushing your GitHub auth token!
 - You can use GitHub API without authentication:
   - Try [GitHub API](https://api.github.com/)
-  - user URL: https://api.github.com/users/{username}
+  - user URL format: https://api.github.com/users/{username}
 - For user search:
   - https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-users
   - https://api.github.com/search/users?q=joe+in%3Alogin&type=Users
