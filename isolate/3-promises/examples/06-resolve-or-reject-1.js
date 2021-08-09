@@ -1,4 +1,4 @@
-import { labeledLogger } from '../../../lib/labeled-logger.js';
+import { labeledLogger } from "../../../lib/labeled-logger.js";
 
 const log = labeledLogger(Date.now());
 
@@ -11,19 +11,19 @@ const log = labeledLogger(Date.now());
 */
 
 // resolve/reject based on a random number with if/else
-Promise(() => {
+Promise((resolve, reject) => {
   const randomNumber = Math.random();
   if (randomNumber > 0.5) {
-    resolve('random number is greater than 0.5: ' + randomNumber);
+    resolve("random number is greater than 0.5: " + randomNumber);
   } else {
-    reject('random number is less than 0.5: ' + randomNumber);
+    reject("random number is less than 0.5: " + randomNumber);
   }
 })
-  .then(resolvedValue => {
-    log('resolved value: ', resolvedValue);
+  .then((resolvedValue) => {
+    log("resolved value: ", resolvedValue);
   })
-  .catch(rejectionValue => {
-    log('rejected value: ', rejectionValue);
+  .catch((rejectionValue) => {
+    log("rejected value: ", rejectionValue);
   });
 
-log('= = = =  the call stack is empty  = = = =');
+log("= = = =  the call stack is empty  = = = =");
