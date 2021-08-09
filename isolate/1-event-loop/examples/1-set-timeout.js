@@ -1,6 +1,6 @@
 debugger;
 
-import { labeledLogger } from '../../../lib/labeled-logger.js';
+import { labeledLogger } from '/lib/labeled-logger.js';
 
 const log = labeledLogger(Date.now());
 

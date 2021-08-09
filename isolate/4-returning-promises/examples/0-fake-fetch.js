@@ -1,5 +1,5 @@
-import { labeledLogger } from '../../../lib/labeled-logger.js';
-import { fakeFetch } from '../../../lib/fake-fetch.js';
+import { labeledLogger } from '/lib/labeled-logger.js';
+import { fakeFetch } from '/lib/fake-fetch.js';
 
 const log = labeledLogger(Date.now());
 
