@@ -1,0 +1,10 @@
+{
+  "outputType": "dot",
+  "doNotFollow": { "path": ["node_modules", "lib", "data-access"] },
+  "reporterOptions": {
+    "dot": {
+      "collapsePattern": "^((node_modules|lib)/[^/]+)"
+    }
+  },
+  "exclude": "(sandbox.js|(\\S)+.spec.js|dev-scripts|dev.js)"
+}

@@ -53,25 +53,38 @@ How to study the code in this repo.
 >
 > follow the instructions in [this StackOverflow answer](https://stackoverflow.com/a/63424744), that should take care of it ; )
 
+### Running Tests
+
+This repository has two test scripts:
+
+- `npm run test:esm -- ./path/to/file.js`: used for testing ES Module files in the `/browser` directory
+- `npm run test:cjs -- ./path/to/file.js`: used for testing CommonJS files in the `/node` directory
+
 [TOP](#asynchronous-programming)
 
 ---
 
 ## Learning Objectives
 
-- Browser
-  - Using `setTimeout` and `setInterval` to schedule tasks on the _Event Loop_
-  - Using `Promise` to write more manageable asynchronous code
-  - Refactoring promises to `async`/`await`
-  - Using `fetch` to get and consume data from APIs
-
-[TOP](#asynchronous-programming)
-
----
-
-## About the Projects
-
-Projects in this module will build on what you learned in the last module by adding in _network calls_ to APIS and scheduled tasks on the event loop.
+- 🥚 You understand the JavaScript Event Loop, and can demonstrate this by using `setTimeout` and `setInterval` to schedule simple tasks.
+- 🥚 You can explain why Asynchronous Programming is important for programs that have _blocking_ and _non-blocking_ tasks.
+- 🥚 You can explain the basics of the Client/Server model and HTTP requests and can `fetch` data from RESTful APIs.
+- 🥚 You can convert built-in Node modules from consuming callbacks being promises.
+- 🐣 You can write and run JavaScript for Node.js or for the Browser. Both environments run JavaScript but they have some important differences!
+  - **use cases**: You can explain some use cases that are unique to each runtime.
+  - **built-in APIs**: You can list some of the key APIs available in each environment, and why they are not available in the other.
+  - **module systems**: You can explain the difference between _CommonJS Modules_ in Node.js and _ES Modules_ in the Browser. You can write and use programs written with either system.
+- 🐣 You can break down an asynchronous problem into smaller tasks and solve it using promises. This includes identify which tasks depend on each other and which are independent:
+  - _dependent tasks_: The return value from one task is required to start the next task, these must be completed in a specific order - `.then`
+  - _independent tasks_: These tasks do not use each other's return values, they can be completed at the same time - `Promise.all`
+- 🐣 You can trace, refactor and write code that accesses the file system between these 3 different syntaxes:
+  1. Callbacks
+  2. Promises
+  3. `async`/`await`
+- 🐣 You can step through a Node.js command line application using the VSCode debugger.
+- You can write small programs with a Data Access layer that asynchronously uses data stored in different locations:
+  - 🐣 **Browser**: You can write a small web page that `fetch`es data from a RESTful API and renders it into the DOM.
+  - 🐥 **Node**: You can write a small CLI program that reads user input from `process.argv` and reads/writes the file system.
 
 [TOP](#asynchronous-programming)
 
@@ -81,8 +94,21 @@ Projects in this module will build on what you learned in the last module by add
 
 References and Practice to help you master this module.
 
-<details>
+<details open>
 <summary>expand/collapse</summary>
+
+### in ths repo
+
+- **`/browser`**
+  - 🥚 **[`/the-event-loop`](./browser/the-event-loop)**: Learn what the JavaScript Event Loop is and how to visualize it. There are some tools that can help step through asynchronous code, but they will not work for all the code you write.
+  - 🐣 **[`/isolate`](./browser/isolate)**: Explore different ways to write and use asynchronous code in JS from `setTimeout`/`setInterval`, to Promises to `async`/`await`
+  - 🐣 **[`/promistaurant`](./browser/promistaurant)**: Practice solving asynchronous problems by working in a restaurant. You will need to figure out how you can complete people's orders when all the tasks take different amounts of time and may or may not depend on each other.
+  - 🐣 **[`/api-calls`](./browser/api-calls)**: Learn how to fetch data from external APIs by modifying a template API Call function.
+  - 🐣 **[`/fetch-and-render`](./browser/fetch-and-render)**: Practice fetching data from an API and rendering it asynchronously into a user interface.
+- **`/node`**
+  - 🥚 **[`/commonjs-modules`](./node/commonjs-modules)**: Node.js hasn't always used `import`/`export`, it used `require`/`module.exports`. Explore some examples to understand how this works.
+  - 🥚 **[`/process-argv`](./node/process-argv)**: learn to use process.argv to get user input from the command line. you won't need this to write an API, but it's simple enough and helps to understand how command line tools work.
+  - 🐣 **[`/file-system`](./node/file-system)**: practice using the `fs` module with callbacks, promises and `async`/`await`.
 
 ### The Event Loop
 
@@ -132,6 +158,11 @@ References and Practice to help you master this module.
   - [restfulapi.net](https://restfulapi.net/)
 - [Coding Train](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X)
 - [what is CORS?](https://www.codecademy.com/articles/what-is-cors)
+- HTTP statuses
+  - [In 60 Seconds](https://www.youtube.com/watch?v=GrNrcmD6HLA)
+  - [httpstatuses.com](https://httpstatuses.com/)
+  - [wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+  - [http.cat](https://http.cat/)
 
 ### `fetch`
 
@@ -152,6 +183,30 @@ References and Practice to help you master this module.
   - [Fetching REST](https://github.com/HackYourFutureBelgium/fetching-rest)
   - JS 30: Type Ahead
 
+### Debugging Node in VSCode
+
+- [Getting started with Node.js debugging in VS Code](https://www.youtube.com/watch?v=2oFKNL7vYV8)
+- [Burke Holland](https://www.youtube.com/watch?v=NW2HG9C_mZc)
+- [VSCode Channel Intro](https://www.youtube.com/watch?v=2oFKNL7vYV8)
+- [James Q Quick](https://www.youtube.com/watch?v=yFtU6_UaOtA)
+- [CodeSpace, 2 Ways](https://www.youtube.com/watch?v=N8O-Yf3hc-A)
+
+### Node.js
+
+- **101**
+  - [Mosh: Node.js in 1 hour](https://www.youtube.com/watch?v=uVwtVBpw7RQ&list=PLTjRvDozrdlydy3uUBWZlLUTNpJSGGCEm&index=1)
+  - [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
+  - [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
+  - [NetNinja: Node Js Crash Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
+  - [`argsv`](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/) - Use command line arguments in Node
+- **Built-In Modules**
+  - [The file system](https://vimeo.com/414475261) (first 20 minutes)
+  - references
+    - [assert](https://nodejs.org/api/assert.html) - Test values in Node.js
+    - [fs](https://nodejs.org/api/fs.html) - Read & write form the file system
+    - [path](https://nodejs.org/api/path.html) - Manipulate file paths
+    - [util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original) - Convert functions that take callbacks into Promises
+
 </details>
 <br>
 
@@ -161,60 +216,18 @@ References and Practice to help you master this module.
 
 ## Week 1
 
-The Event Loop!
-
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-- [./the-event-loop](./the-event-loop)
-  - watch a couple of the videos
-  - step through the timeout examples in [jsv9000.app](https://www.jsv9000.app/)
-- [./isolate](./isolate)
-  - `labeled-logger`
-  - `event-loop` examples
-
 ### During Class
 
 #### Before Break
 
-- _All Together_:
-  - [The Event Loop](https://www.youtube.com/watch?v=EI7sN1dDwcY) - restaurant analogy
-  - [./the-event-loop](./the-event-loop): timeouts examples
-- _In Small Groups_:
-  - [./isolate](./isolate): timeout exercises & sync vs. async
-
 #### After break
 
-- _All Together_:
-  - Callback Hell at the Restaurant
-  - [./the-event-loop](./the-event-loop): promises
-- _In Small Groups_:
-  - [./isolate](./isolate): promises
-
 ### After Class
-
-> individual project
-
-Try to reverse-engineer [stopwatch.net](https://stopwatch.net/) using `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval`
-
-There is not starter repository and you do not need to write a full Single Page App, one JS script for each version is ok. You should focus on the event loop and the user experience.
-
-```markdown
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-  - with one page for each version
-  - each version can be identical for the user, but have different code
-- [/planning](https://github.com/_/_/tree/master/planning)
-  - [ ] constraints
-  - [ ] backlog
-  - [ ] wireframe
-  - [ ] development strategy
-  - [ ] retrospective
-```
-
-Study the [/promistaurant](./promistaurant) too, this will help you understand to solve asynchronous problems by thinking about what needs to be done in a specific order and what can be done at the same time.
 
 </details>
 <br>
@@ -225,71 +238,18 @@ Study the [/promistaurant](./promistaurant) too, this will help you understand t
 
 ## Week 2
 
-`async`/`await`, Fetching Data and RESTful APIs
-
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-- Promises
-  - [js.info](https://javascript.info/async): 1 -> 4
-  - Isolate: 3. Promises
-  - [Callbacks, Promises, Async](#callbacks-promises-async)
-- APIs & REST
-  - [Restful Routes?](https://medium.com/@atingenkay/restful-routes-what-are-they-8fe221521bb)
-  - JSON Placeholder:[live](https://jsonplaceholder.typicode.com/guide.html), [more docs](https://github.com/typicode/json-server)
-  - [Presentation - Javascript Fetch and REST API](./slides/fetch-and-rest-api.html)
-- **DevTools**, the Network Tab:
-  - [chrome/ium](https://developers.google.com/web/tools/chrome-devtools/network/)
-  - [firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor)
-- [./isolate](./isolate)
-  - `returning-promises` & `async-await`: examples
-
 ### During Class
 
 #### Before Break
 
-- What is `async`/`await`? Cover some examples together.
-- APIs - https://jsonplaceholder.typicode.com/users/1
-  - put this URL into the browser URL bar, what happens?
-  - now try `fetch("https://jsonplaceholder.typicode.com/users/1")` in your console, what do you see?
-  - how can you get the data from the response?
-- API Call functions
-  - examples
-
 #### After Break
 
-- API Call functions
-  - exercises
-
 ### After Class
-
-> individual project
-
-You've made it this far, time to show off a bit! Build yourself a new home page + portfolio to show off what you've built. You will use the GitHub API to fetch data about your profile, your projects, your contributions, whatever you're most proud of. (hint: avoid pushing your GitHub auth token!). Here's some links to get you started:
-
-- [Starter Repository](https://github.com/HackYourFutureBelgium/starter-github-api-home-page)
-- [The Docs](https://docs.github.com/en/rest) - GitHub API documentation
-- [HamScript](https://www.youtube.com/watch?v=sJspH620ZsU) (good intro)
-- [Johnny](https://www.youtube.com/watch?v=Yd8dU-XpsRI) (intro to fetch)
-- [Dev By RayRay](https://www.youtube.com/watch?v=8MgqZf4Qtas) (build a component)
-- [Hussein Nasser](https://www.youtube.com/watch?v=5QlE6o-iYcE) (long intro with DOM)
-- [Coding Shiksha](https://www.youtube.com/watch?v=y7mR7BEzx0s) (quick demo)
-
-And a checklist:
-
-```markdown
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- [/planning](https://github.com/_/_/tree/master/planning)
-  - [ ] constraints
-  - [ ] backlog
-  - [ ] wireframe
-  - [ ] development strategy
-  - [ ] retrospective
-- [ ] [project board](https://github.com/_/_/projects/1)
-```
 
 </details>
 <br>
@@ -300,23 +260,14 @@ And a checklist:
 
 ## Week 3
 
-Project week, no new material!
-
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-Take it easy, focus on your portfolio
-
 ### During Class
 
-- Questions and answers + code review
-- All together then in small groups
-
 ### After Class
-
-Keep working on your home page. No worries if you don't finish it this week! It's always a work in progress, and you'll have much more to add after next module.
 
 </details>
 <br>
@@ -399,7 +350,8 @@ Keep working on your home page. No worries if you don't finish it this week! It'
 - [Part 2](https://vimeo.com/579095696)
 
 1. week 2 - by Yoshi:
+
 - [Part 1](https://vimeo.com/582102001)
 - [Part 2](https://vimeo.com/582103554)
 - [Part 3](https://vimeo.com/582104038)
-- 
+-
