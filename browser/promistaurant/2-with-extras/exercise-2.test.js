@@ -32,7 +32,7 @@ const mealWithoutExtras = _;
 const geraltsMeal = _;
 
 geraltsMeal
-  .then(theMeal => {
+  .then((theMeal) => {
     prettyPrintMeal(theMeal);
 
     describe("Geralt's meal", () => {
@@ -67,4 +67,4 @@ geraltsMeal
       });
     });
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));

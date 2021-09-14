@@ -28,7 +28,7 @@ import {
 const bobsOrder = _;
 
 bobsOrder
-  .then(theMeal => {
+  .then((theMeal) => {
     prettyPrintMeal(theMeal);
 
     describe("Bob's meal", () => {
@@ -54,4 +54,4 @@ bobsOrder
       });
     });
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));

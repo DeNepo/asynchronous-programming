@@ -33,15 +33,15 @@ const pokemonByName = async (name = '') => {
 // --- fetch and log the data ---
 
 pokemonByName('pikachu')
-  .then(data => log('pikachu', data))
-  .catch(err => log('pikachu', err));
+  .then((data) => log('pikachu', data))
+  .catch((err) => log('pikachu', err));
 
 pokemonByName('mew')
-  .then(data => log('mew', data))
-  .catch(err => log('mew', err));
+  .then((data) => log('mew', data))
+  .catch((err) => log('mew', err));
 
 pokemonByName('lickitung')
-  .then(data => log('lickitung', data))
-  .catch(err => log('lickitung', err));
+  .then((data) => log('lickitung', data))
+  .catch((err) => log('lickitung', err));
 
 log('= = = =  the call stack is empty  = = = =');

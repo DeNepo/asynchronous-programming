@@ -8,7 +8,7 @@
  * @throws {Error} "oops! something went wrong."
  *  Randomly throws this error 20% of the time.
  */
-export const fakeFetch = async value => {
+export const fakeFetch = async (value) => {
   // randomly fail 1/5 times the function is called
   const failure = Math.random() < 0.2;
   if (failure) {
@@ -19,7 +19,7 @@ export const fakeFetch = async value => {
   const delay = Math.round(Math.random() * 5000);
 
   // create a new promise that resolves to `value` after the delay
-  const slowPromise = new Promise(resolve => {
+  const slowPromise = new Promise((resolve) => {
     setTimeout(() => {
       resolve(value);
     }, delay);

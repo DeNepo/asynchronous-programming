@@ -30,11 +30,8 @@ const findCruisablePaths = async (dirPath = '') => {
   }
 
   if (
-    CRUISABLE_PATH_NAMES.some(name =>
-      dirPath
-        .split(path.sep)
-        .pop()
-        .includes(name),
+    CRUISABLE_PATH_NAMES.some((name) =>
+      dirPath.split(path.sep).pop().includes(name),
     )
   ) {
     return [dirPath];
@@ -62,27 +59,27 @@ const findCruisablePaths = async (dirPath = '') => {
 };
 
 findCruisablePaths(ROOT)
-  .then(unflatPaths => unflatPaths.flat(Infinity))
-  .then(async paths => {
-    const cruised = paths.map(path => ({
+  .then((unflatPaths) => unflatPaths.flat(Infinity))
+  .then(async (paths) => {
+    const cruised = paths.map((path) => ({
       path,
       graph: cruise([path], cruiserOptions).output,
     }));
 
     for (const project of cruised) {
       renderGraphFromSource({ input: project.graph }, { format: 'svg' })
-        .then(svgGraph => {
+        .then((svgGraph) => {
           const graphBasePath = path.join(
             project.path,
             project.path.includes('src') ? '..' : '',
             'dependency-graph',
           );
-          fs.writeFile(`${graphBasePath}.svg`, svgGraph, 'utf-8', err => {
+          fs.writeFile(`${graphBasePath}.svg`, svgGraph, 'utf-8', (err) => {
             console.log(project.path);
             err && console.error(err);
           });
         })
-        .catch(err => console.error(err));
+        .catch((err) => console.error(err));
     }
 
     // await import(
@@ -93,4 +90,4 @@ findCruisablePaths(ROOT)
     //   console.log(path);
     // }
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));

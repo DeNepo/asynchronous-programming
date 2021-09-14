@@ -9,8 +9,7 @@ describe('searchResources: fetches all entries from a single type that match a s
         id: 10,
         name: 'eaque et deleniti atque tenetur ut quo ut',
         email: 'Carmen_Keeling@caroline.name',
-        body:
-          'voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis',
+        body: 'voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis',
       },
     ]);
   });

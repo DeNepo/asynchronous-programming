@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('BEGIN ./other-file.js');
+console.log('BEGIN ./other-file');
 
 console.log('module.exports (before) -', module.exports);
 

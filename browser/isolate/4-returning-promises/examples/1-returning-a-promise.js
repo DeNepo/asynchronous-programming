@@ -24,7 +24,7 @@ const log = labeledLogger();
  * @param {any} value - The value to resolve.
  * @returns {Promise<any>} A promise that resolves to the argument.
  */
-const tryFetching = value => {
+const tryFetching = (value) => {
   log('1. pretend to fetch the value:', value);
   const valuePromise = fakeFetch(value);
 
@@ -35,11 +35,11 @@ const tryFetching = value => {
 // --- use the function that returns a promise ---
 
 tryFetching('hello')
-  .then(description => log('+ resolved:', description))
-  .catch(error => log('- rejected:', error));
+  .then((description) => log('+ resolved:', description))
+  .catch((error) => log('- rejected:', error));
 
 tryFetching('good bye')
-  .then(description => log('+ resolved:', description))
-  .catch(error => log('- rejected:', error));
+  .then((description) => log('+ resolved:', description))
+  .catch((error) => log('- rejected:', error));
 
 log('= = = =  the call stack is empty  = = = =');

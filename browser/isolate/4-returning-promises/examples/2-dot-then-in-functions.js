@@ -19,9 +19,9 @@ const log = labeledLogger();
  * @param {any} value - The value to describe.
  * @returns {Promise<string>} A promise that resolves to either "truey" or "falsey".
  */
-const truthiness = value => {
+const truthiness = (value) => {
   log('1. fetch then describe the value:', value);
-  const descriptionPromise = fakeFetch(value).then(resolvedValue => {
+  const descriptionPromise = fakeFetch(value).then((resolvedValue) => {
     const castToBoolean = Boolean(resolvedValue);
     const description = castToBoolean + 'y';
     log(`3: ${resolvedValue} -> ${description}`);
@@ -35,11 +35,11 @@ const truthiness = value => {
 // --- use the function that returns a promise ---
 
 truthiness(1)
-  .then(description => log('+ resolved:', description))
-  .catch(error => log('- rejected:', error));
+  .then((description) => log('+ resolved:', description))
+  .catch((error) => log('- rejected:', error));
 
 truthiness(0)
-  .then(description => log('+ resolved:', description))
-  .catch(error => log('- rejected:', error));
+  .then((description) => log('+ resolved:', description))
+  .catch((error) => log('- rejected:', error));
 
 log('= = = =  the call stack is empty  = = = =');

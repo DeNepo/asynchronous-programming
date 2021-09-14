@@ -28,7 +28,7 @@ import {
 const daisysOrder = _;
 
 daisysOrder
-  .then(theMeal => {
+  .then((theMeal) => {
     prettyPrintMeal(theMeal);
 
     describe("Daisy's meal", () => {
@@ -54,4 +54,4 @@ daisysOrder
       });
     });
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));

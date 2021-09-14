@@ -20,7 +20,7 @@ const log = labeledLogger();
  * @param {any} value - A value to return.
  * @returns {Promise<any>}
  */
-const wrapInPromise = async value => {
+const wrapInPromise = async (value) => {
   log('return from async function:', value);
   // the return value is a promise, you can see it in the debugger!
   // debugger;
@@ -31,10 +31,10 @@ const wrapInPromise = async value => {
 
 const helloPromise = wrapInPromise('hello');
 log('helloPromise:', helloPromise);
-helloPromise.then(val => log(val));
+helloPromise.then((val) => log(val));
 
 const goodByePromise = wrapInPromise('good bye');
 log('goodByePromise:', goodByePromise);
-goodByePromise.then(val => log(val));
+goodByePromise.then((val) => log(val));
 
 log('= = = =  the call stack is empty  = = = =');

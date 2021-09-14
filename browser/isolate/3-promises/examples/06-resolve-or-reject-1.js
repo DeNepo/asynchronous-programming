@@ -19,10 +19,10 @@ Promise(() => {
     reject('random number is less than 0.5: ' + randomNumber);
   }
 })
-  .then(resolvedValue => {
+  .then((resolvedValue) => {
     log('resolved value: ', resolvedValue);
   })
-  .catch(rejectionValue => {
+  .catch((rejectionValue) => {
     log('rejected value: ', rejectionValue);
   });
 

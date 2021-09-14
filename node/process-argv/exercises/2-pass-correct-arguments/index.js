@@ -5,7 +5,7 @@
 // require built-in modules
 const assert = require('assert');
 // require local modules
-const listify = require('./listify.js');
+const listify = require('./listify');
 
 // process user input
 const userInput = process.argv.slice(2);

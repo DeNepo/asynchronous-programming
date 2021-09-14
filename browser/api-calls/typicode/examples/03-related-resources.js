@@ -43,15 +43,15 @@ const fetchRelatedResources = async (paths = []) => {
 // --- fetch and log the data ---
 
 fetchRelatedResources(['users', '3', 'albums'])
-  .then(data => log('/users/3/albums', data))
-  .catch(err => log('/users/3/albums', err));
+  .then((data) => log('/users/3/albums', data))
+  .catch((err) => log('/users/3/albums', err));
 
 fetchRelatedResources(['users', '3', 'posts'])
-  .then(data => log('/users/3/posts', data))
-  .catch(err => log('/users/3/posts', err));
+  .then((data) => log('/users/3/posts', data))
+  .catch((err) => log('/users/3/posts', err));
 
 fetchRelatedResources(['posts', '5', 'comments'])
-  .then(data => log('/posts/5/comments', data))
-  .catch(err => log('/posts/5/comments', err));
+  .then((data) => log('/posts/5/comments', data))
+  .catch((err) => log('/posts/5/comments', err));
 
 log('= = = =  the call stack is empty  = = = =');

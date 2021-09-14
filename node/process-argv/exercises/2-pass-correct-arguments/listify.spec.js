@@ -1,6 +1,6 @@
 'use strict';
 
-const listify = require('./listify.js');
+const listify = require('./listify');
 
 describe('listify joins an array of strings into a single formatted list', () => {
   it('returns an empty string for an empty array', () => {

@@ -24,11 +24,11 @@ export const preparePortion = (size, base) => {
     }
     const ctr = portionCtr++;
     console.log(
-      `Started preparing base for meal ${ctr} (${base}, ${size.name.toLowerCase()})`
+      `Started preparing base for meal ${ctr} (${base}, ${size.name.toLowerCase()})`,
     );
     setTimeout(() => {
       console.log(
-        `Finished preparing base for meal ${ctr} §${base}, ${size.name.toLowerCase()})`
+        `Finished preparing base for meal ${ctr} §${base}, ${size.name.toLowerCase()})`,
       );
       resolve({
         nr: ctr,
@@ -43,11 +43,11 @@ export const preparePortion = (size, base) => {
   });
 };
 
-export const addVegetables = meal => {
+export const addVegetables = (meal) => {
   return new Promise((resolve, reject) => {
     if (meal.status !== STATUSES.NEW) {
       reject(
-        'Can only add the vegetable base to a freshly made base without other ingredients added!'
+        'Can only add the vegetable base to a freshly made base without other ingredients added!',
       );
     }
     console.log(`Started adding vegetables to meal #${meal.nr}`);
@@ -78,7 +78,7 @@ export const addSauce = (meal, sauce) => {
   return new Promise((resolve, reject) => {
     if (meal.status !== STATUSES.TOPPING_SELECTED) {
       reject(
-        'The sauce has to be added directly after the topping was selected!'
+        'The sauce has to be added directly after the topping was selected!',
       );
     }
     console.log(`Adding ${sauce} sauce to meal ${meal.nr}`);
@@ -91,7 +91,7 @@ export const addSauce = (meal, sauce) => {
   });
 };
 
-export const prepareExtra = extra => {
+export const prepareExtra = (extra) => {
   return new Promise((resolve, reject) => {
     console.log(`Started preparing extra ${extra.name}`);
     setTimeout(() => {
@@ -108,7 +108,7 @@ export const addPreparedExtras = (meal, preparedExtras) => {
     }
     console.log(`Adding prepared extras to meal #${meal.nr}`);
     setTimeout(() => {
-      preparedExtras.forEach(ex => meal.extras.push(ex.preparedContent));
+      preparedExtras.forEach((ex) => meal.extras.push(ex.preparedContent));
       console.log(`Finished adding prepared extras to meal #${meal.nr}`);
       meal.status = STATUSES.DONE;
       resolve(meal);
@@ -116,7 +116,7 @@ export const addPreparedExtras = (meal, preparedExtras) => {
   });
 };
 
-export const bag = meal => {
+export const bag = (meal) => {
   return new Promise((resolve, reject) => {
     if (
       !(meal.status === STATUSES.SAUCE_ADDED || meal.status === STATUSES.DONE)
@@ -134,10 +134,10 @@ export const bag = meal => {
   });
 };
 
-export const prettyPrintMeal = meal => {
+export const prettyPrintMeal = (meal) => {
   console.log('\n=======================================================');
   console.log(
-    `------------------------Meal #${meal.nr}------------------------`
+    `------------------------Meal #${meal.nr}------------------------`,
   );
   console.log(`Base:    ${meal.base}`);
   console.log(`size:    ${meal.size.name.toLowerCase()}`);
@@ -146,7 +146,7 @@ export const prettyPrintMeal = meal => {
   if (meal.extras.length > 0) {
     console.log('-------------------------------------------------------');
     console.log("Extra's:   ");
-    meal.extras.forEach(x => console.log(`    ${x.name}`));
+    meal.extras.forEach((x) => console.log(`    ${x.name}`));
     console.log('-------------------------------------------------------');
   }
   console.log('=======================================================\n');

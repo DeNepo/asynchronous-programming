@@ -4,7 +4,7 @@ const log = labeledLogger();
 
 // you can have setTimeout and setInterval pass arguments to a callback
 
-const callback1 = message => {
+const callback1 = (message) => {
   log(message);
 };
 const intervalId = setInterval(callback1, 500, 'hi!');

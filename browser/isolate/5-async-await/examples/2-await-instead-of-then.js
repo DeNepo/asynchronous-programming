@@ -20,7 +20,7 @@ const log = labeledLogger();
  * @param {any} value - The value to describe.
  * @returns {Promise<string>} A promise that resolves to either "truey" or "falsey".
  */
-const truthiness = async value => {
+const truthiness = async (value) => {
   log('1. pretend to fetch the value:', value);
   // this line waits asynchronously for fakeFetch to resolve
   const resolvedValue = await fakeFetch(value);
@@ -39,11 +39,11 @@ const truthiness = async value => {
 // --- use the async function that returns a promise ---
 
 truthiness(1)
-  .then(description => log('+ resolved:', description))
-  .catch(error => log('- rejected:', error));
+  .then((description) => log('+ resolved:', description))
+  .catch((error) => log('- rejected:', error));
 
 truthiness(0)
-  .then(description => log('+ resolved:', description))
-  .catch(error => log('- rejected:', error));
+  .then((description) => log('+ resolved:', description))
+  .catch((error) => log('- rejected:', error));
 
 log('= = = =  the call stack is empty  = = = =');

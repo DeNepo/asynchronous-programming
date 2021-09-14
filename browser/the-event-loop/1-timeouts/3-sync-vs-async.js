@@ -14,7 +14,7 @@ const synchronousTimeout = (callback, delay, ...callbackArgs) => {
   callback(...callbackArgs);
 };
 
-const callback = message => console.log(message);
+const callback = (message) => console.log(message);
 
 console.log('begin synchronous 0 ms');
 synchronousTimeout(() => {

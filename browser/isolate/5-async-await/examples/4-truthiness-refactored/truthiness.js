@@ -10,7 +10,7 @@ import { describeValue } from './utils/describe-value.js';
  * @param {any} value - The value to describe.
  * @returns {Promise<string>} A promise that resolves to either "truey" or "falsey".
  */
-export const truthiness = async value => {
+export const truthiness = async (value) => {
   // this line waits asynchronously for fakeFetch to settle
   const resolvedValue = await fakeFetch(value);
 

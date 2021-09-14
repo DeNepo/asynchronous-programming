@@ -14,7 +14,7 @@ const b = function (c, d) {
 };
 const c = b;
 ('use strict');
-const repeater = require('./repeater.js'),
+const repeater = require('./repeater'),
   userInput = process[c('0x1')][c('0x2')](0x2),
   text = userInput[0x0],
   repeats = +userInput[0x1],

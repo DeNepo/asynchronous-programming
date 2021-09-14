@@ -17,11 +17,11 @@ const log = labeledLogger();
 */
 
 // declare callbacks
-const logSuccessFailure = resolvedValue => {
+const logSuccessFailure = (resolvedValue) => {
   const finalMessage = resolvedValue ? 'number is even' : 'number is not even';
   log(finalMessage);
 };
-const mustBeGreaterThanZero = resolvedValue => {
+const mustBeGreaterThanZero = (resolvedValue) => {
   log('checking if ' + resolvedValue + ' is greater than 0');
   if (resolvedValue <= 0) {
     throw new RangeError(resolvedValue + ' is not greater than 0');
@@ -40,10 +40,10 @@ const inputANumberExecutor = (resolve, reject) => {
     _('input is not a number: ' + userInput);
   }
 };
-const handleRejection = err => {
+const handleRejection = (err) => {
   log('promise was rejected:', err);
 };
-const isEvenNumber = resolvedValue => {
+const isEvenNumber = (resolvedValue) => {
   log('checking if ' + resolvedValue + ' is even');
   return resolvedValue % 2 === 0;
 };

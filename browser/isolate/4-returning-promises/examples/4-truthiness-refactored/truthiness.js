@@ -9,7 +9,7 @@ import { describeValue } from './utils/describe-value.js';
  * @param {any} value - The value to describe.
  * @returns {Promise<string>} A promise that resolves to either "truey" or "falsey".
  */
-export const truthiness = value => {
+export const truthiness = (value) => {
   const descriptionPromise = fakeFetch(value).then(describeValue);
   return descriptionPromise;
 };

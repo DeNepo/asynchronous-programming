@@ -24,14 +24,14 @@ const log = labeledLogger();
 
 */
 
-const valueIsNumber = resolvedValue => {
+const valueIsNumber = (resolvedValue) => {
   return typeof resolvedValue === 'number';
 };
-const logAndReturn = resolvedValue => {
+const logAndReturn = (resolvedValue) => {
   log('resolved value: ', resolvedValue);
   return resolvedValue;
 };
-const handleRejection = err => {
+const handleRejection = (err) => {
   log('promise was rejected: ', err);
 };
 
@@ -40,29 +40,29 @@ new Promise((resolve, reject) => {
   log('resolving 5'); // log 1
   resolve(5);
 })
-  .then(resolved => logAndReturn(resolved)) // log 5
-  .then(value => valueIsNumber(value))
-  .then(resolved => logAndReturn(resolved)) // log 7
-  .catch(err => handleRejection(err));
+  .then((resolved) => logAndReturn(resolved)) // log 5
+  .then((value) => valueIsNumber(value))
+  .then((resolved) => logAndReturn(resolved)) // log 7
+  .catch((err) => handleRejection(err));
 
 // resolved to value "hello"
 new Promise((resolve, reject) => {
   log('resolving "hello"'); // log 2
   resolve('hello');
 })
-  .then(resolved => logAndReturn(resolved)) // log 6
-  .then(value => valueIsNumber(value))
-  .then(resolved => logAndReturn(resolved)) // log 8
-  .catch(err => handleRejection(err));
+  .then((resolved) => logAndReturn(resolved)) // log 6
+  .then((value) => valueIsNumber(value))
+  .then((resolved) => logAndReturn(resolved)) // log 8
+  .catch((err) => handleRejection(err));
 
 // rejected (will skip all .thens)
 new Promise((resolve, reject) => {
   log('rejecting!'); // log 3
   reject(':(');
 })
-  .then(resolved => logAndReturn(resolved))
-  .then(value => valueIsNumber(value))
-  .then(resolved => logAndReturn(resolved))
-  .catch(err => handleRejection(err)); // log 9
+  .then((resolved) => logAndReturn(resolved))
+  .then((value) => valueIsNumber(value))
+  .then((resolved) => logAndReturn(resolved))
+  .catch((err) => handleRejection(err)); // log 9
 
 log('= = = =  the call stack is empty  = = = ='); // log 4

@@ -29,27 +29,27 @@ import {
  */
 
 const preparedExtras = Promise.all(
-  [extras.egg, extras.onion, extras.pineapple, extras.mushrooms].map(e =>
-    prepareExtra(e)
-  )
+  [extras.egg, extras.onion, extras.pineapple, extras.mushrooms].map((e) =>
+    prepareExtra(e),
+  ),
 );
 
 const harryPrep = preparePortion(sizes.medium, bases.whiteRice)
-  .then(meal => addVegetables(meal))
-  .then(meal => addTopping(meal, toppings.beef))
-  .then(meal => addSauce(meal, sauces.sweetChilli));
+  .then((meal) => addVegetables(meal))
+  .then((meal) => addTopping(meal, toppings.beef))
+  .then((meal) => addSauce(meal, sauces.sweetChilli));
 
 const ingridPrep = preparePortion(sizes.large, bases.fineNoodles)
-  .then(meal => addVegetables(meal))
-  .then(meal => addTopping(meal, toppings.shellfish))
-  .then(meal => addSauce(meal, sauces.sweetChilli));
+  .then((meal) => addVegetables(meal))
+  .then((meal) => addTopping(meal, toppings.shellfish))
+  .then((meal) => addSauce(meal, sauces.sweetChilli));
 
 const theOrder = Promise.all([harryPrep, ingridPrep, preparedExtras])
   .then(([hMeal, iMeal, [egg, onion, pineapple, mushrooms]]) =>
     Promise.all([
       addPreparedExtras(hMeal, [egg, onion]),
       addPreparedExtras(iMeal, [pineapple, mushrooms]),
-    ])
+    ]),
   )
   .then(([hMeal, iMeal]) => Promise.all([bag(hMeal), bag(iMeal)]));
 
@@ -117,4 +117,4 @@ theOrder
       });
     });
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));

@@ -30,11 +30,11 @@ const includesAnX = async (text = '') => {
 const userInput = prompt('enter some text to learn if it includes an "x".');
 
 includesAnX(userInput)
-  .then(itDoes => {
+  .then((itDoes) => {
     const doesOrNot = itDoes ? 'does' : 'does not';
     alert(`"${userInput}" ${doesOrNot} include an "x"`);
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
 
     // works for this example, it is not a general solution

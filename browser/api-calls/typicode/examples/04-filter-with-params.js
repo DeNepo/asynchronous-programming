@@ -41,19 +41,19 @@ const fetchWithQueries = async (resourceType, key = '', value = '') => {
 // --- fetch and log the data ---
 
 fetchWithQueries('users', 'username', 'Samantha')
-  .then(data => log('/users?username=Samantha', data))
-  .catch(err => log('/users?username=Samantha', err));
+  .then((data) => log('/users?username=Samantha', data))
+  .catch((err) => log('/users?username=Samantha', err));
 
 fetchWithQueries('posts', 'title', 'qui est esse')
-  .then(data => log('/posts?title=qui%20est%20esse', data))
-  .catch(err => log('/posts?title=qui%20est%20esse', err));
+  .then((data) => log('/posts?title=qui%20est%20esse', data))
+  .catch((err) => log('/posts?title=qui%20est%20esse', err));
 
 fetchWithQueries('posts', 'id', '2')
-  .then(data => log('/posts?id=2', data))
-  .catch(err => log('/posts?id=2', err));
+  .then((data) => log('/posts?id=2', data))
+  .catch((err) => log('/posts?id=2', err));
 
 fetchWithQueries('comments', 'postId', '3')
-  .then(data => log('/comments?postId=3', data))
-  .catch(err => log('/comments?postId=3', err));
+  .then((data) => log('/comments?postId=3', data))
+  .catch((err) => log('/comments?postId=3', err));
 
 log('= = = =  the call stack is empty  = = = =');

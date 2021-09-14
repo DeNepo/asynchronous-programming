@@ -20,13 +20,13 @@ import {
  */
 
 const aliceMeal = preparePortion(sizes.medium, bases.whiteRice)
-  .then(meal => addVegetables(meal))
-  .then(meal => addTopping(meal, toppings.calamari))
-  .then(meal => addSauce(meal, sauces.sweetChilli))
-  .then(meal => bag(meal));
+  .then((meal) => addVegetables(meal))
+  .then((meal) => addTopping(meal, toppings.calamari))
+  .then((meal) => addSauce(meal, sauces.sweetChilli))
+  .then((meal) => bag(meal));
 
 aliceMeal
-  .then(theMeal => {
+  .then((theMeal) => {
     prettyPrintMeal(theMeal);
 
     describe('alice should get the meal she ordered', () => {
@@ -52,4 +52,4 @@ aliceMeal
       });
     });
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));

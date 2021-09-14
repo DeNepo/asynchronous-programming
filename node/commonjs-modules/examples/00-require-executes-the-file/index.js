@@ -1,7 +1,7 @@
 'use strict';
 
-console.log('BEGIN ./index.js');
+console.log('BEGIN ./index');
 
-require('./other-file.js');
+require('./other-file');
 
-console.log('END ./index.js');
+console.log('END ./index');

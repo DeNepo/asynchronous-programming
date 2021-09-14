@@ -22,7 +22,7 @@ import { fakeFetch } from '/browser/lib/fake-fetch.js';
  * @param {any} value - The value to describe.
  * @returns {Promise<string>} A promise that resolves to either "truey" or "falsey".
  */
-const truthiness = async value => {
+const truthiness = async (value) => {
   // this line waits asynchronously for fakeFetch to settle
   const resolvedValue = await fakeFetch(value);
 

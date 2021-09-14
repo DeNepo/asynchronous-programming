@@ -32,7 +32,7 @@ const mealWithoutExtras = _;
 const fiensOrder = _;
 
 fiensOrder
-  .then(theMeal => {
+  .then((theMeal) => {
     prettyPrintMeal(theMeal);
 
     describe("Fien's meal", () => {
@@ -64,4 +64,4 @@ fiensOrder
       });
     });
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));

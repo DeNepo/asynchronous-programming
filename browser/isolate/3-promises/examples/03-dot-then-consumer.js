@@ -18,13 +18,13 @@ const log = labeledLogger();
 
 */
 
-const logResolvedValue = value => {
+const logResolvedValue = (value) => {
   log(value);
 };
 
-new Promise(resolve => {
+new Promise((resolve) => {
   log('in executor'); // 1
   resolve('success!');
-}).then(val => logResolvedValue(val)); // 3
+}).then((val) => logResolvedValue(val)); // 3
 
 log('= = = =  the call stack is empty  = = = ='); // 2

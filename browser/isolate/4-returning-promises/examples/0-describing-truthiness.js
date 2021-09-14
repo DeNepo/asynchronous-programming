@@ -12,7 +12,7 @@
  * @param {any} value - The value to describe.
  * @returns {string} Either "truey" or "falsey".
  */
-const truthiness = value => {
+const truthiness = (value) => {
   console.log('0. the value:', value);
 
   const castToBoolean = Boolean(value);

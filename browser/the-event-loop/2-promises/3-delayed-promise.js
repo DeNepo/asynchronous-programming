@@ -6,7 +6,7 @@
  * @returns {Promise<any>} A promise resolving to the value parameter.
  */
 const delayedPromise = (delay = 0, value = delay) => {
-  const delayedResolver = resolve => {
+  const delayedResolver = (resolve) => {
     setTimeout(() => {
       resolve(value);
     }, delay);
@@ -15,15 +15,15 @@ const delayedPromise = (delay = 0, value = delay) => {
 };
 
 delayedPromise(100, 'hi 100')
-  .then(val => console.log(val))
-  .catch(err => console.error(err));
+  .then((val) => console.log(val))
+  .catch((err) => console.error(err));
 
 delayedPromise(50, 'hi 50')
-  .then(val => console.log(val))
-  .catch(err => console.error(err));
+  .then((val) => console.log(val))
+  .catch((err) => console.error(err));
 
 delayedPromise(1000, 'hi 1000')
-  .then(val => console.log(val))
-  .catch(err => console.error(err));
+  .then((val) => console.log(val))
+  .catch((err) => console.error(err));
 
 console.log('= =  the call stack is empty  = =');

@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('BEGIN ./other-file.js');
+console.log('BEGIN ./other-file');
 
 // module is an object available in every node script
 // like all objects, it can have properties

@@ -31,22 +31,22 @@ const log = labeledLogger();
  */
 
 const preparedExtras = Promise.all(
-  [extras.egg, extras.onion].map(e => prepareExtra(e)),
+  [extras.egg, extras.onion].map((e) => prepareExtra(e)),
 );
 
 const mealWithoutExtras = preparePortion(sizes.medium, bases.whiteRice)
-  .then(meal => addVegetables(meal))
-  .then(meal => addTopping(meal, toppings.beef))
-  .then(meal => addSauce(meal, sauces.sweetChilli));
+  .then((meal) => addVegetables(meal))
+  .then((meal) => addTopping(meal, toppings.beef))
+  .then((meal) => addSauce(meal, sauces.sweetChilli));
 
 const ericsOrder = Promise.all([preparedExtras, mealWithoutExtras])
   .then(([thePreparedExtras, meal]) =>
     addPreparedExtras(meal, thePreparedExtras),
   )
-  .then(meal => bag(meal));
+  .then((meal) => bag(meal));
 
 ericsOrder
-  .then(theMeal => {
+  .then((theMeal) => {
     prettyPrintMeal(theMeal);
 
     describe("Eric's meal", () => {
@@ -78,4 +78,4 @@ ericsOrder
       });
     });
   })
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));

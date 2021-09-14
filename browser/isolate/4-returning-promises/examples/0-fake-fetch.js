@@ -29,28 +29,22 @@ const log = labeledLogger();
 
 // --- declare some callbacks ---
 
-const logResolvedValue = resolvedValue => {
+const logResolvedValue = (resolvedValue) => {
   log('+ resolved:', resolvedValue);
 };
-const handleRejection = rejection => {
+const handleRejection = (rejection) => {
   log('- rejected:', rejection);
 };
 
 // --- use the callbacks ---
 
 log('fetching "hello"');
-fakeFetch('hello')
-  .then(logResolvedValue)
-  .catch(handleRejection);
+fakeFetch('hello').then(logResolvedValue).catch(handleRejection);
 
 log('fetching false');
-fakeFetch(false)
-  .then(logResolvedValue)
-  .catch(handleRejection);
+fakeFetch(false).then(logResolvedValue).catch(handleRejection);
 
 log('fetching "bye"');
-fakeFetch('bye')
-  .then(logResolvedValue)
-  .catch(handleRejection);
+fakeFetch('bye').then(logResolvedValue).catch(handleRejection);
 
 log('= = = =  the call stack is empty  = = = =');

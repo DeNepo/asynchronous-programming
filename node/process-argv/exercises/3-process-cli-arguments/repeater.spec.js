@@ -1,6 +1,6 @@
 'use strict';
 
-const repeater = require('./repeater.js');
+const repeater = require('./repeater');
 
 describe('repeater joins an array of strings into a single formatted list', () => {
   it('returns an empty string for 0 repeats', () => {
