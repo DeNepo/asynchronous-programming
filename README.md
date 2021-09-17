@@ -216,18 +216,49 @@ References and Practice to help you master this module.
 
 ## Week 1
 
+The Event Loop!
+
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
+- [./browser/the-event-loop](./browser/the-event-loop)
+  - watch a couple of the videos
+  - step through the timeout examples in [jsv9000.app](https://www.jsv9000.app/)
+- [./browser/isolate](./browser/isolate)
+  - `labeled-logger`
+  - `event-loop` examples
+
 ### During Class
 
 #### Before Break
 
+- _All Together_:
+  - [The Event Loop](https://www.youtube.com/watch?v=EI7sN1dDwcY) - restaurant analogy
+  - [./browser/the-event-loop](./browser/the-event-loop): timeouts examples
+- _In Small Groups_:
+  - [./browser/isolate](./browser/isolate): timeout exercises & sync vs. async
+
 #### After break
 
+- _All Together_:
+  - Callback Hell at the Restaurant
+  - [./the-event-loop](./the-event-loop): promises
+- _In Small Groups_:
+  - [./isolate](./isolate): promises
+
 ### After Class
+
+> independent study
+
+No project this week! This week you should focus on studying:
+
+- The Event Loop.
+  - Reverse-engineering [stopwatch.net](https://stopwatch.net/) with `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval` is a good challenge if you're looking for one. (A single script.js file is ok, no need for full architecture)
+- Promises
+  - [./browser/promistaurant](./browser/promistaurant) will help you understand how to solve asynchronous problems by thinking about what tasks need to be done in a specific order and which tasks can be done at the same time.
+- `async`/`await`
 
 </details>
 <br>
