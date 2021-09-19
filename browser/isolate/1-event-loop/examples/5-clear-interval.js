@@ -9,7 +9,7 @@ const callback1 = () => {
   log('interval ...');
 };
 const intervalId = setInterval(callback1, 500);
-log('scheduled interval');
+log('scheduled interval', intervalId);
 
 const callback2 = () => {
   log('timeout!');
