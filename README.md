@@ -254,12 +254,13 @@ The Event Loop!
 No project this week! This week you should focus on studying:
 
 - The Event Loop.
-  - Reverse-engineering [stopwatch.net](https://stopwatch.net/) with `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval` is a good challenge if you're looking for one. (A single script.js file is ok, no need for full architecture)
+  - review the videos and visualizations in `/browser/the-event-loop`
+  - continue with `/browser/isolate`, through promises if you have time
+  - (_challenge_) Reverse-engineering [stopwatch.net](https://stopwatch.net/) with `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval` is a good project if you're looking for one. (A single script.js file is ok, no need for full architecture)
 - Node.js:
   1. [node/commonjs-modules](./node/commonjs-modules)
   2. [node/process-argv](./node/process-argv)
   3. [node/file-system](./node/file-system): 1. FS Sync, 2. FS Callbacks
-- begin studying Promises & `async`/`await` if you have time
 
 </details>
 <br>
