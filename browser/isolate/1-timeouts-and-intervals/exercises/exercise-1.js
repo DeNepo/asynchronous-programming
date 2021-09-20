@@ -5,8 +5,7 @@ const log = labeledLogger();
 // fill in the blanks
 
 let x = '';
-
-x += _;
+log(x);
 
 const callback1 = () => {
   x += 'ri';
@@ -14,7 +13,8 @@ const callback1 = () => {
 };
 setTimeout(callback1, _);
 
-x += _;
+x += 'j';
+log(x);
 
 const callback2 = () => {
   const test = x === 'javascript';
@@ -23,11 +23,17 @@ const callback2 = () => {
 };
 setTimeout(callback2, _);
 
+x += 'a';
+log(x);
+
 const callback3 = () => {
   x += 'sc';
   log('cb 3:', x);
 };
 setTimeout(callback3, _);
+
+x += 'v';
+log(x);
 
 const callback4 = () => {
   x += 'pt';
@@ -35,8 +41,7 @@ const callback4 = () => {
 };
 setTimeout(callback4, _);
 
-x += _;
-
+x += 'a';
 log(x);
 
 log('= = = =  the call stack is empty  = = = =');

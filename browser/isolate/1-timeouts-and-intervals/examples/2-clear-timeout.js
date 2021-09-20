@@ -13,7 +13,7 @@ const callback1 = () => {
 };
 const timeout1 = setTimeout(callback1, 2000);
 
-log('scheduled timeout 1'); // log 1
+log('scheduled timeout 1', timeout1); // log 1
 
 const callback2 = () => {
   log('in callback 2'); // log 4
@@ -21,6 +21,6 @@ const callback2 = () => {
 };
 const timeout2 = setTimeout(callback2, 1000);
 
-log('scheduled timeout 2'); // log 2
+log('scheduled timeout 2', timeout2); // log 2
 
 log('= = = =  the call stack is empty  = = = ='); // log 3

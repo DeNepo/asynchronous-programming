@@ -228,7 +228,7 @@ The Event Loop!
   - step through the timeout examples in [jsv9000.app](https://www.jsv9000.app/)
 - [./browser/isolate](./browser/isolate)
   - `labeled-logger`
-  - `event-loop` examples
+  - `timeouts-and-intervals` examples
 
 ### During Class
 
@@ -236,17 +236,16 @@ The Event Loop!
 
 - _All Together_:
   - [The Event Loop](https://www.youtube.com/watch?v=EI7sN1dDwcY) - restaurant analogy
-  - [./browser/the-event-loop](./browser/the-event-loop): timeouts examples
+  - [./browser/timeouts-and-intervals](./browser/timeouts-and-intervals): timeouts examples
 - _In Small Groups_:
   - [./browser/isolate](./browser/isolate): timeout exercises & sync vs. async
 
 #### After break
 
-- _All Together_:
-  - Callback Hell at the Restaurant
-  - [./the-event-loop](./the-event-loop): promises
 - _In Small Groups_:
-  - [./isolate](./isolate): promises
+  - continue [./browser/isolate](./browser/isolate): timeout exercises & sync vs. async
+- _All Together_:
+  - recap & Q/A
 
 ### After Class
 
@@ -255,10 +254,13 @@ The Event Loop!
 No project this week! This week you should focus on studying:
 
 - The Event Loop.
-  - Reverse-engineering [stopwatch.net](https://stopwatch.net/) with `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval` is a good challenge if you're looking for one. (A single script.js file is ok, no need for full architecture)
-- Promises
-  - [./browser/promistaurant](./browser/promistaurant) will help you understand how to solve asynchronous problems by thinking about what tasks need to be done in a specific order and which tasks can be done at the same time.
-- `async`/`await`
+  - review the videos and visualizations in `/browser/the-event-loop`
+  - continue with `/browser/isolate`, through promises if you have time
+  - (_challenge_) Reverse-engineering [stopwatch.net](https://stopwatch.net/) with `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval` is a good project if you're looking for one. (A single script.js file is ok, no need for full architecture)
+- Node.js:
+  1. [node/commonjs-modules](./node/commonjs-modules)
+  2. [node/process-argv](./node/process-argv)
+  3. [node/file-system](./node/file-system): 1. FS Sync, 2. FS Callbacks
 
 </details>
 <br>
@@ -281,6 +283,9 @@ No project this week! This week you should focus on studying:
 #### After Break
 
 ### After Class
+
+- Promises
+  - [./browser/promistaurant](./browser/promistaurant) will help you understand how to solve asynchronous problems by thinking about what tasks need to be done in a specific order and which tasks can be done at the same time.
 
 </details>
 <br>
@@ -376,13 +381,13 @@ No project this week! This week you should focus on studying:
 ### [Class 13-14](https://github.com/hackyourfuturebelgium/class-13-14)
 
 1. week 1 - by Yoshi and Joel:
-
-- [Part 1](https://vimeo.com/579091811)
-- [Part 2](https://vimeo.com/579095696)
-
+   - [Part 1](https://vimeo.com/579091811)
+   - [Part 2](https://vimeo.com/579095696)
 1. week 2 - by Yoshi:
+   - [Part 1](https://vimeo.com/582102001)
+   - [Part 2](https://vimeo.com/582103554)
+   - [Part 3](https://vimeo.com/582104038)
 
-- [Part 1](https://vimeo.com/582102001)
-- [Part 2](https://vimeo.com/582103554)
-- [Part 3](https://vimeo.com/582104038)
--
+### Class 15
+
+1. Week 1: [timeouts and the event loop](https://vimeo.com/609704105)
