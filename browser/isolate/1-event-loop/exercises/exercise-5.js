@@ -5,7 +5,12 @@ const log = labeledLogger();
 // use setTimeout and .charCodeAt() to sort an array of strings
 //  read items from the unsorted array to the sorted array
 //  you can control the order of the sorted array by using different delays in a setTimeout
-const sortArray = (unsorted, sorted) => {};
+
+const sortArray = (unsorted, sorted) => {
+  sorted = unsorted.sort();
+  console.log(sorted);
+  return sorted;
+};
 
 // can you figure out why the tests pass in the order they do?
 // is it possible for a test never to finish?
