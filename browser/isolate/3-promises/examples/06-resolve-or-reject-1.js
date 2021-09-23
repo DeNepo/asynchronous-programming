@@ -11,7 +11,7 @@ const log = labeledLogger();
 */
 
 // resolve/reject based on a random number with if/else
-Promise(() => {
+new Promise((resolve, reject) => {
   const randomNumber = Math.random();
   if (randomNumber > 0.5) {
     resolve('random number is greater than 0.5: ' + randomNumber);
