@@ -5,15 +5,19 @@ const log = labeledLogger();
 // use setTimeout and .charCodeAt() to sort an array of strings
 //  read items from the unsorted array to the sorted array
 //  you can control the order of the sorted array by using different delays in a setTimeout
-const sortArray = (unsorted, sorted) => {};
+const sortArray = (unsorted, sorted) => {
+  unsorted.forEach(element => {
+    setTimeout(function() {sorted.push(element)}, element.charCodeAt());
+    return sorted;
+})};
 
 // can you figure out why the tests pass in the order they do?
 // is it possible for a test never to finish?
 const testSortAsync = (actual, expected, testId) => {
   if (actual.length === expected.length) {
     log(testId, 'actual:', actual, 'expected:', expected);
-    const test1 = actual.toString() === expected.toString();
-    console.assert(test1, testId);
+    const test2 = actual.toString() === expected.toString();
+    console.assert(test2, testId);
   } else {
     // sorting is not finished, check again later
     setTimeout(testSortAsync, 50, actual, expected, testId);

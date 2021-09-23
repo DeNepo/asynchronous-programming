@@ -36,7 +36,7 @@ const handleRejection = (err) => {
 };
 
 // resolved to value 5
-new Promise((resolve, reject) => {
+new Promise((resolve, reject) => { // first promise
   log('resolving 5'); // log 1
   resolve(5);
 })
@@ -46,7 +46,7 @@ new Promise((resolve, reject) => {
   .catch((err) => handleRejection(err));
 
 // resolved to value "hello"
-new Promise((resolve, reject) => {
+new Promise((resolve, reject) => { // second 
   log('resolving "hello"'); // log 2
   resolve('hello');
 })
@@ -56,7 +56,7 @@ new Promise((resolve, reject) => {
   .catch((err) => handleRejection(err));
 
 // rejected (will skip all .thens)
-new Promise((resolve, reject) => {
+new Promise((resolve, reject) => { // third promise
   log('rejecting!'); // log 3
   reject(':(');
 })

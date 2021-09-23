@@ -37,7 +37,7 @@ log('settled, fulfilled:', fulfilledPromise);
 // settled: rejected (intentional)
 const rejectExecutor = (resolve, reject) => {
   log('in rejectExecutor');
-  reject('good bye from rejectExecutor : (');
+  reject('good bye from rejectExecutor : ('); // first error after the call stack is empty
 };
 const rejectedPromise = new Promise(rejectExecutor);
 log('settled: rejected (intentional):', rejectedPromise);
@@ -45,7 +45,7 @@ log('settled: rejected (intentional):', rejectedPromise);
 // settled: rejected (by error)
 const errorExecutor = (resolve, reject) => {
   log('in errorExecutor');
-  null();
+  null(); //  the second error 
 };
 const errorPromise = new Promise(errorExecutor);
 log('settled: rejected (by error):', errorPromise);

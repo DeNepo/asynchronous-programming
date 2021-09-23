@@ -18,14 +18,14 @@ const exercise5_cb_1 = () => {
   const test = sum === 0;
   console.assert(test, 'Test 1');
 };
-setTimeout(exercise5_cb_1, _);
+setTimeout(exercise5_cb_1, 0);
 
 const exercise5_cb_2 = () => {
   log('callback 2:', arr);
   const test = arr.length === 7;
   console.assert(test, 'Test 2');
 };
-setTimeout(exercise5_cb_2, _);
+setTimeout(exercise5_cb_2, 700);
 
 const exercise5_cb_3 = () => {
   const sum = arr.reduce((sum, next) => sum + next, 0);
@@ -36,7 +36,7 @@ const exercise5_cb_3 = () => {
   clearTimeout(intervalId);
   arr.push('almost done!');
 };
-setTimeout(exercise5_cb_3, _);
+setTimeout(exercise5_cb_3, 600);
 
 const exercise5_cb_4 = () => {
   const sum = arr.reduce((sum, next) => sum + next, 0);
@@ -44,7 +44,7 @@ const exercise5_cb_4 = () => {
   const test = sum === 2;
   console.assert(test, 'Test 4');
 };
-setTimeout(exercise5_cb_4, _);
+setTimeout(exercise5_cb_4, 200);
 
 const exercise5_cb_5 = () => {
   const sum = arr.reduce((sum, next) => sum + next, 0);
@@ -52,6 +52,6 @@ const exercise5_cb_5 = () => {
   const test = sum === 5;
   console.assert(test, 'Test 5');
 };
-setTimeout(exercise5_cb_5, _);
+setTimeout(exercise5_cb_5, 500);
 
 log('= = = =  the call stack is empty  = = = =');

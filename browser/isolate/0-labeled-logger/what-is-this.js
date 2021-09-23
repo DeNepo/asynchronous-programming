@@ -5,7 +5,7 @@ import { labeledLogger } from '/browser/lib/labeled-logger.js';
   this is a function to (hopefully) help you understand the event loop and asynchronous programming in JS
 
   it's like console.log but with extra information:
-    - label so you can tell which logger was called
+    - label so you can tell which logger was called === ojo
     - the time you created the labeled logger
     - how many times you've called the logger
     - the time delay in millisenconds for each logs

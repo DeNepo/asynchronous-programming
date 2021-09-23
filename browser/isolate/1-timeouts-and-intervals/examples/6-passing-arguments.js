@@ -7,13 +7,13 @@ const log = labeledLogger();
 const callback1 = (message) => {
   log(message);
 };
-const intervalId = setInterval(callback1, 500, 'hi!');
+const intervalId = setInterval(callback1, 0, 'hi!'); // 500
 
 const callback2 = (arg1, arg2) => {
   log(arg1, arg2);
   clearInterval(intervalId);
 };
-setTimeout(callback2, 5000, 'good', 'bye');
+setTimeout(callback2, 0, 'good', 'bye'); // 5000
 
 log('= = = =  the call stack is empty  = = = =');
 
