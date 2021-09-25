@@ -1,6 +1,13 @@
 {
-  "--defaults": {
-    ".js": "highlight"
-  },
-  "--port": 4007
+  "--port": 4007,
+  "study": {
+    "variables": true,
+    "tables": true,
+    "blanks": true,
+    "flowchart": true,
+    "writeme": true,
+    "ask": {
+      "levels": [1, 2, 3, 4]
+    }
+  }
 }
