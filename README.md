@@ -109,6 +109,7 @@ References and Practice to help you master this module.
   - 🥚 **[`/commonjs-modules`](./node/commonjs-modules)**: Node.js hasn't always used `import`/`export`, it used `require`/`module.exports`. Explore some examples to understand how this works.
   - 🥚 **[`/process-argv`](./node/process-argv)**: learn to use process.argv to get user input from the command line. you won't need this to write an API, but it's simple enough and helps to understand how command line tools work.
   - 🐣 **[`/file-system`](./node/file-system)**: practice using the `fs` module with callbacks, promises and `async`/`await`.
+  - 🐥 **[`/command-line-applications`](./node/command-line-applications)**: use everything you've learned about node to write small command line applications.
 
 ### The Event Loop
 
@@ -257,6 +258,8 @@ No project this week! This week you should focus on studying:
   - review the videos and visualizations in `/browser/the-event-loop`
   - continue with `/browser/isolate`, through promises if you have time
   - (_challenge_) Reverse-engineering [stopwatch.net](https://stopwatch.net/) with `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval` is a good project if you're looking for one. (A single script.js file is ok, no need for full architecture)
+- Promises
+  - [./browser/promistaurant](./browser/promistaurant) will help you understand how to solve asynchronous problems by thinking about what tasks need to be done in a specific order and which tasks can be done at the same time.
 - Node.js:
   1. [node/commonjs-modules](./node/commonjs-modules)
   2. [node/process-argv](./node/process-argv)
@@ -271,21 +274,23 @@ No project this week! This week you should focus on studying:
 
 ## Week 2
 
+File System!
+
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
+Look through the [./node](./node) folder of this repository.
+
+- CLI arguments & `process.argsv`
+- file system with callbacks (examples)
+
 ### During Class
 
-#### Before Break
-
-#### After Break
+File System!
 
 ### After Class
-
-- Promises
-  - [./browser/promistaurant](./browser/promistaurant) will help you understand how to solve asynchronous problems by thinking about what tasks need to be done in a specific order and which tasks can be done at the same time.
 
 </details>
 <br>
