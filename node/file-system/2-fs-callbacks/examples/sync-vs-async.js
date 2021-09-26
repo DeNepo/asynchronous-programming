@@ -15,10 +15,6 @@ const log = labeledLogger(Date.now());
 
 log(0, 'begin!');
 
-fs.writeFileSync(FILE_PATH, '111111111111');
-
-log(1, 'first write is finished');
-
 const fsWriteCallback = (err) => {
   if (err) {
     log(3, err);
@@ -28,7 +24,11 @@ const fsWriteCallback = (err) => {
   log(3, 'second write is finished');
 };
 
-fs.writeFile(FILE_PATH, '222222222222', fsWriteCallback);
+fs.writeFile(FILE_PATH, '111', fsWriteCallback);
+
+fs.writeFileSync(FILE_PATH, '222');
+
+log(1, 'first write is finished');
 
 const firstRead = fs.readFileSync(FILE_PATH, 'utf-8');
 

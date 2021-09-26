@@ -25,7 +25,11 @@ import {
  *  Complete the following code so that the test passes
  */
 
-const bobsOrder = _;
+const bobsOrder = preparePortion(sizes.large, bases.riceNoodles)
+  .then((meal) => addVegetables(meal))
+  .then((meal) => addTopping(meal, toppings.chicken))
+  .then((meal) => addSauce(meal, sauces.teriYaki))
+  .then((meal) => bag(meal));
 
 bobsOrder
   .then((theMeal) => {

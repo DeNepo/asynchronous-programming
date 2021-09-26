@@ -2,8 +2,11 @@
 
 console.log('BEGIN ./index');
 
-const fromOtherFile = require('./other-file');
+const sayHello = require('./other-file');
+// const fromOtherFile = require('./other-file');
 
-console.log('fromOtherFile -', fromOtherFile);
+// console.log('fromOtherFile -', fromOtherFile);
 
-console.log('END ./index');
+// console.log('END ./index');
+
+sayHello('hello from the other file');

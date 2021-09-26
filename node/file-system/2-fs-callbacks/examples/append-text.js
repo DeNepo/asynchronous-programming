@@ -13,6 +13,8 @@ const log = labeledLogger(Date.now());
 const contentToAppend = process.argv[2] + '\n';
 log(1, contentToAppend);
 
+console.log(typeof parseInt(process.argv[2]));
+
 const callback = (err) => {
   if (err) {
     log(3, err);
@@ -26,3 +28,4 @@ const filePath = path.join(__dirname, 'file.txt');
 fs.appendFile(filePath, contentToAppend, callback);
 
 log(2, '...');
+log(process.argv);
