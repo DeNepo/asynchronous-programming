@@ -23,10 +23,10 @@ new Promise((resolve, reject) => {
     reject('is not a number: ' + userInput);
   }
 })
-  .catch((resolvedValue) => {
+  .then((resolvedValue) => {
     log('resolved value: ', resolvedValue);
   })
-  .then((rejectionValue) => {
+  .catch((rejectionValue) => {
     log('rejected value: ', rejectionValue);
   });
 
