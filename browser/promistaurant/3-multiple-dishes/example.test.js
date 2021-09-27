@@ -13,6 +13,7 @@ import {
   bag,
   prepareExtra,
   preparePortion,
+  prettyPrintMeal,
   STATUSES,
 } from '../kitchen/steps.js';
 
