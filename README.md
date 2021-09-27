@@ -135,15 +135,20 @@ References and Practice to help you master this module.
   - HYF ... [AMS](https://github.com/HackYourFuture/JavaScript3/), [CPH](https://github.com/HackYourFuture-CPH/JavaScript/tree/master/javascript3)
   - [Async/Await - FunFunFunction](https://www.youtube.com/watch?v=568g8hxJJp4)
   - [`return await` (advanced)](https://stackoverflow.com/questions/38708550/difference-between-return-await-promise-and-return-promise)
+- Error-First Callback Convention
+  - [Geeks for Geeks](https://www.geeksforgeeks.org/error-first-callback-in-node-js/)
+  - [Steve Griffith](https://www.youtube.com/watch?v=0pNo1O42m6k)
+  - [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A)
+  - [Thomas Smith](https://www.youtube.com/watch?v=Iv_8tKtfqF0)
+  - [Fred K Schott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
+- Callback Hell:
+  - [.com](http://callbackhell.com/)
+  - [Rising Stack](https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/)
+  - [How To Create Apps](https://howtocreateapps.com/what-is-callback-hell-with-javascript-examples/)
+  - [Hardeep Jethwani](https://hardeep-jethwani.com/callback-hell-in-nodejs-and-the-ways-to-come-out-of-that-hell)
 - Practice
   - [learn-promises](https://github.com/oliverjam/learn-promises)
   - [promise-practice](https://github.com/oliverjam/promise-practice)
-  - JS 30:
-    - Whack-a-Mole
-    - Slide in on Scroll
-    - Countdown Timer
-    - JS & CSS Clock
-    - Webcam Fun
 
 ### APIs
 
@@ -288,9 +293,11 @@ Look through the [./node](./node) folder of this repository.
 
 ### During Class
 
-File System!
+File System! (callback hell ;)
 
 ### After Class
+
+Just keep on studying, no project.
 
 </details>
 <br>
