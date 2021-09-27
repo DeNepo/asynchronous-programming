@@ -17,6 +17,6 @@ const newContent = process.argv[3];
 log(2, newContent);
 
 log(3, '...');
-fs.writeFile(filePath, newContent);
+fs.writeFileSync(filePath, newContent);
 
 log(4, 'all done!');

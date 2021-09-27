@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = require('assert');
 
 console.log('assert:', assert);

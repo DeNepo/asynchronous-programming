@@ -44,4 +44,4 @@ if (!name) {
   process.exit(1);
 }
 
-console.log(`Hello ${name}! 🤗`);
+console.log(`Welcome ${name}! 🤗`);

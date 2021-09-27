@@ -16,28 +16,40 @@ const log = labeledLogger(Date.now());
 
 log(0, `--- ${EXERCISE_NAME} ---`);
 
-const filePath = path.join(__dirname, process.argv[2]);
-log(1, filePath);
+const fileName1 = process.argv[2];
+const filePath1 = path.join(__dirname, fileName1);
+log(1, filePath1);
 
-const toAppend = process.argv[3];
-log(2, toAppend);
+const fileName2 = process.argv[3];
+const filePath2 = path.join(__dirname, fileName2);
+log(2, filePath2);
 
-const numberOfTimes = Number(process.argv[4]);
-log(3, numberOfTimes);
+log(3, `reading ${fileName1} ...`);
+const fileContents1 = fs.readFileSync(filePath1, 'utf-8');
 
-log(4, 'reading old contents ...');
-const oldContents = fs.readFileSync(filePath, 'utf-8');
+log(4, `reading ${fileName2} ...`);
+const fileContents2 = fs.readFileSync(filePath2, 'utf-8');
 
-for (let i = 1; i <= numberOfTimes; i++) {
-  log(4 + i, `appending ...`);
-  fs.appendFileSync(filePath, toAppend);
+log(5, 'comparing file contents ...');
+const fileOneIsLonger = fileContents1.length > fileContents2.length;
+if (fileOneIsLonger) {
+  log(6, `writing to ${fileName2} ...`);
+  fs.writeFileSync(filePath2, fileContents1);
+} else {
+  log(6, `writing to ${fileName1} ...`);
+  fs.writeFileSync(filePath1, fileContents2);
 }
 
-log(numberOfTimes + 5, 'reading new contents ...');
-const newContents = fs.readFileSync(filePath, 'utf-8');
+if (fileOneIsLonger) {
+  log(7, `reading ${fileName2} ...`);
+  const newFileContents2 = fs.readFileSync(filePath2, 'utf-8');
+  log(8, 'asserting ...');
+  assert.strictEqual(fileContents1, newFileContents2);
+} else {
+  log(7, `reading ${fileName1} ...`);
+  const newFileContents1 = fs.readFileSync(filePath1, 'utf-8');
+  log(8, 'asserting ...');
+  assert.strictEqual(fileContents2, newFileContents1);
+}
 
-log(numberOfTimes + 6, 'asserting file contents ...');
-const expectedContents = oldContents + toAppend.repeat(numberOfTimes);
-assert.strictEqual(newContents, expectedContents);
-
-log(numberOfTimes + 7, 'PASS!');
+log(9, 'PASS!');

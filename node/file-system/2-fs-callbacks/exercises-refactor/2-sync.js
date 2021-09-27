@@ -35,17 +35,15 @@ const fileOneIsLonger = fileContents1.length > fileContents2.length;
 if (fileOneIsLonger) {
   log(6, `writing to ${fileName2} ...`);
   fs.writeFileSync(filePath2, fileContents1);
-} else {
-  log(6, `writing to ${fileName1} ...`);
-  fs.writeFileSync(filePath1, fileContents2);
-}
 
-if (fileOneIsLonger) {
   log(7, `reading ${fileName2} ...`);
   const newFileContents2 = fs.readFileSync(filePath2, 'utf-8');
   log(8, 'asserting ...');
   assert.strictEqual(fileContents1, newFileContents2);
 } else {
+  log(6, `writing to ${fileName1} ...`);
+  fs.writeFileSync(filePath1, fileContents2);
+
   log(7, `reading ${fileName1} ...`);
   const newFileContents1 = fs.readFileSync(filePath1, 'utf-8');
   log(8, 'asserting ...');

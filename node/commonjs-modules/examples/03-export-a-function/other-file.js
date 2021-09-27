@@ -6,7 +6,7 @@ console.log('module.exports (before) -', module.exports);
 
 // you can export functions too, .exports is just a property on an object!
 const logMessage = (message) => {
-  console.trace(message);
+  console.log(message);
 };
 
 module.exports = logMessage;

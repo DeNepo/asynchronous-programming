@@ -27,4 +27,4 @@ const callback = (err) => {
 
 fs.writeFile(filePath, newContent, callback);
 
-log(3, '...');
+log(3, '... end of callstack ...');

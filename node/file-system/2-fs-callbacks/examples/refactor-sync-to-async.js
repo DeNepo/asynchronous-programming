@@ -28,21 +28,24 @@ log(2, currentFileContents);
 const newAsyncFileContents = '[**]';
 log(3, newAsyncFileContents);
 
-fs.writeFile(FILE_PATH, newAsyncFileContents, (err) => {
+const writeFileCallback = (err) => {
   if (err) {
     log(5, err);
     return;
   }
 
-  fs.readFile(FILE_PATH, 'utf-8', (err, asyncFileContents) => {
+  const readFileCallback = (err, asyncFileContents) => {
     if (err) {
       log(6, err);
       return;
     }
 
     log(6, asyncFileContents);
-  });
+  };
+  fs.readFile(FILE_PATH, 'utf-8', readFileCallback);
   log(5, 'reading file ...');
-});
+};
+
+fs.writeFile(FILE_PATH, newAsyncFileContents, writeFileCallback);
 
 log(4, 'writing file ...');

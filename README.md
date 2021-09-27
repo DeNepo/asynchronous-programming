@@ -396,3 +396,4 @@ File System!
 ### Class 15
 
 1. Week 1: [timeouts and the event loop](https://vimeo.com/609704105)
+2. Week 2: [Node & File System](https://vimeo.com/616023084), [Refactor Sync to Callbacks](https://vimeo.com/616024490)

@@ -6,7 +6,7 @@
     "test:esm": "node --experimental-vm-modules node_modules/.bin/jest --silent ",
     "test:cjs": "node node_modules/.bin/jest --silent ",
     "document": "node dev-scripts/document.js",
-    "format": "prettier --write"
+    "format": "prettier --write ./"
   },
   "repository": {
     "type": "git",
