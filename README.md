@@ -163,7 +163,6 @@ References and Practice to help you master this module.
   - JSON Placeholder:[live](https://jsonplaceholder.typicode.com/), [more docs](https://github.com/typicode/json-server)
   - [restfulapi.net](https://restfulapi.net/)
 - [Coding Train](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X)
-- [what is CORS?](https://www.codecademy.com/articles/what-is-cors)
 - HTTP statuses
   - [In 60 Seconds](https://www.youtube.com/watch?v=GrNrcmD6HLA)
   - [httpstatuses.com](https://httpstatuses.com/)
@@ -181,7 +180,6 @@ References and Practice to help you master this module.
   - [Learn Fetch API](https://www.youtube.com/watch?v=cuEtnrL9-H0)
   - [Async/Await Javascript and Promises - Fetch API vs Axios](https://www.youtube.com/watch?v=XCLtVQl1if0)
   - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Basic_concepts)
-  - [this-to-fetch](https://github.com/hackyourfuturebelgium/this-to-fetch-example)
 - Practice
   - [learn-fetch](https://github.com/oliverjam/learn-fetch)
   - [real-world-fetch](https://github.com/oliverjam/real-world-fetch)
@@ -308,14 +306,26 @@ Just keep on studying, no project.
 
 ## Week 3
 
+`fetch` and APIs.
+
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
+- APIs 101
+  - [How do they work?](https://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
+  - [Like a Restaurant](https://www.youtube.com/watch?v=s7wmiS2mSXY)
+- `fetch`: Study a couple of your favorite links from Suggested Study
+
 ### During Class
 
+- Before Break: [./browser/api-calls/typicode](./browser/api-calls/typicode)
+- After Break: [./browser/fetch-and-render](./browser/fetch-and-render)
+
 ### After Class
+
+Continue studying `fetch`, APIs, and the File System. All of these concepts will pull together in Web Apps.
 
 </details>
 <br>
