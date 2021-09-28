@@ -317,6 +317,7 @@ Just keep on studying, no project.
   - [How do they work?](https://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
   - [Like a Restaurant](https://www.youtube.com/watch?v=s7wmiS2mSXY)
 - `fetch`: Study a couple of your favorite links from Suggested Study
+- [./browser/api-calls/README.md](./browser/api-calls/README.md)
 
 ### During Class
 
