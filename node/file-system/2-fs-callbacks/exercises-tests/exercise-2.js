@@ -49,7 +49,7 @@ const writeFileCallback = (err) => {
   log(6, parsedFileContents);
   assert.deepStrictEqual(parsedFileContents, objectToSave);
 
-  log(7, '\033[32mpass!\x1b[0m');
+  log(7, 'PASS');
 };
 
 // async
