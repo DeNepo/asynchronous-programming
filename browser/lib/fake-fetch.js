@@ -28,7 +28,7 @@ export const fakeFetch = async (value) => {
   // wait asynchronously for the delay to finish
   const resolvedValue = await slowPromise;
 
-  // return the value, this is will be in a resolved promise!
+  // return the value, this will be in a resolved promise!
   //  you can see in in the debugger if you pause on this line
   return resolvedValue;
 };

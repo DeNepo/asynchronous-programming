@@ -8,6 +8,7 @@
 export const synchronousTimeout = (callback, delay, ...callbackArgs) => {
   const end = Date.now() + delay;
   let now = Date.now();
+
   while (now < end) {
     now = Date.now();
   }
