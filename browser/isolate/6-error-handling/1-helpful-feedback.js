@@ -19,11 +19,12 @@ const userInput = prompt('enter some text to learn if it includes an "x".');
 try {
   // check if it includes an "x"
   //  if than error occurs, they must have canceled
-  const itDoes = text.toLowerCase().includes('x');
+  const itDoes = userInput.toLowerCase().includes('x');
 
   // if it succeeds, let them know if it includes an "x" or not
   const doesOrNot = itDoes ? 'does' : 'does not';
   alert(`"${userInput}" ${doesOrNot} include an "x"`);
+
 } catch (err) {
   // if an error occurred the user must have canceled
   //  instead of the program just ending, let them know what happened

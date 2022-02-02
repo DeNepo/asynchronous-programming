@@ -17,6 +17,14 @@ import { fakeFetch } from '/browser/lib/fake-fetch.js';
  *
  * @async
  */
+const includesAnX = async (text = '') => {
+  // check if the text includes an "x"
+  const itDoesIncludeX = text.toLowerCase().includes('x');
+
+  // wait asynchronously for fakeFetch to settle
+  return await fakeFetch(itDoesIncludeX);
+};
+
 const handleInput = async () => {
   const userInput = prompt('enter some text to learn if it includes an "x".');
 

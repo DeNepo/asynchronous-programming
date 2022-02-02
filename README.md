@@ -415,3 +415,10 @@ Continue studying `fetch`, APIs, and the File System. All of these concepts will
 
 1. Week 1: [timeouts and the event loop](https://vimeo.com/609704105)
 2. Week 2: [Node & File System](https://vimeo.com/616023084), [Refactor Sync to Callbacks](https://vimeo.com/616024490)
+3. week 3:
+   - [Part 1](https://youtu.be/ouUJF-Nuvjc)
+   - [Part 2](https://youtu.be/U66Xl5WVBss)
+   - [Part 3](https://youtu.be/J73sEmmy4Nk)
+   - [Part 4](https://youtu.be/zf8W_nOp5iU)
+   - [Part 5](https://youtu.be/bbcVgwWKRb4)
+   - [Part 6](https://youtu.be/SHRpxE9Q9xA)
