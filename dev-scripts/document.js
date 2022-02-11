@@ -1,10 +1,13 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-const { cruise } = require('dependency-cruiser');
-const { renderGraphFromSource } = require('graphviz-cli');
+import { cruise } from 'dependency-cruiser';
+import { renderGraphFromSource } from 'graphviz-cli';
+
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const cruiserOptions = JSON.parse(
   fs.readFileSync(

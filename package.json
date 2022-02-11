@@ -2,9 +2,9 @@
   "name": "asynchronous-programming",
   "version": "1.0.0",
   "description": "the Async module for HYF Belgium",
+  "type": "module",
   "scripts": {
-    "test:esm": "node --experimental-vm-modules node_modules/.bin/jest --silent ",
-    "test:cjs": "node node_modules/.bin/jest --silent ",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --silent ",
     "document": "node dev-scripts/document.js",
     "format": "prettier --write ./"
   },

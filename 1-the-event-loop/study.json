@@ -1,0 +1,8 @@
+{
+  "--defaults": {
+    ".js": "open-in=jsv9000"
+  },
+  "study": {
+    "ask": true
+  }
+}

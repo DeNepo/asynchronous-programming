@@ -14,19 +14,36 @@ What makes web development so cool is the ... web. Being able to build applicati
 
 Enter _asynchronous programming_: writing code that tells your browser to start one task and move on to a new task while you wait for the first to finish. This is possible because of the _Event Loop_.
 
-## Contents
+- [Learning Objectives](#learning-objectives): what you can expect to learn from
+  studying this material
+- [Setting Up](#setting-up): how to set up and study this material
+- [Suggested Study](./suggested-study.md): Helpful links for this module, useful
+but not required.
+<!--
+- [Study Path](#study-path): An introduction to the chapters in this repo and
+  the best way to work your way through them.
+- [Study Tips](./study-tips.md): Some tips for getting the most out of your time
+  learning to program.
+- [Lesson Plans](./lesson-plans): A few ideas for running lessons around this
+  material.
+  -->
 
-- [Learning Objectives](#learning-objectives)
-- [Suggested Study](#suggested-study)
-- Sundays & Projects
-  - [Week 1](#week-1)
-  - [Week 2](#week-2)
-  - [Week 3](#week-3)
-- [Class Recordings](#class-recordings)
-- [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
-- [HYF Home](https://home.hackyourfuture.be/) (external)
+## Learning Objectives
 
-## Getting Started
+- 🥚 You understand the JavaScript Event Loop, and can demonstrate this by using `setTimeout` and `setInterval` to schedule simple tasks.
+- 🥚 You can explain why Asynchronous Programming is important for programs that have _blocking_ and _non-blocking_ tasks.
+- 🥚 You can explain the basics of the Client/Server model and HTTP requests and can `fetch` data from RESTful APIs.
+- 🐣 You can break down an asynchronous problem into smaller tasks and solve it using promises. This includes identify which tasks depend on each other and which are independent:
+  - _dependent tasks_: The return value from one task is required to start the next task, these must be completed in a specific order - `.then`
+  - _independent tasks_: These tasks do not use each other's return values, they can be completed at the same time - `Promise.all`system.
+- 🐣 You can fetch data from an API and render it into the DOM using `/api-calls`, `/handlers` and `async`/`await` syntax.
+- 🐣 You can write unit tests for functions that return promises using `async`/`await` syntax.
+
+[TOP](#asynchronous-programming)
+
+---
+
+## Setting Up
 
 How to study the code in this repo.
 
@@ -55,370 +72,8 @@ How to study the code in this repo.
 
 ### Running Tests
 
-This repository has two test scripts:
+You can also run tests directly from CLI using the NPM script:
 
-- `npm run test:esm -- ./path/to/file.js`: used for testing ES Module files in the `/browser` directory
-- `npm run test:cjs -- ./path/to/file.js`: used for testing CommonJS files in the `/node` directory
-
-[TOP](#asynchronous-programming)
-
----
-
-## Learning Objectives
-
-- 🥚 You understand the JavaScript Event Loop, and can demonstrate this by using `setTimeout` and `setInterval` to schedule simple tasks.
-- 🥚 You can explain why Asynchronous Programming is important for programs that have _blocking_ and _non-blocking_ tasks.
-- 🥚 You can explain the basics of the Client/Server model and HTTP requests and can `fetch` data from RESTful APIs.
-- 🥚 You can convert built-in Node modules from consuming callbacks being promises.
-- 🐣 You can write and run JavaScript for Node.js or for the Browser. Both environments run JavaScript but they have some important differences!
-  - **use cases**: You can explain some use cases that are unique to each runtime.
-  - **built-in APIs**: You can list some of the key APIs available in each environment, and why they are not available in the other.
-  - **module systems**: You can explain the difference between _CommonJS Modules_ in Node.js and _ES Modules_ in the Browser. You can write and use programs written with either system.
-- 🐣 You can break down an asynchronous problem into smaller tasks and solve it using promises. This includes identify which tasks depend on each other and which are independent:
-  - _dependent tasks_: The return value from one task is required to start the next task, these must be completed in a specific order - `.then`
-  - _independent tasks_: These tasks do not use each other's return values, they can be completed at the same time - `Promise.all`
-- 🐣 You can trace, refactor and write code that accesses the file system between these 3 different syntaxes:
-  1. Callbacks
-  2. Promises
-  3. `async`/`await`
-- 🐣 You can step through a Node.js command line application using the VSCode debugger.
-- You can write small programs with a Data Access layer that asynchronously uses data stored in different locations:
-  - 🐣 **Browser**: You can write a small web page that `fetch`es data from a RESTful API and renders it into the DOM.
-  - 🐥 **Node**: You can write a small CLI program that reads user input from `process.argv` and reads/writes the file system.
+- `npm run test -- ./path/to/file.js`
 
 [TOP](#asynchronous-programming)
-
----
-
-## Suggested Study
-
-References and Practice to help you master this module.
-
-<details open>
-<summary>expand/collapse</summary>
-
-### in ths repo
-
-- **`/browser`**
-  - 🥚 **[`/the-event-loop`](./browser/the-event-loop)**: Learn what the JavaScript Event Loop is and how to visualize it. There are some tools that can help step through asynchronous code, but they will not work for all the code you write.
-  - 🐣 **[`/isolate`](./browser/isolate)**: Explore different ways to write and use asynchronous code in JS from `setTimeout`/`setInterval`, to Promises to `async`/`await`
-  - 🐣 **[`/promistaurant`](./browser/promistaurant)**: Practice solving asynchronous problems by working in a restaurant. You will need to figure out how you can complete people's orders when all the tasks take different amounts of time and may or may not depend on each other.
-  - 🐣 **[`/api-calls`](./browser/api-calls)**: Learn how to fetch data from external APIs by modifying a template API Call function.
-  - 🐣 **[`/fetch-and-render`](./browser/fetch-and-render)**: Practice fetching data from an API and rendering it asynchronously into a user interface.
-- **`/node`**
-  - 🥚 **[`/commonjs-modules`](./node/commonjs-modules)**: Node.js hasn't always used `import`/`export`, it used `require`/`module.exports`. Explore some examples to understand how this works.
-  - 🥚 **[`/process-argv`](./node/process-argv)**: learn to use process.argv to get user input from the command line. you won't need this to write an API, but it's simple enough and helps to understand how command line tools work.
-  - 🐣 **[`/file-system`](./node/file-system)**: practice using the `fs` module with callbacks, promises and `async`/`await`.
-  - 🐥 **[`/command-line-applications`](./node/command-line-applications)**: use everything you've learned about node to write small command line applications.
-
-### The Event Loop
-
-- [Coding Nomad](https://www.youtube.com/watch?v=5YcMKYTZZvk) - short clear example
-- [Java Brains](https://www.youtube.com/watch?v=EI7sN1dDwcY) - restaurant analogy
-- [Loupe](http://latentflip.com/loupe/) (+10)
-- [In the Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) (+10)
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
-- [flavicops](https://flaviocopes.com/javascript-event-loop/)
-- [javascript.info/settimeout-setinterval](https://javascript.info/settimeout-setinterval)
-- [https://javascript.info/event-loop](https://javascript.info/event-loop)
-- [Use case for using setTimeout(0)](https://javascript.info/event-loop#use-case-3-doing-something-after-the-event)
-- [Beau from FCC](https://www.youtube.com/watch?v=kOcFZV3c75I) (timeouts & intervals)
-
-### Callbacks, Promises, Async
-
-- References
-  - [Coding Train](https://www.youtube.com/watch?v=QO4NXhWo_NM&list=PLRqwX-V7Uu6bKLPQvPRNNE65kBL62mVfx)
-  - [Dev Ed](https://www.youtube.com/watch?v=_8gHHBlbziw)
-  - [Traversy](https://www.youtube.com/watch?v=PoRJizFvM7s)
-  - [javascript.info](https://javascript.info/async)
-  - MDN: [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
-  - HYF ... [AMS](https://github.com/HackYourFuture/JavaScript3/), [CPH](https://github.com/HackYourFuture-CPH/JavaScript/tree/master/javascript3)
-  - [Async/Await - FunFunFunction](https://www.youtube.com/watch?v=568g8hxJJp4)
-  - [`return await` (advanced)](https://stackoverflow.com/questions/38708550/difference-between-return-await-promise-and-return-promise)
-- Error-First Callback Convention
-  - [Geeks for Geeks](https://www.geeksforgeeks.org/error-first-callback-in-node-js/)
-  - [Steve Griffith](https://www.youtube.com/watch?v=0pNo1O42m6k)
-  - [David Connelly](https://www.youtube.com/watch?v=Pov477mI57A)
-  - [Thomas Smith](https://www.youtube.com/watch?v=Iv_8tKtfqF0)
-  - [Fred K Schott](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
-- Callback Hell:
-  - [.com](http://callbackhell.com/)
-  - [Rising Stack](https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/)
-  - [How To Create Apps](https://howtocreateapps.com/what-is-callback-hell-with-javascript-examples/)
-  - [Hardeep Jethwani](https://hardeep-jethwani.com/callback-hell-in-nodejs-and-the-ways-to-come-out-of-that-hell)
-- Practice
-  - [learn-promises](https://github.com/oliverjam/learn-promises)
-  - [promise-practice](https://github.com/oliverjam/promise-practice)
-
-### APIs
-
-- [What is JSON?](https://www.youtube.com/watch?v=JuFdz8f-cT4)
-- APIs 101
-  - [How do they work?](https://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
-  - [Like a Restaurant](https://www.youtube.com/watch?v=s7wmiS2mSXY)
-- **DevTools**, the Network Tab:
-  - [chrome/ium](https://developers.google.com/web/tools/chrome-devtools/network/)
-  - [firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor)
-- What is RESTful
-  - JSON Placeholder:[live](https://jsonplaceholder.typicode.com/), [more docs](https://github.com/typicode/json-server)
-  - [restfulapi.net](https://restfulapi.net/)
-- [Coding Train](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X)
-- HTTP statuses
-  - [In 60 Seconds](https://www.youtube.com/watch?v=GrNrcmD6HLA)
-  - [httpstatuses.com](https://httpstatuses.com/)
-  - [wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-  - [http.cat](https://http.cat/)
-
-### `fetch`
-
-- References
-  - [Javascript Promises and Fetch for beginners](https://www.youtube.com/watch?v=IHjzyhjKxtc)
-  - [javascript.info/fetch](https://javascript.info/fetch)
-  - [Traversy](https://www.youtube.com/watch?v=Oive66jrwBs)
-  - [Coding Train](https://www.youtube.com/watch?v=tc8DU14qX6I)
-  - [Fetch API Introduction](https://www.youtube.com/watch?v=PoRJizFvM7s)
-  - [Learn Fetch API](https://www.youtube.com/watch?v=cuEtnrL9-H0)
-  - [Async/Await Javascript and Promises - Fetch API vs Axios](https://www.youtube.com/watch?v=XCLtVQl1if0)
-  - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Basic_concepts)
-- Practice
-  - [learn-fetch](https://github.com/oliverjam/learn-fetch)
-  - [real-world-fetch](https://github.com/oliverjam/real-world-fetch)
-  - [github-api-crash-course tutorial](https://www.youtube.com/watch?v=5QlE6o-iYcE). (hint: avoid pushing your GitHub auth token!)
-  - [Fetching REST](https://github.com/HackYourFutureBelgium/fetching-rest)
-  - JS 30: Type Ahead
-
-### Debugging Node in VSCode
-
-- [Getting started with Node.js debugging in VS Code](https://www.youtube.com/watch?v=2oFKNL7vYV8)
-- [Burke Holland](https://www.youtube.com/watch?v=NW2HG9C_mZc)
-- [VSCode Channel Intro](https://www.youtube.com/watch?v=2oFKNL7vYV8)
-- [James Q Quick](https://www.youtube.com/watch?v=yFtU6_UaOtA)
-- [CodeSpace, 2 Ways](https://www.youtube.com/watch?v=N8O-Yf3hc-A)
-
-### Node.js
-
-- **101**
-  - [Mosh: Node.js in 1 hour](https://www.youtube.com/watch?v=uVwtVBpw7RQ&list=PLTjRvDozrdlydy3uUBWZlLUTNpJSGGCEm&index=1)
-  - [Traversy: Node for Absolute Beginners](https://www.youtube.com/watch?v=U8XF6AFGqlc)
-  - [Traversy: Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
-  - [NetNinja: Node Js Crash Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
-  - [`argsv`](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/) - Use command line arguments in Node
-- **Built-In Modules**
-  - [The file system](https://vimeo.com/414475261) (first 20 minutes)
-  - references
-    - [assert](https://nodejs.org/api/assert.html) - Test values in Node.js
-    - [fs](https://nodejs.org/api/fs.html) - Read & write form the file system
-    - [path](https://nodejs.org/api/path.html) - Manipulate file paths
-    - [util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original) - Convert functions that take callbacks into Promises
-
-</details>
-<br>
-
-[TOP](#asynchronous-programming)
-
----
-
-## Week 1
-
-The Event Loop!
-
-<details>
-<summary>expand/collapse</summary>
-
-### Before Class
-
-- [./browser/the-event-loop](./browser/the-event-loop)
-  - watch a couple of the videos
-  - step through the timeout examples in [jsv9000.app](https://www.jsv9000.app/)
-- [./browser/isolate](./browser/isolate)
-  - `labeled-logger`
-  - `timeouts-and-intervals` examples
-
-### During Class
-
-#### Before Break
-
-- _All Together_:
-  - [The Event Loop](https://www.youtube.com/watch?v=EI7sN1dDwcY) - restaurant analogy
-  - [./browser/timeouts-and-intervals](./browser/timeouts-and-intervals): timeouts examples
-- _In Small Groups_:
-  - [./browser/isolate](./browser/isolate): timeout exercises & sync vs. async
-
-#### After break
-
-- _In Small Groups_:
-  - continue [./browser/isolate](./browser/isolate): timeout exercises & sync vs. async
-- _All Together_:
-  - recap & Q/A
-
-### After Class
-
-> independent study
-
-No project this week! This week you should focus on studying:
-
-- The Event Loop.
-  - review the videos and visualizations in `/browser/the-event-loop`
-  - continue with `/browser/isolate`, through promises if you have time
-  - (_challenge_) Reverse-engineering [stopwatch.net](https://stopwatch.net/) with `setTimeout`, `setInterval`, `clearTimeout` and `clearInterval` is a good project if you're looking for one. (A single script.js file is ok, no need for full architecture)
-- Promises
-  - [./browser/promistaurant](./browser/promistaurant) will help you understand how to solve asynchronous problems by thinking about what tasks need to be done in a specific order and which tasks can be done at the same time.
-- Node.js:
-  1. [node/commonjs-modules](./node/commonjs-modules)
-  2. [node/process-argv](./node/process-argv)
-  3. [node/file-system](./node/file-system): 1. FS Sync, 2. FS Callbacks
-
-</details>
-<br>
-
-[TOP](#asynchronous-programming)
-
----
-
-## Week 2
-
-File System!
-
-<details>
-<summary>expand/collapse</summary>
-
-### Before Class
-
-Look through the [./node](./node) folder of this repository.
-
-- CLI arguments & `process.argsv`
-- file system with callbacks (examples)
-
-### During Class
-
-File System! (callback hell ;)
-
-### After Class
-
-Just keep on studying, no project.
-
-</details>
-<br>
-
-[TOP](#asynchronous-programming)
-
----
-
-## Week 3
-
-`fetch` and APIs.
-
-<details>
-<summary>expand/collapse</summary>
-
-### Before Class
-
-- APIs 101
-  - [How do they work?](https://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work)
-  - [Like a Restaurant](https://www.youtube.com/watch?v=s7wmiS2mSXY)
-- `fetch`: Study a couple of your favorite links from Suggested Study
-- [./browser/api-calls/README.md](./browser/api-calls/README.md)
-
-### During Class
-
-- Before Break: [./browser/api-calls/typicode](./browser/api-calls/typicode)
-- After Break: [./browser/fetch-and-render](./browser/fetch-and-render)
-
-### After Class
-
-Continue studying `fetch`, APIs, and the File System. All of these concepts will pull together in Web Apps.
-
-</details>
-<br>
-
-[TOP](#asynchronous-programming)
-
----
-
-## Class Recordings
-
-- **Students**: Here you can find recordings of this module from past classes. Enjoy!
-- **Coaches**: When sending your PR's with links please ...
-  - Indicate which class you were teaching
-  - Which week it was (if the module is more than 1 week)
-  - Give your name
-  - and a helpful description
-
----
-
-### Class 7 & 8
-
-> [Anthony](https://github.com/Toinne/), [Kevin](https://github.com/kevintss/)
-
-1. week 1:
-   - Part 1: [The Event Loop](https://vimeo.com/406780143)
-   - Part 2: [Whack-a-Mole](https://vimeo.com/408313126)
-2. week 2:
-   - Part 1: [`fetch` & REST](https://vimeo.com/409437916)
-   - Part 2: [Explore Users](https://vimeo.com/409459062)
-3. week 3:
-   - Part 1: [`import` and `export`](https://vimeo.com/412299042)
-   - Part 2: [Explore Pokemon](https://vimeo.com/412616444)
-
----
-
-### [class-9-10](https://github.com/hackyourfuturebelgium/class-9-10)
-
-> [Bram](https://github.com/bramdevries), [Deni](https://github.com/denichodev)
-
-1. week 1:
-   - Part 1: [Isolate - The Event Loop](https://vimeo.com/459858141)
-   - Part 2: [Integrate - Event Loop](https://vimeo.com/460082162)
-   - Part 3: [Recap & Project Intro](https://vimeo.com/460082763)
-1. week 2:
-   - Part 1: [Isolate - Fetch & REST](https://vimeo.com/462531506)
-   - Part 2: [Integrate - Fetch & REST](https://vimeo.com/462536889)
-1. week 3:
-   - Part 1: [Isolate - `async`/`await`](https://vimeo.com/465272582)
-   - Part 2: [Integrate - `async`/`await`](https://vimeo.com/465276266)
-   - Wednesday Review: [Deploying to Heroku](https://vimeo.com/466119979)
-
-### [class-11-12](https://github.com/hackyourfuturebelgium/class-11-12)
-
-> [Bram](https://github.com/bramdevries), [Thibault](https://github.com/ThibaultLesuisse)
-
-1. week 1: Scheduling & The Event Loop. `setTimeout`, `setInterval`
-   - [slides](./slides/week-1-bram.pdf)
-   - [isolate](https://vimeo.com/507186101)
-   - [integrate](https://vimeo.com/507186832)
-   - [homework](https://vimeo.com/507187398)
-   - [wednesday review](https://vimeo.com/508373774)
-2. week 2: Promises & `fetch`
-   - [slides](./slides/week-2-bram.pdf)
-   - [isolate](https://vimeo.com/509470203), [exercises](https://vimeo.com/509470785)
-   - [integrate](https://vimeo.com/509471044), [exercises](https://vimeo.com/509470529)
-   - [homework](https://vimeo.com/509471326)
-   - [Wednesday Review](https://vimeo.com/513441039)
-3. week 3: `async`/`await` & `fetch`
-   - [slides](./slides/week-3-bram.pdf)
-   - [isolate](https://vimeo.com/512490603), [exercises](https://vimeo.com/512490977)
-   - [integrate](https://vimeo.com/512491395), [exercises](https://vimeo.com/512491562)
-   - [homework](https://vimeo.com/512491928)
-   - [Wednesday Review](https://vimeo.com/513451907)
-
-### [Class 13-14](https://github.com/hackyourfuturebelgium/class-13-14)
-
-1. week 1 - by Yoshi and Joel:
-   - [Part 1](https://vimeo.com/579091811)
-   - [Part 2](https://vimeo.com/579095696)
-1. week 2 - by Yoshi:
-   - [Part 1](https://vimeo.com/582102001)
-   - [Part 2](https://vimeo.com/582103554)
-   - [Part 3](https://vimeo.com/582104038)
-
-### Class 15
-
-1. Week 1: [timeouts and the event loop](https://vimeo.com/609704105)
-2. Week 2: [Node & File System](https://vimeo.com/616023084), [Refactor Sync to Callbacks](https://vimeo.com/616024490)
-3. week 3:
-   - [Part 1](https://youtu.be/ouUJF-Nuvjc)
-   - [Part 2](https://youtu.be/U66Xl5WVBss)
-   - [Part 3](https://youtu.be/J73sEmmy4Nk)
-   - [Part 4](https://youtu.be/zf8W_nOp5iU)
-   - [Part 5](https://youtu.be/bbcVgwWKRb4)
-   - [Part 6](https://youtu.be/SHRpxE9Q9xA)

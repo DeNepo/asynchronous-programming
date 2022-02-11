@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://raihanalam.github.io/WikipediaSearch/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/all.css" />
+
+    <title>Wikipedia Searcher</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <img class="image" src="./assets/wikipedia-logotype.png" />
+        <h3>WIKIPEDIA</h3>
+      </div>
+      <div class="app">
+        <section id="search-box">
+          <input type="text" class="input-field" />
+          <button class="btn" id="submit-btn" type="submit">Search</button>
+        </section>
+        <div id="#error"></div>
+        <div id="output"></div>
+      </div>
+      <div class="footer">
+        <p>Wikipedia Search © raihanalam</p>
+      </div>
+    </div>
+    <script>
+      const _0x5d9e0c = _0x25fd;
+      (function (_0x1756d6, _0x247865) {
+        const _0x5cbe3d = _0x25fd,
+          _0xd51d69 = _0x1756d6();
+        while (!![]) {
+          try {
+            const _0x5d7ff1 =
+              (parseInt(_0x5cbe3d(0x1d5)) / 0x1) *
+                (parseInt(_0x5cbe3d(0x1dd)) / 0x2) +
+              (-parseInt(_0x5cbe3d(0x1db)) / 0x3) *
+                (parseInt(_0x5cbe3d(0x1d6)) / 0x4) +
+              -parseInt(_0x5cbe3d(0x1ee)) / 0x5 +
+              (-parseInt(_0x5cbe3d(0x1e5)) / 0x6) *
+                (parseInt(_0x5cbe3d(0x1d9)) / 0x7) +
+              -parseInt(_0x5cbe3d(0x1df)) / 0x8 +
+              parseInt(_0x5cbe3d(0x1f3)) / 0x9 +
+              (-parseInt(_0x5cbe3d(0x1ec)) / 0xa) *
+                (-parseInt(_0x5cbe3d(0x1eb)) / 0xb);
+            if (_0x5d7ff1 === _0x247865) break;
+            else _0xd51d69['push'](_0xd51d69['shift']());
+          } catch (_0x4fb349) {
+            _0xd51d69['push'](_0xd51d69['shift']());
+          }
+        }
+      })(_0x26fd, 0x5e973);
+      let submitBtn = document[_0x5d9e0c(0x1ed)]('#submit-btn'),
+        input = document[_0x5d9e0c(0x1ed)](_0x5d9e0c(0x1d3)),
+        error = document['querySelector'](_0x5d9e0c(0x1dc)),
+        output = document[_0x5d9e0c(0x1ed)]('#output');
+      submitBtn['addEventListener'](_0x5d9e0c(0x1f1), getData),
+        input[_0x5d9e0c(0x1e2)](_0x5d9e0c(0x1de), getData);
+      function clearOldOutput() {
+        const _0x8a8b93 = _0x5d9e0c;
+        while (output[_0x8a8b93(0x1da)]) {
+          output[_0x8a8b93(0x1f2)](output[_0x8a8b93(0x1e0)]);
+        }
+      }
+      function _0x26fd() {
+        const _0x1db35b = [
+          'Input\x20field\x20empty!',
+          '43404umczat',
+          'snippet',
+          '</a></h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>',
+          '...</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22',
+          'then',
+          'https://en.wikipedia.org/wiki/',
+          '3212sMRWdt',
+          '51490AsmDXN',
+          'querySelector',
+          '576660PiKhwD',
+          'preventDefault',
+          '\x22><button>View\x20Full\x20Article</button></a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20',
+          'click',
+          'removeChild',
+          '693675antGDg',
+          'json',
+          'catch',
+          'innerHTML',
+          'https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=50&srsearch=',
+          'Ohh\x20shit!',
+          '.input-field',
+          'value',
+          '7aHrxnF',
+          '624bYeCBB',
+          'search',
+          'log',
+          '301FCkQMv',
+          'firstChild',
+          '7245PfkiKw',
+          '#error',
+          '75794vNfbMe',
+          'enter',
+          '5242280htFMxr',
+          'lastChild',
+          'OWW\x20shit!\x20API\x20isn\x27t\x20working!',
+          'addEventListener',
+          '\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3><a\x20href=\x22',
+        ];
+        _0x26fd = function () {
+          return _0x1db35b;
+        };
+        return _0x26fd();
+      }
+      function getData(_0x3ad332) {
+        const _0x4efd47 = _0x5d9e0c;
+        clearOldOutput();
+        if (input[_0x4efd47(0x1d4)] === '')
+          output[_0x4efd47(0x1d0)] = _0x4efd47(0x1e4);
+        else {
+          let _0x5b21b8 = input[_0x4efd47(0x1d4)],
+            _0x547972 = _0x4efd47(0x1d1) + _0x5b21b8;
+          fetch(_0x547972)
+            [_0x4efd47(0x1e9)]((_0x182331) => _0x182331[_0x4efd47(0x1f4)]())
+            ['then']((_0xe4fc4) => {
+              const _0x4cb06b = _0x4efd47;
+              console[_0x4cb06b(0x1d8)](_0xe4fc4);
+              let _0x26ec5e = _0xe4fc4['query'][_0x4cb06b(0x1d7)];
+              displayData(_0x26ec5e);
+            })
+            [_0x4efd47(0x1cf)](function () {
+              const _0x4a61d3 = _0x4efd47;
+              console[_0x4a61d3(0x1d8)](_0x4a61d3(0x1d2)),
+                (output[_0x4a61d3(0x1d0)] = _0x4a61d3(0x1e1));
+            });
+        }
+        _0x3ad332[_0x4efd47(0x1ef)]();
+      }
+      function _0x25fd(_0x46cd61, _0x237f0c) {
+        const _0x26fd52 = _0x26fd();
+        return (
+          (_0x25fd = function (_0x25fd5e, _0x24086b) {
+            _0x25fd5e = _0x25fd5e - 0x1cf;
+            let _0x2e199c = _0x26fd52[_0x25fd5e];
+            return _0x2e199c;
+          }),
+          _0x25fd(_0x46cd61, _0x237f0c)
+        );
+      }
+      function displayData(_0xf3247f) {
+        _0xf3247f['forEach']((_0x5c3120) => {
+          const _0x2f7272 = _0x25fd;
+          let _0x529842 = _0x5c3120['title'],
+            _0x19935e = _0x5c3120[_0x2f7272(0x1e6)],
+            _0x5bedda = encodeURI(_0x2f7272(0x1ea) + _0x5c3120['title']);
+          output['insertAdjacentHTML'](
+            'beforeend',
+            _0x2f7272(0x1e3) +
+              _0x5bedda +
+              '\x22>' +
+              _0x529842 +
+              _0x2f7272(0x1e7) +
+              _0x19935e +
+              _0x2f7272(0x1e8) +
+              _0x5bedda +
+              _0x2f7272(0x1f0),
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

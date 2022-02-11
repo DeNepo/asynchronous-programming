@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://raihanalam.github.io/GithubFinder/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Required meta tags -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="./styles/bootstrap.min.css" rel="stylesheet" />
+
+    <!---Font Awesome CDN-->
+    <link rel="stylesheet" href="./styles/all.css" />
+    <link rel="stylesheet" href="./styles/syle.css" />
+    <title>Github Finder</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="container">
+        <h3><i class="fab fa-github-alt"></i> GitHub Finder</h3>
+      </div>
+    </nav>
+    <div class="container searchContainer">
+      <br />
+      <div class="search card text-center">
+        <div class="card-header"></div>
+        <div class="search card card-body">
+          <h5 class="card-title">Search Github User</h5>
+          <p class="card-text">
+            Enter a github username to fetch a user profile and repositories.
+          </p>
+          <input
+            type="text"
+            class="form-control"
+            id="searchUser"
+            placeholder="Github Username..."
+          />
+          <br />
+          <button class="btn btn-search" id="searchBtn">SEARCH</button>
+        </div>
+      </div>
+      <div id="profile"></div>
+    </div>
+    <footer class="mg p-3 text-center bg-light-green">Github Finder ©</footer>
+
+    <script src="./lib/popper.min.js"></script>
+    <script src="./lib/bootstrap.min.js"></script>
+
+    <script>
+      function _0x3f74(_0xa75b8a, _0x2157b1) {
+        const _0x4765df = _0x4765();
+        return (
+          (_0x3f74 = function (_0x3f743d, _0xd5c28) {
+            _0x3f743d = _0x3f743d - 0x1b5;
+            let _0x458a40 = _0x4765df[_0x3f743d];
+            return _0x458a40;
+          }),
+          _0x3f74(_0xa75b8a, _0x2157b1)
+        );
+      }
+      function _0x4765() {
+        const _0x386a4c = [
+          'clearAlert',
+          'name',
+          '\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class\x20=\x20\x22card\x20card-body\x20mb-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-md-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22img-fluid\x20mb-2\x22\x20src=\x22',
+          'public_gists',
+          '170SevrWO',
+          'innerHTML',
+          '56YRGOMs',
+          '</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22list-group-item\x22>Location:\x20',
+          'insertBefore',
+          '.searchContainer',
+          'profile',
+          '584788WGWZqo',
+          '490171MzEsld',
+          'querySelector',
+          'following',
+          'clearProfile',
+          '.serach',
+          '40WDlGgE',
+          '</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<small>',
+          '261329OcEmit',
+          'location',
+          'followers',
+          '</small><br><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20bg-primary\x22\x20>Public\x20Repos:\x20',
+          '</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br><br>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<ul\x20clas=\x22list-group\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22list-group-item\x22>Company:\x20',
+          '3056571LooTDs',
+          '</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22list-group-item\x22>Website/Blog:\x20',
+          'html_url',
+          '</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</ul>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20',
+          '18454KOxpQg',
+          'createElement',
+          'public_repos',
+          'showAlert',
+          '\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22',
+          '120774GnpBUh',
+          'avatar_url',
+          '\x22\x20target=\x22blank\x22\x20class=\x22btn\x20btn-primary\x20btn-block\x20mb-4\x22>View\x20Profile</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-md-9\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>',
+          '27rveMoK',
+          '</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20bg-secondary\x22\x20>Public\x20Gitsts:\x20',
+          'remove',
+          'created_at',
+          '209762FLFMyE',
+        ];
+        _0x4765 = function () {
+          return _0x386a4c;
+        };
+        return _0x4765();
+      }
+      const _0x459f45 = _0x3f74;
+      (function (_0x34a5c1, _0x1026fa) {
+        const _0x414d6b = _0x3f74,
+          _0x5dbdb1 = _0x34a5c1();
+        while (!![]) {
+          try {
+            const _0x5c552e =
+              -parseInt(_0x414d6b(0x1da)) / 0x1 +
+              (-parseInt(_0x414d6b(0x1ba)) / 0x2) *
+                (parseInt(_0x414d6b(0x1c2)) / 0x3) +
+              parseInt(_0x414d6b(0x1d2)) / 0x4 +
+              (-parseInt(_0x414d6b(0x1cb)) / 0x5) *
+                (-parseInt(_0x414d6b(0x1bf)) / 0x6) +
+              (-parseInt(_0x414d6b(0x1c6)) / 0x7) *
+                (parseInt(_0x414d6b(0x1cd)) / 0x8) +
+              parseInt(_0x414d6b(0x1b6)) / 0x9 +
+              (parseInt(_0x414d6b(0x1d8)) / 0xa) *
+                (-parseInt(_0x414d6b(0x1d3)) / 0xb);
+            if (_0x5c552e === _0x1026fa) break;
+            else _0x5dbdb1['push'](_0x5dbdb1['shift']());
+          } catch (_0x1fd4f8) {
+            _0x5dbdb1['push'](_0x5dbdb1['shift']());
+          }
+        }
+      })(_0x4765, 0x6ae40);
+      class UI {
+        constructor() {
+          const _0x16230f = _0x3f74;
+          this[_0x16230f(0x1d1)] = document[_0x16230f(0x1d4)]('#profile');
+        }
+        ['showProfile'](_0x282bdd) {
+          const _0x48ab6e = _0x3f74;
+          this[_0x48ab6e(0x1c7)](),
+            (this['profile'][_0x48ab6e(0x1cc)] =
+              _0x48ab6e(0x1c9) +
+              _0x282bdd[_0x48ab6e(0x1c0)] +
+              _0x48ab6e(0x1be) +
+              _0x282bdd[_0x48ab6e(0x1b8)] +
+              _0x48ab6e(0x1c1) +
+              _0x282bdd[_0x48ab6e(0x1c8)] +
+              _0x48ab6e(0x1d9) +
+              _0x282bdd['bio'] +
+              _0x48ab6e(0x1dd) +
+              _0x282bdd[_0x48ab6e(0x1bc)] +
+              _0x48ab6e(0x1c3) +
+              _0x282bdd[_0x48ab6e(0x1ca)] +
+              '</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20bg-success\x22\x20>Followers:\x20' +
+              _0x282bdd[_0x48ab6e(0x1dc)] +
+              '</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20bg-info\x22\x20>Following:\x20' +
+              _0x282bdd[_0x48ab6e(0x1d5)] +
+              _0x48ab6e(0x1b5) +
+              _0x282bdd['company'] +
+              _0x48ab6e(0x1b7) +
+              _0x282bdd['blog'] +
+              _0x48ab6e(0x1ce) +
+              _0x282bdd[_0x48ab6e(0x1db)] +
+              '</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22list-group-item\x22>Account\x20Created:\x20' +
+              _0x282bdd[_0x48ab6e(0x1c5)] +
+              _0x48ab6e(0x1b9));
+        }
+        [_0x459f45(0x1d6)]() {
+          const _0x303e9f = _0x459f45;
+          this[_0x303e9f(0x1d1)][_0x303e9f(0x1cc)] = '';
+        }
+        [_0x459f45(0x1bd)](_0xf912d, _0x6203d8) {
+          const _0x4d14f8 = _0x459f45;
+          this[_0x4d14f8(0x1d6)](), this[_0x4d14f8(0x1c7)]();
+          let _0x16a9cc = document[_0x4d14f8(0x1bb)]('div');
+          (_0x16a9cc['className'] = _0x6203d8),
+            _0x16a9cc['appendChild'](document['createTextNode'](_0xf912d));
+          let _0x3783df = document[_0x4d14f8(0x1d4)](_0x4d14f8(0x1d0)),
+            _0x2b907e = document[_0x4d14f8(0x1d4)](_0x4d14f8(0x1d7));
+          _0x3783df[_0x4d14f8(0x1cf)](_0x16a9cc, _0x2b907e);
+        }
+        ['clearAlert']() {
+          const _0x2c53b7 = _0x459f45;
+          let _0xe12598 = document['querySelector']('.alert');
+          _0xe12598 && _0xe12598[_0x2c53b7(0x1c4)]();
+        }
+      }
+
+      function _0x2a33(_0xa98ea7, _0x115a48) {
+        const _0x376ce3 = _0x376c();
+        return (
+          (_0x2a33 = function (_0x2a3308, _0x313b08) {
+            _0x2a3308 = _0x2a3308 - 0x1ee;
+            let _0x2457af = _0x376ce3[_0x2a3308];
+            return _0x2457af;
+          }),
+          _0x2a33(_0xa98ea7, _0x115a48)
+        );
+      }
+      const _0x1607f0 = _0x2a33;
+      (function (_0x2fccb8, _0x2e1806) {
+        const _0x12ecc8 = _0x2a33,
+          _0x1c580c = _0x2fccb8();
+        while (!![]) {
+          try {
+            const _0x2be41c =
+              (parseInt(_0x12ecc8(0x1f3)) / 0x1) *
+                (-parseInt(_0x12ecc8(0x1f2)) / 0x2) +
+              -parseInt(_0x12ecc8(0x1ee)) / 0x3 +
+              -parseInt(_0x12ecc8(0x1fa)) / 0x4 +
+              parseInt(_0x12ecc8(0x1f8)) / 0x5 +
+              (-parseInt(_0x12ecc8(0x1f4)) / 0x6) *
+                (-parseInt(_0x12ecc8(0x203)) / 0x7) +
+              (parseInt(_0x12ecc8(0x1fe)) / 0x8) *
+                (parseInt(_0x12ecc8(0x1f1)) / 0x9) +
+              (-parseInt(_0x12ecc8(0x1f5)) / 0xa) *
+                (-parseInt(_0x12ecc8(0x1f0)) / 0xb);
+            if (_0x2be41c === _0x2e1806) break;
+            else _0x1c580c['push'](_0x1c580c['shift']());
+          } catch (_0x2d43d2) {
+            _0x1c580c['push'](_0x1c580c['shift']());
+          }
+        }
+      })(_0x376c, 0x513ff);
+      function _0x376c() {
+        const _0xacbdd = [
+          '1666250VKubOo',
+          'message',
+          '2395256amVFGJ',
+          'https://api.github.com/users/',
+          'showAlert',
+          '#searchUser',
+          '8rpjnmG',
+          'showProfile',
+          'json',
+          'then',
+          'clearProfile',
+          '21pMWBoL',
+          '#searchBtn',
+          '959286dIwDHK',
+          'log',
+          '1885741SPJImy',
+          '3673899jBvgoP',
+          '113978MXlTLa',
+          '4LbrakG',
+          '1132878lstunT',
+          '10lBfVLf',
+          'User\x20Not\x20Found!',
+          'querySelector',
+        ];
+        _0x376c = function () {
+          return _0xacbdd;
+        };
+        return _0x376c();
+      }
+      let searchBtn = document[_0x1607f0(0x1f7)](_0x1607f0(0x204)),
+        searchUser = document['querySelector'](_0x1607f0(0x1fd)),
+        ui = new UI();
+      searchBtn,
+        addEventListener('click', (_0x4d91c0) => {
+          const _0x7f9092 = _0x1607f0;
+          let _0x445f9a = searchUser['value'];
+          _0x445f9a != ''
+            ? fetch(_0x7f9092(0x1fb) + _0x445f9a)
+                ['then']((_0x4de763) => _0x4de763[_0x7f9092(0x200)]())
+                [_0x7f9092(0x201)]((_0x55e14e) => {
+                  const _0x5036cb = _0x7f9092;
+                  console[_0x5036cb(0x1ef)](_0x55e14e),
+                    _0x55e14e[_0x5036cb(0x1f9)] == 'Not\x20Found'
+                      ? ui[_0x5036cb(0x1fc)](
+                          _0x5036cb(0x1f6),
+                          'alert\x20alert-danger',
+                        )
+                      : ui[_0x5036cb(0x1ff)](_0x55e14e);
+                })
+            : ui[_0x7f9092(0x202)]();
+        });
+    </script>
+  </body>
+</html>

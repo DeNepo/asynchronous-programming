@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.alert {
+  text-align: center;
+}
+.mg {
+  margin-top: 220px;
+}
+.btn-search {
+  background-color: rgb(27, 177, 127);
+}
+.bg-light-green {
+  background-color: rgb(144, 226, 199);
+}
+.nav-bar {
+  height: 50px;
+  background-color: rgb(9, 122, 85);
+  padding: 5px;
+}
+.nav-bar h3 {
+  text-align: center;
+  color: white;
+}
+.nav-bar h3 i {
+  color: black;
+  font-size: 28px;
+}
