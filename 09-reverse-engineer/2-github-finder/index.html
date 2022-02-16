@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://raihanalam.github.io/GithubFinder/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Required meta tags -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="./styles/bootstrap.min.css" rel="stylesheet" />
+
+    <!---Font Awesome CDN-->
+    <link rel="stylesheet" href="./styles/all.css" />
+    <link rel="stylesheet" href="./styles/syle.css" />
+    <title>Github Finder</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="container">
+        <h3><i class="fab fa-github-alt"></i> GitHub Finder</h3>
+      </div>
+    </nav>
+    <div class="container searchContainer">
+      <br />
+      <div class="search card text-center">
+        <div class="card-header"></div>
+        <div class="search card card-body">
+          <h5 class="card-title">Search Github User</h5>
+          <p class="card-text">
+            Enter a github username to fetch a user profile and repositories.
+          </p>
+          <input
+            type="text"
+            class="form-control"
+            id="searchUser"
+            placeholder="Github Username..."
+          />
+          <br />
+          <button class="btn btn-search" id="searchBtn">SEARCH</button>
+        </div>
+      </div>
+      <div id="profile"></div>
+    </div>
+    <footer class="mg p-3 text-center bg-light-green">Github Finder ©</footer>
+
+    <script src="./lib/popper.min.js"></script>
+    <script src="./lib/bootstrap.min.js"></script>
+
+    <script type="module" src="./src/init.j"></script>
+  </body>
+</html>

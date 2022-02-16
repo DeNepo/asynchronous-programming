@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.wrapper .header img {
+  height: 180px;
+  width: 180px;
+}
+.wrapper .header h3 {
+  font-size: 50px;
+}
+.wrapper .app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.wrapper .app #search-box {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .app #search-box .input-field {
+  height: 50px;
+  width: 50%;
+  font-size: 20px;
+}
+.wrapper .app #search-box .btn {
+  cursor: pointer;
+  height: 54px;
+  width: 100px;
+  font-size: 18px;
+}
+.wrapper .app #search-box .btn:hover {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.wrapper .app #output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .app #output .row {
+  height: auto;
+  width: 80%;
+  background-color: rgb(236, 242, 243);
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.wrapper .app #output .row h3 a {
+  text-decoration: none;
+  font-size: 25px;
+}
+.wrapper .app #output .row p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.wrapper .app #output .row button {
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+  font-size: 15px;
+  border: 1px solid blue;
+}
+.wrapper .app #output .row button:hover {
+  background-color: blue;
+  color: white;
+  border: none;
+}
+.wrapper .footer {
+  height: 30px;
+  margin-top: 200px;
+  padding: 10px;
+  background-color: aliceblue;
+  text-align: center;
+}
