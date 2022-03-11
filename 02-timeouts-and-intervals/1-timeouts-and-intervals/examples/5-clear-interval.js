@@ -3,7 +3,7 @@ import { labeledLogger } from '../../../lib/labeled-logger.js';
 const { log } = labeledLogger();
 
 // you can also stop a setInterval using it's id
-//  this happens by passing the id as an argument to clearTimeout
+//  this happens by passing the id as an argument to clearInterval
 
 const callback1 = () => {
   log('interval ...');
