@@ -5,7 +5,7 @@ The Event Loop!
 ## Before Class
 
 - `/01-the-event-loop`
-  - watch a couple of the videos
+  - watch a couple of the [videos](https://github.com/HackYourFutureBelgium/asynchronous-programming/blob/master/suggested-study.md#suggested-study)
   - step through the timeout examples in [jsv9000.app](https://www.jsv9000.app/)
 - `/02-timeouts-and-intervals`
   - `/0-labeled-logger`
