@@ -13,6 +13,9 @@ const slowString = delayedValue(log);
   then you call the function to run your script
   it's conventional to call this function `main`
 
+  you won't need this for your projects
+  but you will see it around the internet
+
 */
 
 const main = async () => {
