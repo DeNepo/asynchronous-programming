@@ -23,18 +23,10 @@ const { log } = labeledLogger();
 const getUserName = (id = 1) => {
   log('fetching user ' + id);
 
-  return fetchUserById(id)
-    .then((res) => {
-      log(`user ${id} response:`, res);
-      if (!res.ok) {
-        throw new Error(`${res.status}: ${res.statusText}`);
-      }
-      return res.json();
-    })
-    .then((user) => {
-      log(`user ${id}:`, user);
-      return user.name;
-    });
+  return fetchUserById(id).then((user) => {
+    log(`user ${id}:`, user);
+    return user.name;
+  });
 };
 
 // --- test the function ---

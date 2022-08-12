@@ -7,13 +7,6 @@ const { log, error } = labeledLogger();
 
 // --- declare some callbacks ---
 
-const handleResponse = (res) => {
-  if (!res.ok) {
-    throw new Error(`${res.status}: ${res.statusText}`);
-  }
-  return res.json();
-};
-
 const getContactInfo = (user) => {
   // write me!
 };
@@ -24,7 +17,6 @@ const handleError = (err) => error(err);
 
 log('fetching and processing user 2');
 fetchUserById(2)
-  .then((res) => handleResponse(res))
   .then((user) => getContactInfo(user))
   // "2: Shana@melissa.tv, 010-692-6593 x09125, anastasia.net"
   .then((contactInfo) => log(contactInfo))
@@ -32,7 +24,6 @@ fetchUserById(2)
 
 log('fetching and processing user 5');
 fetchUserById(5)
-  .then(handleResponse)
   .then(getContactInfo)
   // "5: Lucio_Hettinger@annie.ca, (254)954-1289, demarco.info"
   .then(_)
@@ -40,7 +31,6 @@ fetchUserById(5)
 
 log('fetching and processing user 7');
 fetchUserById(7)
-  ._(_)
   ._(_)
   // "7: Telly.Hoeger@billy.biz, 210.067.6132, elvis.io"
   ._(_)

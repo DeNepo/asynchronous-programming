@@ -21,7 +21,7 @@ describe('userWorksAt checks if a user works at a specific company', () => {
   });
   it('user 6 does work at Considine-Lockman', async () => {
     const actual = await userWorksAt(6, 'Considine-Lockman');
-    expect(actual).toEqual(false);
+    expect(actual).toEqual(true);
   });
   it('user 7 does not work at John Groups', async () => {
     const actual = await userWorksAt(7, 'John Groups');

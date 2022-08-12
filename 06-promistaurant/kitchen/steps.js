@@ -14,7 +14,7 @@ const getRandomInRange = (min, max) => Math.random() * (max - min) + min;
 let portionCtr = 1;
 export const preparePortion = (size, base) => {
   return new Promise((resolve, reject) => {
-    if (![sizes.large, sizes.medium, sizes.large].includes(size)) {
+    if (![sizes.small, sizes.medium, sizes.large].includes(size)) {
       reject('Invalid size!');
     }
     if (

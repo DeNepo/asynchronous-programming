@@ -14,31 +14,18 @@ const namesInRange = async (firstId = 1, lastId = 1) => {
   // debugger;
 
   // gather all user response promises in an array
-  const responsePromises = [];
+  const userPromises = [];
   for (let id = firstId; id <= lastId; id++) {
     const next = fetchUserById(id);
-    responsePromises.push(next);
+    userPromises.push(next);
   }
 
   // wait for all of the promises to resolve
   //  if one rejects, this whole function will reject!
-  const responses = await Promise.all(responsePromises);
-
-  // throw an error if any response was not OK
-  for (const res of responses) {
-    if (!res.ok) {
-      throw new Error(`${res.status}: ${res.statusText}`);
-    }
-  }
-
-  // parse all responses into user data promises
-  //   still in an array, still in the same order!
-  const userPromises = responses.map((response) => response.json());
   const users = await Promise.all(userPromises);
 
   // create an array containing each user's name in order
-  const names = users.map((user) => `${user.id}. ${user.name}`);
-  return names;
+  return users.map((user) => `${user.id}. ${user.name}`);
 };
 
 // --- --- tests --- ---

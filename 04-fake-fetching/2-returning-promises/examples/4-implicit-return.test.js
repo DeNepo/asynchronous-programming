@@ -20,15 +20,7 @@ const { log } = labeledLogger();
  *
  * @throws {Error} {status number}: {status text}
  */
-const getUserName = (id = 1) =>
-  fetchUserById(id)
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error(`${res.status}: ${res.statusText}`);
-      }
-      return res.json();
-    })
-    .then((user) => user.name);
+const getUserName = (id = 1) => fetchUserById(id).then((user) => user.name);
 
 // --- test the function  ---
 

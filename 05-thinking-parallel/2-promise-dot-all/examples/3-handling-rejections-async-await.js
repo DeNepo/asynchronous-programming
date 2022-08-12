@@ -19,17 +19,7 @@ const main = async () => {
     ];
 
     // await the responses
-    const responses = await Promise.all(responsePromises);
-    log('responses:', responses);
-
-    for (const res of responses) {
-      if (!res.ok) {
-        throw new Error(`${res.status}: ${res.statusText}`);
-      }
-    }
-
-    // parse each response into an user promises
-    const userPromises = responses.map((res) => res.json());
+    const userPromises = await Promise.all(responsePromises);
     log('user promises:', userPromises);
 
     // await a promise that waits for all users to resolve

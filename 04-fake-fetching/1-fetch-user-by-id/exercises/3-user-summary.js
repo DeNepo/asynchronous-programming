@@ -7,13 +7,6 @@ const { log, error } = labeledLogger();
 
 // --- declare some callbacks ---
 
-const handleResponse = (res) => {
-  if (!res.ok) {
-    throw new Error(`${res.status}: ${res.statusText}`);
-  }
-  return res.json();
-};
-
 const createSummary = (user) => {
   // write me!
 };
