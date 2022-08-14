@@ -19,20 +19,6 @@ const responsePromises = [
 ];
 
 Promise.all(responsePromises)
-  .then((responses) => {
-    log('responses:', responses);
-
-    for (const res of responses) {
-      if (!res.ok) {
-        throw new Error(`${res.status}: ${res.statusText}`);
-      }
-    }
-    // parse each response into an user promises
-    const userPromises = responses.map((res) => res.json());
-    log('user promises:', userPromises);
-    // return a promise that waits for all users to resolve
-    return Promise.all(userPromises);
-  })
   .then((users) => {
     log('users:', users);
     // create an array with only the users' names

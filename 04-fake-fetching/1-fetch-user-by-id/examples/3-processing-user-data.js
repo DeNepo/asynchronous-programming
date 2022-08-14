@@ -12,13 +12,6 @@ const { log, error } = labeledLogger();
 
 // --- declare some callbacks ---
 
-const handleResponse = (res) => {
-  if (!res.ok) {
-    throw new Error(`${res.status}: ${res.statusText}`);
-  }
-  return res.json();
-};
-
 const createIntroduction = (user) => {
   return `${user.id}: Hello, my name is ${user.name}.`;
 };
@@ -27,7 +20,6 @@ const createIntroduction = (user) => {
 
 log('fetching user 1');
 fetchUserById(1)
-  .then((res) => handleResponse(res))
   .then((user) => createIntroduction(user))
   // "1: Hello, my name is Leanne Graham"
   .then((intro) => log(intro))
@@ -35,7 +27,6 @@ fetchUserById(1)
 
 log('fetching user 5');
 fetchUserById(5)
-  .then(handleResponse)
   .then((user) => createIntroduction(user))
   // 51: Hello, my name is Chelsey Dietrich"
   .then((intro) => log(intro))
@@ -43,7 +34,6 @@ fetchUserById(5)
 
 log('fetching user 12 (there are only 10 users!)');
 fetchUserById(12)
-  .then(handleResponse)
   .then(createIntroduction)
   .then((intro) => log(intro))
   // 404

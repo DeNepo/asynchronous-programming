@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --silent ",
-    "document": "node dev-scripts/document.js",
     "format": "prettier --write ./"
   },
   "repository": {

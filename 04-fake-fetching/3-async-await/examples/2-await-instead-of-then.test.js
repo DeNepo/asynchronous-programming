@@ -30,15 +30,7 @@ const getName = (id = 1) => {
   log('.then id:', id);
 
   // debugger;
-  const responsePromise = fetchUserById(id);
-
-  const userPromise = responsePromise.then((res) => {
-    log('.then response:', res);
-    if (!res.ok) {
-      throw new Error(`${res.status}: ${res.statusText}`);
-    }
-    return res.json();
-  });
+  const userPromise = fetchUserById(id);
 
   const namePromise = userPromise.then((user) => {
     log('.then user:', user);
@@ -56,18 +48,11 @@ const getName = (id = 1) => {
  * @returns {Promise<string>} A promise that resolves to the user's id and name.
  */
 const getNameAsyncAwait = async (id = 1) => {
-  log('await id:', id);
+  log('await fetching id:', id);
 
   // debugger;
-  const response = await fetchUserById(id);
-  log('await response:', response);
-
-  if (!response.ok) {
-    throw new Error(`${response.status}: ${response.statusText}`);
-  }
-
-  const user = await response.json();
-  log('await user:', user);
+  const user = await fetchUserById(id);
+  log(id, user);
 
   const name = `${user.id}. ${user.name}`;
 
