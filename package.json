@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/HackYourFutureBelgium/asynchronous-programming#readme",
   "devDependencies": {
-    "dependency-cruiser": "^10.0.6",
+    "dependency-cruiser": "^12.3.0",
     "graphviz-cli": "^1.0.0",
     "jest": "^27.0.4",
     "prettier": "^2.3.2"
